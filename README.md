@@ -1959,7 +1959,6 @@ This guide draws from research and best practices established by:
 
 **For Questions or Feedback:**
 - Open an issue on GitHub
-- Join OWASP LLM Working Group
 - Connect with the AI security community
 
 **For Security Vulnerabilities:**
