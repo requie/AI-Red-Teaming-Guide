@@ -4,6 +4,12 @@ All notable changes to this guide should be documented in this file.
 
 ## [Unreleased]
 ### Added
+- README refresh for 2026 source governance:
+  - Updated freshness messaging and badge to 2026
+  - Added a date-stamped “Latest Update Watchlist” with official EU AI Act, OWASP Agentic Top 10, and NIST update triggers
+  - Expanded Regulatory Compliance and Resources sections with current references
+- New community template: `templates/linkedin-100-stars-post-template.md` for announcing the 100-star milestone.
+- `resources-validation.md` expanded with 2026-04-27 validation dates and additional standards/regulatory rows.
 - Operational implementation sections in README:
   - Implementation Quickstart (30/60/90)
   - Evaluation Harness (Reference Implementation)

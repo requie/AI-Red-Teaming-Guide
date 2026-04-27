@@ -5,7 +5,7 @@
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-2025-orange?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-2026-orange?style=for-the-badge)
 
 **A comprehensive guide to adversarial testing and security evaluation of AI systems, helping organizations identify vulnerabilities before attackers exploit them.**
 
@@ -62,7 +62,7 @@ This comprehensive guide is designed for:
 - ✅ **Evidence-Based**: Grounded in real-world experience from Microsoft's 100+ AI product red teams
 - ✅ **Framework-Aligned**: Incorporates NIST AI RMF, OWASP, MITRE ATLAS, and CSA guidelines
 - ✅ **Practical Focus**: Actionable methodologies and tools you can implement today
-- ✅ **Continuously Updated**: Reflects latest 2024-2025 research and industry practices
+- ✅ **Continuously Updated**: Reflects latest 2024-2026 research and industry practices
 - ✅ **Comprehensive Coverage**: From basic concepts to advanced attack techniques
 
 ---
@@ -2088,6 +2088,19 @@ Template available: `templates/model-system-security-card.md`
 
 Reference index available: `resources-validation.md`
 
+### Latest Update Watchlist (Validated: 2026-04-27)
+
+Use this list during quarterly maintenance to keep the guide synchronized with official sources:
+
+1. **EU AI Act implementation milestones are now active in phases**
+   - Prohibited practices and AI literacy obligations: **effective 2 February 2025**
+   - GPAI governance rules and obligations: **effective 2 August 2025**
+   - Most transparency and high-risk obligations: **effective 2 August 2026**
+   - High-risk AI embedded in regulated products: extended transition to **2 August 2027**
+2. **OWASP published the Top 10 for Agentic Applications** (December 2025), adding prioritized risks such as agent behavior hijacking, tool misuse, and identity/privilege abuse for autonomous systems.
+3. **NIST AI RMF Playbook was updated on 27 March 2026**, which is a good trigger to refresh operational checklists and mappings in this guide.
+4. **NIST SSDF project now lists SP 800-218 Rev.1 (SSDF v1.2) as Draft (17 December 2025)**, relevant for teams linking AI red teaming controls to secure SDLC requirements.
+
 ---
 
 ## 📎 Practitioner Appendices
@@ -2122,11 +2135,17 @@ Defines AI red teaming as "a structured testing effort to find flaws and vulnera
 
 ### European Union
 
-#### EU AI Act (2024)
+#### EU AI Act (Regulation (EU) 2024/1689)
 **Article 15** requires operators of high-risk AI systems to demonstrate:
 - Accuracy
 - Robustness
 - Cybersecurity
+
+**Implementation Timeline (official phased rollout):**
+- **2 February 2025**: prohibited practices and AI literacy obligations entered into application
+- **2 August 2025**: governance rules and GPAI obligations became applicable
+- **2 August 2026**: the Act is broadly applicable, including transparency and most high-risk requirements
+- **2 August 2027**: extended transition deadline for high-risk AI embedded in regulated products
 
 **Red Teaming Requirements:**
 - Risk assessment documentation
@@ -2189,11 +2208,15 @@ Recommends adversarial testing before deployment and continuous monitoring in pr
 - [GenAI Profile (AI 600-1)](https://www.nist.gov/publications/ai-600-1)
 - [Dioptra Testbed](https://pages.nist.gov/dioptra/)
 - [ARIA Program](https://www.nist.gov/programs-projects/aria)
+- [NIST AI RMF Playbook](https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook)
+- [SP 800-218A (SSDF Community Profile for GenAI)](https://csrc.nist.gov/pubs/sp/800/218/a/final)
+- [SP 800-218 Rev.1 Draft (SSDF v1.2)](https://csrc.nist.gov/Projects/ssdf/publications)
 
 **OWASP:**
 - [GenAI Red Teaming Guide](https://genai.owasp.org/)
 - [LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [AI Security & Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/)
+- [Top 10 for Agentic Applications](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/)
 
 **MITRE:**
 - [ATLAS Framework](https://atlas.mitre.org/)
