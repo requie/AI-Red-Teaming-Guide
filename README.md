@@ -15,8 +15,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
 
-
-![X](https://img.shields.io/twitter/follow/iam_tarique)
+[![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
 
 
 **A comprehensive guide to adversarial testing and security evaluation of AI systems, helping organizations identify vulnerabilities before attackers exploit them.**
