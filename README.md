@@ -33,13 +33,11 @@
 
 <div align="center">
 
+
+
 ## 🛡️ Put RedTeamKit to Work
 
 **Stop starting AI security assessments from scratch.**
-
-A structured operating system for adversarial AI testing — built for security practitioners, consultants, and teams.
-
-**150 Test Cases** · **Guided Workflows** · **Evidence Capture** · **Risk Tracking** · **Executive Reporting** · **Implementation Assets**
 
 <br>
 
