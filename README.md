@@ -37,11 +37,11 @@
 
 ## 🛡️ Put RedTeamKit to Work
 
-**Stop starting AI security assessments from scratch.**
+**Stop starting AI security assessments from scratch.** 
+[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
 
 <br>
 
-[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
 [![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://redteamkit.tarique.io/)
 [![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://redteamkit.tarique.io/#sample)
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
