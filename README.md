@@ -2,22 +2,6 @@
   
 # 🎯 AI Red Teaming: The Complete Guide
 
-</div>
-
-> ### 🌐 Join the Global Red Teaming Network
-> Connect with AI red teamers worldwide, share findings, and collaborate on adversarial testing through **Cogensec**.
-> **→ [Join the network](https://cogensec.com/redteam-network)**
-
-<div align="center">
-
-![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
-
-[![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
-
-
 **A comprehensive guide to adversarial testing and security evaluation of AI systems, helping organizations identify vulnerabilities before attackers exploit them.**
 
 ### Trusted by practitioners at
@@ -40,6 +24,37 @@
 </div>
 
 ---
+
+> ### 🌐 Join the Global Red Teaming Network
+> Connect with AI red teamers worldwide, share findings, and collaborate on adversarial testing through **Cogensec**.
+> **→ [Join the network](https://cogensec.com/redteam-network)**
+
+---
+
+<div align="center">
+
+## 🛡️ Put RedTeamKit to Work
+
+**Stop starting AI security assessments from scratch.**
+
+A structured operating system for adversarial AI testing — built for security practitioners, consultants, and teams.
+
+**150 Test Cases** · **Guided Workflows** · **Evidence Capture** · **Risk Tracking** · **Executive Reporting** · **Implementation Assets**
+
+<br>
+
+[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
+[![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://redteamkit.tarique.io/)
+[![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://redteamkit.tarique.io/#sample)
+![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
+[![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
+> ⚠️ **Authorized use only.** Use RedTeamKit exclusively on systems you own or are explicitly authorized to test.
+
+---
+</div>
 
 ## 📋 Table of Contents
 
@@ -3059,6 +3074,28 @@ This guide draws from research and best practices established by:
 - Follow responsible disclosure practices
 - Contact vendor security teams directly
 - Use coordinated disclosure timelines
+
+---
+
+<div align="center">
+
+## 🛡️ Get The Red Team Kit
+
+**Stop starting AI security assessments from scratch.**
+
+A structured operating system for adversarial AI testing — built for security practitioners, consultants, and teams.
+
+**150 Test Cases** · **Guided Workflows** · **Evidence Capture** · **Risk Tracking** · **Executive Reporting** · **Implementation Assets**
+
+<br>
+
+[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
+[![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://redteamkit.tarique.io/)
+[![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://redteamkit.tarique.io/#sample)
+
+</div>
+
+> ⚠️ **Authorized use only.** Use RedTeamKit exclusively on systems you own or are explicitly authorized to test.
 
 ---
 
