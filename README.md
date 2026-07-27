@@ -2622,7 +2622,15 @@ User Input
 - Post-exercise retro: what failed, what improved, what's next
 
 ---
+---
 
+<div align="center">
+  <a href="https://redteamkit.tarique.io">
+    <img src="assets/redteamkit-banner.svg" alt="RedTeamKit — You've read the methodology. Now run it. $249 one-time." width="100%">
+  </a>
+</div>
+
+---
 ## ⚠️ Common Implementation Pitfalls
 
 | Pitfall | Why It Fails | What Good Looks Like |
@@ -3095,6 +3103,16 @@ used in real AI security engagements.
 
 > ⚠️ **Authorized use only.** Use RedTeamKit exclusively on systems you own or are explicitly authorized to test.
 
+
+---
+
+<div align="center">
+  <a href="https://redteamkit.tarique.io">
+    <img src="assets/redteamkit-banner.svg" alt="RedTeamKit — You've read the methodology. Now run it. $249 one-time." width="100%">
+  </a>
+</div>
+
+---
 ---
 
 ## ⚠️ Disclaimer
@@ -3110,6 +3128,8 @@ Unauthorized testing of AI systems may be illegal and unethical. Always obtain e
 ---
 
 <div align="center">
+
+
 
 ### 🎯 Remember: Responsible red teaming makes AI safer for everyone 🎯
 
