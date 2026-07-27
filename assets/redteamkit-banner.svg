@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RedTeamKit — You've read the methodology. Now run it. Get RedTeamKit, $249 one-time.">
+  <defs>
+    <clipPath id="frame">
+      <rect x="0" y="0" width="1200" height="320" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ink field -->
+  <g clip-path="url(#frame)">
+    <rect x="0" y="0" width="1200" height="320" fill="#16151A"/>
+
+    <!-- Signature: recon reticle, right side -->
+    <g stroke="#B87333" fill="none" opacity="0.9">
+      <circle cx="1010" cy="160" r="96" stroke-width="1" opacity="0.35"/>
+      <circle cx="1010" cy="160" r="64" stroke-width="1" opacity="0.55"/>
+      <circle cx="1010" cy="160" r="6" stroke-width="1.5"/>
+      <!-- crosshair ticks -->
+      <line x1="1010" y1="34" x2="1010" y2="72" stroke-width="1.5"/>
+      <line x1="1010" y1="248" x2="1010" y2="286" stroke-width="1.5"/>
+      <line x1="884" y1="160" x2="922" y2="160" stroke-width="1.5"/>
+      <line x1="1098" y1="160" x2="1136" y2="160" stroke-width="1.5"/>
+      <!-- degree ticks on outer ring -->
+      <g stroke-width="1" opacity="0.5">
+        <line x1="1077.9" y1="92.1" x2="1069.4" y2="100.6"/>
+        <line x1="1077.9" y1="227.9" x2="1069.4" y2="219.4"/>
+        <line x1="942.1" y1="92.1" x2="950.6" y2="100.6"/>
+        <line x1="942.1" y1="227.9" x2="950.6" y2="219.4"/>
+      </g>
+      <!-- sweep arc -->
+      <path d="M 1010 64 A 96 96 0 0 1 1093 112" stroke-width="2.5" opacity="0.85"/>
+    </g>
+    <!-- finding markers inside reticle -->
+    <g fill="#B87333">
+      <rect x="1044" y="120" width="5" height="5"/>
+      <rect x="972" y="188" width="5" height="5"/>
+      <rect x="1032" y="196" width="5" height="5" opacity="0.6"/>
+    </g>
+    <text x="1054" y="116" font-family="'JetBrains Mono','SF Mono','Courier New',monospace" font-size="10" fill="#B87333" opacity="0.8">FINDING-01</text>
+    <text x="906" y="204" font-family="'JetBrains Mono','SF Mono','Courier New',monospace" font-size="10" fill="#B87333" opacity="0.8">INJ-PAYLOAD</text>
+
+    <!-- hairline divider between text block and reticle -->
+    <line x1="836" y1="48" x2="836" y2="272" stroke="#F5F1E9" stroke-width="1" opacity="0.12"/>
+
+    <!-- Eyebrow -->
+    <text x="64" y="72" font-family="'JetBrains Mono','SF Mono','Courier New',monospace" font-size="14" letter-spacing="3" fill="#B87333">REDTEAMKIT · $249 ONE-TIME · LIFETIME UPDATES</text>
+
+    <!-- Headline (Newsreader role) -->
+    <text x="62" y="136" font-family="Newsreader, Georgia, 'Times New Roman', serif" font-size="46" fill="#F5F1E9">You&#8217;ve read the methodology.</text>
+    <text x="62" y="188" font-family="Newsreader, Georgia, 'Times New Roman', serif" font-size="46" font-style="italic" fill="#B87333">Now run it.</text>
+
+    <!-- Supporting line (Hanken Grotesk role) -->
+    <text x="64" y="228" font-family="'Hanken Grotesk','Helvetica Neue',Arial,sans-serif" font-size="17" fill="#F5F1E9" opacity="0.72">7 npm packages &#183; assessment templates &#183; injection payloads &#183; reporting scaffolds</text>
+
+    <!-- CTA pill -->
+    <g>
+      <rect x="64" y="252" width="232" height="42" rx="21" fill="#B87333"/>
+      <text x="180" y="279" text-anchor="middle" font-family="'Hanken Grotesk','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1" fill="#16151A">GET REDTEAMKIT &#8594;</text>
+    </g>
+    <text x="316" y="279" font-family="'JetBrains Mono','SF Mono','Courier New',monospace" font-size="13" fill="#F5F1E9" opacity="0.55">redteamkit.tarique.io</text>
+
+    <!-- Copper baseline accent -->
+    <rect x="0" y="314" width="1200" height="6" fill="#B87333"/>
+  </g>
+
+  <!-- Bone keyline so the banner reads on GitHub dark mode -->
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="#F5F1E9" stroke-opacity="0.14"/>
+</svg>
