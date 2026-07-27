@@ -30,15 +30,7 @@
 > **→ [Join the network](https://cogensec.com/redteam-network)**
 
 ---
-
 <div align="center">
-
-
-
-## 🛡️ Put RedTeamKit to Work
-
-**Stop starting AI security assessments from scratch.** 
-[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
 
 <br>
 
@@ -49,7 +41,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
-> ⚠️ **Authorized use only.** Use RedTeamKit exclusively on systems you own or are explicitly authorized to test.
+> 📦 **Read the guide, now run it.** RedTeamKit turns this methodology into a working assessment — templates, payloads, and 7 npm packages. **[Get it → redteamkit.tarique.io](https://redteamkit.tarique.io)**
 
 ---
 </div>
@@ -3077,19 +3069,27 @@ This guide draws from research and best practices established by:
 
 <div align="center">
 
-## 🛡️ Get The Red Team Kit
+---
 
-**Stop starting AI security assessments from scratch.**
+<div align="center">
 
-A structured operating system for adversarial AI testing — built for security practitioners, consultants, and teams.
+## 🛡️ You've read the methodology. Now run it.
 
-**150 Test Cases** · **Guided Workflows** · **Evidence Capture** · **Risk Tracking** · **Executive Reporting** · **Implementation Assets**
+**RedTeamKit** is the implementation layer for this guide — 7 production npm packages,
+scoped assessment templates, prompt injection payloads, and reporting scaffolds
+used in real AI security engagements.
 
-<br>
+**Ship your first assessment this week, not this quarter.**
 
-[![Get RedTeamKit](https://img.shields.io/badge/Get_RedTeamKit-$249_one--time-b87333?style=for-the-badge)](https://redteamkit.tarique.io/#pricing)
-[![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://redteamkit.tarique.io/)
-[![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://redteamkit.tarique.io/#sample)
+<a href="https://redteamkit.tarique.io">
+  <img src="https://img.shields.io/badge/Get_RedTeamKit-→-1a1a1a?style=for-the-badge&labelColor=b87333" alt="Get RedTeamKit">
+</a>
+
+*$249 one-time · Lifetime updates · Built by the author of this guide*
+
+</div>
+
+---
 
 </div>
 
