@@ -1,3 +1,6 @@
+<!-- LANGUAGE_BAR -->
+**Read this in:** **English** · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md)
+
 <div align="center">
   
 # 🎯 AI Red Teaming: The Complete Guide
@@ -39,7 +42,7 @@
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-July%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
 > 📦 **Read the guide, now run it.** RedTeamKit turns this methodology into a working assessment — templates, payloads, and 7 npm packages. **[Get it → redteamkit.tarique.io](https://redteamkit.tarique.io)**
 
@@ -3020,6 +3023,14 @@ We welcome contributions from the community to keep this guide comprehensive and
 - Maintain consistent formatting
 - Respect responsible disclosure
 - Avoid sharing zero-days or active exploits
+
+### Translations
+
+This guide is available in multiple languages: [English](README.md) · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md).
+
+- **English (`README.md`) is the source of truth.** Translations are point-in-time snapshots and may lag; when they diverge, English prevails.
+- To add a language, copy `README.md` to `README.<lang>.md` (e.g., `README.de.md`), translate prose while leaving code blocks, commands, tool names, badge URLs, links, and `<a id="...">` anchors unchanged, and add the new language to every language bar.
+- To update a translation, sync it to the latest English version and update its sync note.
 
 ---
 
