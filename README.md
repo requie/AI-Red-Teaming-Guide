@@ -1,3 +1,6 @@
+<!-- LANGUAGE_BAR -->
+**Read this in:** **English** · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md)
+
 <div align="center">
   
 # 🎯 AI Red Teaming: The Complete Guide
@@ -39,7 +42,7 @@
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-June%202026-orange?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-July%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
 > 📦 **Read the guide, now run it.** RedTeamKit turns this methodology into a working assessment — templates, payloads, and 7 npm packages. **[Get it → redteamkit.tarique.io](https://redteamkit.tarique.io)**
 
@@ -1420,6 +1423,32 @@ pip install humanbound[firewall]  # add firewall runtime
 
 ---
 
+#### 13. **Scenario - LangWatch**
+
+Simulation-based agent testing and red-teaming framework: instead of firing one-shot prompts, it scripts multi-turn conversations that begin with harmless exploration and escalate toward complex, authority-pressured requests — mirroring how real adversaries coax agents across turns. Available in Python, TypeScript, and Go, and integrates with any LLM evaluation framework.
+
+```bash
+# Python
+uv add langwatch-scenario pytest
+
+# TypeScript
+pnpm install @langwatch/scenario vitest
+```
+
+**Features:**
+- Simulated, scripted multi-turn conversations (harmless → escalation)
+- Custom evaluators; plugs into any LLM eval framework
+- Python / TypeScript / Go SDKs, runs under pytest / vitest
+- Well suited to the multi-turn and agentic testing themes in this guide
+
+**Best For:** Multi-turn agent red teaming, CI-driven behavioral/eval testing
+
+**License:** Apache-2.0
+
+**GitHub:** [langwatch/scenario](https://github.com/langwatch/scenario) *(validated 2026-07)*
+
+---
+
 ### Commercial Platforms
 
 #### 1. **Mindgard**
@@ -1471,6 +1500,20 @@ pip install humanbound[firewall]  # add firewall runtime
 - Voice AI security protection
 - **Website:** [vernolabs.ai](https://vernolabs.ai)
 
+#### 8. **General Analysis**
+- Automated AI red teaming for production apps and agents
+- Prompt-injection coverage plus tool and MCP testing
+- CI/CD release gates and regression testing
+- Model supply-chain visibility and governance evidence
+- **Website:** [generalanalysis.com](https://generalanalysis.com)
+
+#### 9. **Haize Labs**
+- Massive-scale automated LLM stress-testing and red teaming
+- Generates diverse attack scenarios (jailbreaks, harmful content, bias, policy violations)
+- Pre-deployment failure-mode discovery for frontier models
+- Enterprise engagements (e.g., Anthropic, Scale AI, AI21)
+- **Website:** [haizelabs.com](https://haizelabs.com)
+
 ---
 
 ### Emerging: Agent-Native & Autonomous Platforms (2026)
@@ -1479,7 +1522,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 
 - **Cisco AI Defense (Explorer Edition)** — brings agentic AI red teaming to builders; runtime controls + assessment. [blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
 - **Novee AI** — autonomous red-teaming platform (early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
-- **General Analysis, Confident AI** and others publish 2026 agentic-platform comparisons worth tracking during tool selection.
+- **General Analysis** (listed under Commercial Platforms above) and **Confident AI** publish 2026 agentic-platform comparisons worth tracking during tool selection.
 
 *(Validated 2026-06; this is a fast-moving category — confirm current capabilities directly.)*
 
@@ -1498,8 +1541,11 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **Redamon** | Open | Free | Very High | Medium | Autonomous end-to-end red team |
 | **AI-Infra-Guard** | Open | Free | High | Low | Infra/agent/MCP scanning |
 | **Humanbound** | Open | Free | High | Low | Agentic system testing |
+| **Scenario** | Open | Free | High | Low | Multi-turn agent red teaming |
 | **Mindgard** | Commercial | $$$ | Very High | Low | Enterprise compliance |
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
+| **General Analysis** | Commercial | $$$ | Very High | Low | Agentic + tool/MCP testing, CI gates |
+| **Haize Labs** | Commercial | $$$ | Very High | Low | Large-scale automated stress-testing |
 | **Pillar** | Service | $$$$ | Custom | N/A | Full-service testing |
 | **NeuralTrust** | Service | $$$ | Custom | N/A | Full-service testing |
 | **Verno Labs** | Service | $$$ | Very High | Low | Full-service testing |
@@ -2899,6 +2945,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Redamon](https://github.com/samugit83/redamon) - Autonomous AI red-team framework (recon → exploit → triage → auto-remediation)
 - [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) - Full-stack AI/MCP/agent security scanner (Tencent)
 - [Humanbound](https://github.com/humanbound/humanbound) - AI-agent red-team engine, SDK, and CLI
+- [Scenario](https://github.com/langwatch/scenario) - Simulation-based multi-turn agent red-teaming (LangWatch)
 
 **Commercial:**
 - [Mindgard](https://mindgard.ai/)
@@ -2907,6 +2954,8 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Pillar Security](https://www.pillar.security/)
 - [Splx AI](https://splx.ai/)
 - [NeuralTrust](https://neuraltrust.ai)
+- [General Analysis](https://generalanalysis.com) - Agentic + tool/MCP red teaming, CI/CD gates
+- [Haize Labs](https://haizelabs.com) - Large-scale automated LLM stress-testing
 
 ---
 
@@ -2974,6 +3023,14 @@ We welcome contributions from the community to keep this guide comprehensive and
 - Maintain consistent formatting
 - Respect responsible disclosure
 - Avoid sharing zero-days or active exploits
+
+### Translations
+
+This guide is available in multiple languages: [English](README.md) · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md).
+
+- **English (`README.md`) is the source of truth.** Translations are point-in-time snapshots and may lag; when they diverge, English prevails.
+- To add a language, copy `README.md` to `README.<lang>.md` (e.g., `README.de.md`), translate prose while leaving code blocks, commands, tool names, badge URLs, links, and `<a id="...">` anchors unchanged, and add the new language to every language bar.
+- To update a translation, sync it to the latest English version and update its sync note.
 
 ---
 

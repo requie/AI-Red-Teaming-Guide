@@ -2,6 +2,16 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [v1.1.0] - 2026-07 — New tools + multi-language support
+### Added
+- **New red-teaming tools surfaced:**
+  - Scenario (LangWatch) — open-source, simulation-based multi-turn agent red teaming (added to tools, comparison matrix, resources).
+  - General Analysis — commercial agentic + tool/MCP red teaming with CI/CD gates (promoted to a full Commercial Platforms entry).
+  - Haize Labs — commercial large-scale automated LLM stress-testing.
+- **Multi-language support:** full translations `README.es.md` (Spanish), `README.zh.md` (Chinese, Simplified), and `README.fr.md` (French), each with a sync/source-of-truth note.
+- **Language bar** switcher added to the top of every README variant (English · Español · 中文 · Français).
+- **Translations** contribution note added to the Contributing section.
+
 ## [2026-06-10] - Agentic-era refresh
 ### Added
 - **New attack-surface sections** in README:
