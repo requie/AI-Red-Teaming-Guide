@@ -2,7 +2,7 @@
 
 All notable changes to this guide should be documented in this file.
 
-## [2026-07] - New tools + multi-language support
+## [v1.1.0] - 2026-07 — New tools + multi-language support
 ### Added
 - **New red-teaming tools surfaced:**
   - Scenario (LangWatch) — open-source, simulation-based multi-turn agent red teaming (added to tools, comparison matrix, resources).
