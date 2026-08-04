@@ -1,7 +1,9 @@
+<div align="center">
+  
 <!-- LANGUAGE_BAR -->
 **Read this in:** **English** · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md)
 
-<div align="center">
+
   
 # 🎯 AI Red Teaming: The Complete Guide
 
