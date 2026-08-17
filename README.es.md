@@ -3557,4 +3557,4 @@ Las pruebas no autorizadas de sistemas de IA pueden ser ilegales y poco éticas.
 
 ## Historial de estrellas
 
-[![Star History Chart](https://api.star-history.com/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://www.star-history.com/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://star-history.dera.page/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)

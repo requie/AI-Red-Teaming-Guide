@@ -3560,5 +3560,5 @@ Les tests non autorisés de systèmes d'IA peuvent être illégaux et contraires
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://www.star-history.com/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://star-history.dera.page/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)
 </div>
