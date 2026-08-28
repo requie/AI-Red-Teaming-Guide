@@ -3205,5 +3205,5 @@ Unauthorized testing of AI systems may be illegal and unethical. Always obtain e
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://www.star-history.com/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=requie/AI-Red-Teaming-Guide&type=date&legend=top-left)](https://star-history.dera.page/#requie/AI-Red-Teaming-Guide&type=date&legend=top-left)
 </div>
