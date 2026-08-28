@@ -39,14 +39,21 @@
 
 <br>
 
-[![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://redteamkit.tarique.io/)
-[![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://redteamkit.tarique.io/#sample)
+[![Explore Platform](https://img.shields.io/badge/Explore-Platform-1a1a1a?style=for-the-badge)](https://airedteamkit.com/)
+[![Free Sample](https://img.shields.io/badge/Download-Free_Sample-555555?style=for-the-badge)](https://airedteamkit.com/#sample)
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Updated](https://img.shields.io/badge/Updated-July%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
-> 📦 **Read the guide, now run it.** RedTeamKit turns this methodology into a working assessment — templates, payloads, and 7 npm packages. **[Get it → redteamkit.tarique.io](https://redteamkit.tarique.io)**
+
+---
+
+<div align="center">
+  <a href="https://airedteamkit.com">
+    <img src="assets/redteamkit-banner.svg" alt="RedTeamKit — You've read the methodology. Now run it. $249 one-time." width="100%">
+  </a>
+</div>
 
 ---
 </div>
@@ -2673,7 +2680,7 @@ User Input
 ---
 
 <div align="center">
-  <a href="https://redteamkit.tarique.io">
+  <a href="https://airedteamkit.com">
     <img src="assets/redteamkit-banner.svg" alt="RedTeamKit — You've read the methodology. Now run it. $249 one-time." width="100%">
   </a>
 </div>
@@ -3148,7 +3155,7 @@ used in real AI security engagements.
 
 **Ship your first assessment this week, not this quarter.**
 
-<a href="https://redteamkit.tarique.io">
+<a href="https://airedteamkit.com>
   <img src="https://img.shields.io/badge/Get_RedTeamKit-→-1a1a1a?style=for-the-badge&labelColor=b87333" alt="Get RedTeamKit">
 </a>
 
@@ -3166,7 +3173,7 @@ used in real AI security engagements.
 ---
 
 <div align="center">
-  <a href="https://redteamkit.tarique.io">
+  <a href="https://airedteamkit.com">
     <img src="assets/redteamkit-banner.svg" alt="RedTeamKit — You've read the methodology. Now run it. $249 one-time." width="100%">
   </a>
 </div>
