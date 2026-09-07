@@ -2,6 +2,16 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [2026-09-07] - Featured commercial platform: AVERSYN
+
+### Added
+
+- Featured **AVERSYN by Cogensec** in the tools overview and at the top of Commercial Platforms, with a direct table-of-contents link.
+- Added Aversyn to the comparison matrix and commercial resources, linking to https://cogensec.com/aversyn.
+- Described autonomous adversarial validation, reproducible evidence, remediation, operator controls, and engineering integrations from Cogensec's product page.
+- Made commercial/proprietary status, invitation-based frontier access, and maintainer affiliation explicit; left pricing and learning curve unassessed.
+- Synchronized the Aversyn addition across English, Spanish, French, and Simplified Chinese and recorded the product-source review date.
+
 ## [v1.1.0] - 2026-07 — New tools + multi-language support
 ### Added
 - **New red-teaming tools surfaced:**

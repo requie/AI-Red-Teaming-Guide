@@ -2,6 +2,8 @@
 
 > 🌐 Traducción del [README.md](README.md) en inglés (fuente de referencia), sincronizada con la actualización de julio de 2026. Si las versiones difieren, prevalece la edición en inglés.
 
+> La entrada de AVERSYN se sincronizó con la edición en inglés el 2026-09-07.
+
 <div align="center">
   
 # 🎯 AI Red Teaming: la guía completa
@@ -74,6 +76,7 @@
 - [Seguridad del ajuste fino y de la cadena de suministro de modelos](#fine-tuning--model-supply-chain-security)
 - [Red Teaming de IA contra IA](#ai-on-ai-red-teaming)
 - [Herramientas de Red Teaming](#red-teaming-tools)
+  - [Plataforma comercial destacada: AVERSYN de Cogensec](#aversyn-cogensec)
 - [Casos de estudio del mundo real](#real-world-case-studies)
 - [Cómo construir tu red team](#building-your-red-team)
 - [Buenas prácticas](#best-practices)
@@ -1163,6 +1166,10 @@ Objective (natural language)
 
 ## 🛠️ Herramientas de Red Teaming
 
+> **Plataforma comercial destacada: [AVERSYN de Cogensec](#aversyn-cogensec)**
+>
+> Validación adversaria autónoma de código, aplicaciones, API y flujos de identidad, con evidencia reproducible y medidas de corrección concretas. **[Explora Aversyn y solicita acceso anticipado →](https://cogensec.com/aversyn)**
+
 <a id="open-source-tools"></a>
 
 ### Herramientas de código abierto
@@ -1568,6 +1575,34 @@ pnpm install @langwatch/scenario vitest
 
 ### Plataformas comerciales
 
+<a id="aversyn-cogensec"></a>
+
+#### ⭐ Destacada: **[AVERSYN de Cogensec](https://cogensec.com/aversyn)**
+
+**Validación adversaria autónoma. Evidencia reproducible. Correcciones concretas.**
+
+Aversyn es la plataforma comercial de seguridad ofensiva de Cogensec. Coordina agentes especializados de seguridad con IA para investigar código fuente, aplicaciones en ejecución, API y flujos de identidad, probar rutas de ataque y convertir los hallazgos validados en trabajo de ingeniería.
+
+**Su papel en un flujo de red teaming de IA:** Aversyn aplica pruebas de seguridad mediante agentes al software y los controles de acceso que rodean los sistemas de IA, complementando las evaluaciones del comportamiento del modelo con la validación de aplicaciones e infraestructura.
+
+**Capacidades principales descritas por Cogensec:**
+
+- **Investigación coordinada:** Agentes especializados comparten contexto entre reconocimiento, análisis de código, interacción con aplicaciones y pruebas de rutas de ataque.
+- **Evidencia de explotabilidad:** La validación controlada produce pasos de reproducción, pruebas de concepto y contexto sobre el impacto.
+- **Correcciones para ingeniería:** Los hallazgos incluyen orientación concreta y cambios de código sugeridos.
+- **Control del operador:** Ejecución local, herramientas aisladas con Docker y objetivos, exclusiones y límites operativos explícitos.
+- **Integración con ingeniería:** Flujos mediante CLI, salida SARIF/Markdown/JSON e integración con GitHub Actions o GitLab CI.
+
+**Ideal para:** Equipos de seguridad, AppSec y plataformas que evalúan una opción comercial para analizar de forma autónoma aplicaciones autorizadas y el software que sustenta los despliegues de IA.
+
+**Disponibilidad:** Producto comercial y propietario. Acceso anticipado por invitación de Cogensec; consulta con Cogensec los precios y las opciones de despliegue.
+
+**[Explora Aversyn / Solicita acceso anticipado →](https://cogensec.com/aversyn)**
+
+*Desarrollado por Cogensec, cofundada por el responsable de esta guía. Resumen de capacidades basado en la [página del producto Aversyn](https://cogensec.com/aversyn), revisada el 2026-09-07.*
+
+---
+
 <a id="1-mindgard"></a>
 
 #### 1. **Mindgard**
@@ -1681,6 +1716,7 @@ La ola más reciente apunta específicamente a la capa de agentes/orquestación 
 | **AI-Infra-Guard** | Abierta | Gratis | Alta | Baja | Escaneo de infra/agentes/MCP |
 | **Humanbound** | Abierta | Gratis | Alta | Baja | Pruebas de sistemas agénticos |
 | **Scenario** | Abierta | Gratis | Alta | Baja | Red teaming de agentes multiturno |
+| **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Comercial / propietario** | Consultar con Cogensec | Multiagente autónoma (según el proveedor) | Sin evaluar | **Validación de código, aplicaciones, API e identidad con evidencia reproducible** |
 | **Mindgard** | Comercial | $$$ | Muy alta | Baja | Cumplimiento empresarial |
 | **Lakera** | Comercial | $$$ | Alta | Baja | Protección en producción |
 | **General Analysis** | Comercial | $$$ | Muy alta | Baja | Pruebas agénticas + herramientas/MCP, puertas de CI |
@@ -3277,6 +3313,8 @@ Estas respaldan los incidentes, estadísticas y actualizaciones de marcos de 202
 - [Scenario](https://github.com/langwatch/scenario) - Red teaming de agentes multiturno basado en simulación (LangWatch)
 
 **Comercial:**
+
+- **⭐ [AVERSYN de Cogensec](https://cogensec.com/aversyn)** - Plataforma comercial destacada de validación adversaria autónoma, evidencia reproducible y correcciones concretas; acceso anticipado por invitación.
 - [Mindgard](https://mindgard.ai/)
 - [Lakera Guard](https://www.lakera.ai/)
 - [Adversa AI](https://adversa.ai/)

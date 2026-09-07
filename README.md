@@ -80,6 +80,7 @@
 - [Fine-Tuning & Model Supply-Chain Security](#fine-tuning--model-supply-chain-security)
 - [AI-on-AI Red Teaming](#ai-on-ai-red-teaming)
 - [Red Teaming Tools](#red-teaming-tools)
+  - [Featured Commercial Platform: AVERSYN by Cogensec](#aversyn-cogensec)
 - [Real-World Case Studies](#real-world-case-studies)
 - [Building Your Red Team](#building-your-red-team)
 - [Best Practices](#best-practices)
@@ -1085,6 +1086,10 @@ Objective (natural language)
 
 ## 🛠️ Red Teaming Tools
 
+> **Featured commercial platform: [AVERSYN by Cogensec](#aversyn-cogensec)**
+>
+> Autonomous adversarial validation across code, applications, APIs, and identity flows, with reproducible evidence and actionable remediation. **[Explore Aversyn and request frontier access →](https://cogensec.com/aversyn)**
+
 ### Open-Source Tools
 
 > **2026 shift — single-turn probing → multi-turn agentic orchestration.** The whole tool category has moved past "fire one prompt, check the answer." Promptfoo's Hydra strategy, FuzzyAI's Crescendo attacks, and PyRIT's XPIA orchestrator all reflect the same reality: real adversaries escalate across turns and pivot automatically. Favor tools that support multi-turn, adaptive, agent-orchestrated campaigns. *Versions/ownership below were validated June 2026 — re-check before relying on them.*
@@ -1460,6 +1465,34 @@ pnpm install @langwatch/scenario vitest
 
 ### Commercial Platforms
 
+<a id="aversyn-cogensec"></a>
+
+#### ⭐ Featured: **[AVERSYN by Cogensec](https://cogensec.com/aversyn)**
+
+**Autonomous adversarial validation. Reproducible evidence. Actionable fixes.**
+
+Aversyn is Cogensec's commercial offensive security platform. It coordinates specialist AI security agents to investigate source code, running applications, APIs, and identity flows, test attack paths, and turn validated findings into engineering work.
+
+**Why it belongs in an AI red teaming workflow:** Aversyn applies agent-driven security testing to the software and access controls surrounding AI systems, complementing model-behavior evaluations with application and infrastructure validation.
+
+**Core capabilities described by Cogensec:**
+
+- **Coordinated investigation:** Specialist agents share context across reconnaissance, code analysis, application interaction, and attack-path testing.
+- **Evidence of exploitability:** Controlled validation produces reproduction steps, proof-of-concept evidence, and impact context.
+- **Remediation for engineers:** Findings include actionable guidance and suggested code changes.
+- **Operator control:** Local execution, Docker-isolated tooling, and explicit targets, exclusions, and operational limits.
+- **Engineering integration:** CLI workflows, SARIF/Markdown/JSON output, and GitHub Actions or GitLab CI integration.
+
+**Best for:** Security, AppSec, and platform teams evaluating a commercial option for autonomous assessment of authorized applications and the software supporting AI deployments.
+
+**Availability:** Commercial, proprietary product. Frontier access is by invitation through Cogensec; contact Cogensec for pricing and deployment options.
+
+**[Explore Aversyn / Request frontier access →](https://cogensec.com/aversyn)**
+
+*Built by Cogensec, co-founded by this guide's maintainer. Capability summary sourced from the [Aversyn product page](https://cogensec.com/aversyn), reviewed 2026-09-07.*
+
+---
+
 #### 1. **Mindgard**
 - Automated AI red teaming
 - Continuous monitoring
@@ -1551,6 +1584,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **AI-Infra-Guard** | Open | Free | High | Low | Infra/agent/MCP scanning |
 | **Humanbound** | Open | Free | High | Low | Agentic system testing |
 | **Scenario** | Open | Free | High | Low | Multi-turn agent red teaming |
+| **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Commercial / proprietary** | Contact Cogensec | Autonomous multi-agent (vendor-described) | Not assessed | **Code, app, API, and identity validation with reproducible evidence** |
 | **Mindgard** | Commercial | $$$ | Very High | Low | Enterprise compliance |
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
 | **General Analysis** | Commercial | $$$ | Very High | Low | Agentic + tool/MCP testing, CI gates |
@@ -2957,6 +2991,8 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Scenario](https://github.com/langwatch/scenario) - Simulation-based multi-turn agent red-teaming (LangWatch)
 
 **Commercial:**
+
+- **⭐ [AVERSYN by Cogensec](https://cogensec.com/aversyn)** - Featured commercial platform for autonomous adversarial validation, reproducible evidence, and actionable remediation; frontier access by invitation.
 - [Mindgard](https://mindgard.ai/)
 - [Lakera Guard](https://www.lakera.ai/)
 - [Adversa AI](https://adversa.ai/)

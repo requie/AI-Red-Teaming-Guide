@@ -2,6 +2,8 @@
 
 > 🌐 本文档译自英文版 [README.md](README.md)（权威来源），同步至 2026 年 7 月更新。如有出入，以英文版为准。
 
+> AVERSYN 条目已于 2026-09-07 与英文版同步。
+
 <div align="center">
   
 # 🎯 AI 红队测试：完整指南
@@ -76,6 +78,7 @@
 - [微调与模型供应链安全](#fine-tuning--model-supply-chain-security)
 - [AI 打 AI 的红队测试](#ai-on-ai-red-teaming)
 - [红队测试工具](#red-teaming-tools)
+  - [重点介绍的商业平台：Cogensec AVERSYN](#aversyn-cogensec)
 - [真实世界案例研究](#real-world-case-studies)
 - [组建你的红队](#building-your-red-team)
 - [最佳实践](#best-practices)
@@ -1093,6 +1096,10 @@ Objective (natural language)
 
 ## 🛠️ 红队测试工具
 
+> **重点介绍的商业平台：[Cogensec AVERSYN](#aversyn-cogensec)**
+>
+> 对代码、应用、API 和身份流程进行自主对抗性验证，提供可复现的证据和可执行的修复建议。**[了解 Aversyn 并申请前沿体验资格 →](https://cogensec.com/aversyn)**
+
 ### 开源工具
 
 > **2026 年的转变——单轮探测 → 多轮智能体编排。** 整个工具品类已越过了"发一个提示词、检查答案"的阶段。Promptfoo 的 Hydra 策略、FuzzyAI 的 Crescendo 攻击，以及 PyRIT 的 XPIA 编排器，都反映了同一现实：真实对手会跨轮次升级并自动转向。请优先选择支持多轮、自适应、智能体编排行动的工具。*下文的版本/归属信息经 2026 年 6 月验证——依赖前请重新核实。*
@@ -1468,6 +1475,34 @@ pnpm install @langwatch/scenario vitest
 
 ### 商业平台
 
+<a id="aversyn-cogensec"></a>
+
+#### ⭐ 重点介绍：**[Cogensec AVERSYN](https://cogensec.com/aversyn)**
+
+**自主对抗性验证。可复现的证据。可执行的修复建议。**
+
+Aversyn 是 Cogensec 的商业进攻性安全平台。它协调专业 AI 安全智能体，调查源代码、运行中的应用、API 和身份流程，测试攻击路径，并将已验证的发现转化为工程修复任务。
+
+**在 AI 红队工作流程中的作用：** Aversyn 使用智能体驱动的安全测试，评估 AI 系统周边的软件与访问控制，通过应用和基础设施验证来补充模型行为评估。
+
+**Cogensec 描述的核心能力：**
+
+- **协同调查：** 专业智能体在侦察、代码分析、应用交互和攻击路径测试之间共享上下文。
+- **可利用性证据：** 受控验证提供复现步骤、概念验证证据和影响分析。
+- **面向工程师的修复：** 发现包含可执行的建议和代码修改方案。
+- **操作人员控制：** 本地执行、Docker 隔离工具，以及明确的目标、排除项和操作限制。
+- **工程集成：** CLI 工作流程、SARIF/Markdown/JSON 输出，以及 GitHub Actions 或 GitLab CI 集成。
+
+**适合：** 正在评估商业方案的安全、AppSec 和平台团队，用于自主评估已授权的应用及支撑 AI 部署的软件。
+
+**可用性：** 商业专有产品。前沿体验采用 Cogensec 邀请制；价格和部署选项请联系 Cogensec。
+
+**[了解 Aversyn / 申请前沿体验资格 →](https://cogensec.com/aversyn)**
+
+*由本指南维护者共同创立的 Cogensec 开发。能力摘要来自 [Aversyn 产品页面](https://cogensec.com/aversyn)，查阅日期为 2026-09-07。*
+
+---
+
 #### 1. **Mindgard**
 - 自动化 AI 红队测试
 - 持续监控
@@ -1559,6 +1594,7 @@ pnpm install @langwatch/scenario vitest
 | **AI-Infra-Guard** | 开源 | 免费 | 高 | 低 | 基础设施/智能体/MCP 扫描 |
 | **Humanbound** | 开源 | 免费 | 高 | 低 | 智能体系统测试 |
 | **Scenario** | 开源 | 免费 | 高 | 低 | 多轮智能体红队测试 |
+| **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **商业 / 专有** | 联系 Cogensec | 自主多智能体（厂商描述） | 未评估 | **代码、应用、API 和身份验证，并提供可复现的证据** |
 | **Mindgard** | 商业 | $$$ | 极高 | 低 | 企业合规 |
 | **Lakera** | 商业 | $$$ | 高 | 低 | 生产环境防护 |
 | **General Analysis** | 商业 | $$$ | 极高 | 低 | 智能体 + 工具/MCP 测试、CI 关卡 |
@@ -2993,6 +3029,8 @@ User Input
 - [Scenario](https://github.com/langwatch/scenario) - 基于模拟的多轮智能体红队测试（LangWatch）
 
 **商业：**
+
+- **⭐ [Cogensec AVERSYN](https://cogensec.com/aversyn)** - 重点介绍的商业平台，提供自主对抗性验证、可复现的证据和可执行的修复建议；前沿体验采用邀请制。
 - [Mindgard](https://mindgard.ai/)
 - [Lakera Guard](https://www.lakera.ai/)
 - [Adversa AI](https://adversa.ai/)
