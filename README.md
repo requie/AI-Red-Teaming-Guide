@@ -2989,6 +2989,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) - Full-stack AI/MCP/agent security scanner (Tencent)
 - [Humanbound](https://github.com/humanbound/humanbound) - AI-agent red-team engine, SDK, and CLI
 - [Scenario](https://github.com/langwatch/scenario) - Simulation-based multi-turn agent red-teaming (LangWatch)
+- [OrcaPromptVault](https://github.com/Continuum-AI-Corp/OrcaPromptVault) - Reference corpus, not a scanner: system prompts and tool-call schemas of shipped AI agents, for baselining tool/schema poisoning
 
 **Commercial:**
 
