@@ -2,6 +2,15 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [2026-09-27] - DeepKeep AI Security Platform
+
+### Added
+
+- Added **DeepKeep AI Security Platform** to Commercial Platforms, the comparison matrix, and commercial resources.
+- Summarized vendor-described automated AI red teaming for continuous coverage, regression testing, and compliance evidence.
+- Added Vibe AI Red Teaming as human-steered adaptive testing for business-impact vulnerabilities and agentic multi-step attack paths.
+- Recorded the DeepKeep product-source review in `resources-validation.md`.
+
 ## [2026-09-07] - Featured commercial platform: AVERSYN
 
 ### Added
