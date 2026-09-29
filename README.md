@@ -1556,6 +1556,13 @@ Aversyn is Cogensec's commercial offensive security platform. It coordinates spe
 - Enterprise engagements (e.g., Anthropic, Scale AI, AI21)
 - **Website:** [haizelabs.com](https://haizelabs.com)
 
+#### 10. **DeepKeep AI Security Platform**
+- Automated AI red teaming for continuous coverage, regression testing, and compliance evidence
+- Vibe AI Red Teaming: human-steered adaptive testing that adjusts in real time to findings and operator guidance
+- Focus on business-impact vulnerabilities and agentic multi-step attack paths in AI applications, agents, and chatbots
+- **GitHub:** [Deepkeepai](https://github.com/Deepkeepai/)
+- **Website:** [deepkeep.ai/lp/vibe-ai-red-teaming](https://www.deepkeep.ai/lp/vibe-ai-red-teaming)
+
 ---
 
 ### Emerging: Agent-Native & Autonomous Platforms (2026)
@@ -1589,6 +1596,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
 | **General Analysis** | Commercial | $$$ | Very High | Low | Agentic + tool/MCP testing, CI gates |
 | **Haize Labs** | Commercial | $$$ | Very High | Low | Large-scale automated stress-testing |
+| **DeepKeep** | Commercial | Contact DeepKeep | High + human-steered adaptive | Low | Compliance coverage + business-impact AI red teaming |
 | **Pillar** | Service | $$$$ | Custom | N/A | Full-service testing |
 | **NeuralTrust** | Service | $$$ | Custom | N/A | Full-service testing |
 | **Verno Labs** | Service | $$$ | Very High | Low | Full-service testing |
@@ -3001,6 +3009,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [NeuralTrust](https://neuraltrust.ai)
 - [General Analysis](https://generalanalysis.com) - Agentic + tool/MCP red teaming, CI/CD gates
 - [Haize Labs](https://haizelabs.com) - Large-scale automated LLM stress-testing
+- [DeepKeep AI Security Platform](https://github.com/Deepkeepai/) - Automated AI red teaming for compliance coverage plus Vibe AI Red Teaming for human-steered adaptive testing
 
 ---
 

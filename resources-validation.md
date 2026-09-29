@@ -12,6 +12,7 @@ Track major external references to keep this guide current.
 | CSA Agentic AI Red Teaming Guide | Framework | 2026-04-27 | Evidence-backed | Release date May 28, 2025 |
 | EU AI Act implementation page (European Commission) | Regulation | 2026-04-27 | Evidence-backed | Confirms phased obligations for 2025/2026/2027 |
 | [AVERSYN — Cogensec](https://cogensec.com/aversyn) | Commercial platform | 2026-09-07 | Vendor-described | Product page and route reviewed; autonomous adversarial validation, evidence, remediation, deployment controls, and integrations summarized. Frontier access by invitation; capabilities not independently benchmarked. |
+| [DeepKeep AI Security Platform](https://www.deepkeep.ai/lp/vibe-ai-red-teaming) | Commercial platform | 2026-09-27 | Vendor-described | Vibe AI Red Teaming landing page and public GitHub organization reviewed; automated AI red teaming, human-steered adaptive testing, compliance coverage, and AI app/agent/chatbot evaluation summarized. Capabilities not independently benchmarked. |
 
 ## Update Process
 1. Validate links and publication status quarterly.
