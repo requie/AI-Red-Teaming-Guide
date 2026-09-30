@@ -1463,6 +1463,21 @@ pnpm install @langwatch/scenario vitest
 
 ---
 
+#### 14. **Darkmoon**
+
+Open source (GPL-3.0) autonomous AI penetration testing platform: an LLM orchestrates specialist agents and offensive tools over MCP, runs against web, API, Active Directory, and Kubernetes targets, and proves each finding with a real exploit. Runs on a local model and self-hosts, so assessment data stays in your own environment.
+
+**Features:**
+- LLM-orchestrated multi-agent offensive campaigns across web, API, AD, and Kubernetes
+- Real-exploit validation of findings (evidence, not just alerts)
+- Local-model / self-hosted deployment for data control
+- MCP-based tool orchestration
+
+**License:** GPL-3.0
+
+**GitHub:** [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon)
+
+---
 ### Commercial Platforms
 
 <a id="aversyn-cogensec"></a>
