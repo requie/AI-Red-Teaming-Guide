@@ -1463,6 +1463,35 @@ pnpm install @langwatch/scenario vitest
 
 ---
 
+#### 14. **Ziran - TaoQ AI**
+
+Security testing framework for AI agents that models the agent's tools, memory, and permissions as a knowledge graph and tests what happens when capabilities combine: transitive tool chains such as `read_file -> http_request` (data exfiltration) or `sql_query -> execute_code` (SQL to RCE), tool calls that execute even when the agent's text reply refuses, and multi-phase campaigns (reconnaissance through exfiltration) whose phase order is driven by the graph. Scans agents in-process (LangChain, CrewAI, Bedrock) or remotely over REST, OpenAI-compatible, MCP, and A2A protocols. Ships 639 attack vectors mapped to OWASP LLM Top 10 and MITRE ATLAS, HTML/Markdown/JSON reports, SARIF output, and a CI quality gate.
+
+```bash
+pip install ziran
+pip install ziran[langchain]     # LangChain adapter
+pip install ziran[all]           # every adapter, streaming, pentest agent, web UI
+
+ziran scan --framework langchain --agent-path my_agent.py
+ziran scan --target target.yaml --strategy llm-adaptive
+ziran multi-agent-scan --target target.yaml
+```
+
+**Features:**
+- Graph-based tool chain discovery across 30+ dangerous composition patterns
+- Execution-level side-effect detection (catches tool calls hidden behind refusals)
+- 8-phase adaptive campaigns with fixed, rule-based, and LLM-driven strategies
+- Multi-agent scans of supervisor, router, and peer-to-peer topologies
+- CI/CD quality gate with SARIF output (GitHub Actions, GitLab, Jenkins, CircleCI, Azure Pipelines)
+
+**Best For:** Pre-deployment testing of tool-using and multi-agent systems, MCP and A2A agents
+
+**License:** Apache-2.0
+
+**GitHub:** [taoq-ai/ziran](https://github.com/taoq-ai/ziran) *(validated 2026-09)*
+
+---
+
 ### Commercial Platforms
 
 <a id="aversyn-cogensec"></a>
@@ -1591,6 +1620,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **AI-Infra-Guard** | Open | Free | High | Low | Infra/agent/MCP scanning |
 | **Humanbound** | Open | Free | High | Low | Agentic system testing |
 | **Scenario** | Open | Free | High | Low | Multi-turn agent red teaming |
+| **Ziran** | Open | Free | High | Medium | Tool-chain and multi-agent testing |
 | **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Commercial / proprietary** | Contact Cogensec | Autonomous multi-agent (vendor-described) | Not assessed | **Code, app, API, and identity validation with reproducible evidence** |
 | **Mindgard** | Commercial | $$$ | Very High | Low | Enterprise compliance |
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
