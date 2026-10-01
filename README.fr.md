@@ -3914,7 +3914,13 @@ Ce guide s'appuie sur les recherches et bonnes pratiques établies par :
 
 ### Contributeurs
 
+- [@mldangelo](https://github.com/mldangelo) — promptfoo, red teaming et évaluation de LLM ([#1](https://github.com/requie/AI-Red-Teaming-Guide/pull/1))
+- [@alespignaNT](https://github.com/alespignaNT) — NeuralTrust, services de red teaming IA et pare-feu d'applications génératives ([#2](https://github.com/requie/AI-Red-Teaming-Guide/pull/2), [#3](https://github.com/requie/AI-Red-Teaming-Guide/pull/3))
+- [@pm3310](https://github.com/pm3310) — Pallma AI, renommée ensuite Verno Labs ([#7](https://github.com/requie/AI-Red-Teaming-Guide/pull/7), [#14](https://github.com/requie/AI-Red-Teaming-Guide/pull/14))
 - [@samugit83](https://github.com/samugit83) — Redamon, framework autonome de red team IA
+- [@gilarel](https://github.com/gilarel) — DeepKeep AI Security Platform ([#21](https://github.com/requie/AI-Red-Teaming-Guide/pull/21))
+- [@MBK-fr](https://github.com/MBK-fr) — Darkmoon, tests d'intrusion autonomes par IA auto-hébergés ([#23](https://github.com/requie/AI-Red-Teaming-Guide/pull/23))
+- [@leoneperdigao](https://github.com/leoneperdigao) — Ziran, tests de sécurité des chaînes d'outils et multi-agents fondés sur un graphe ([#22](https://github.com/requie/AI-Red-Teaming-Guide/pull/22), intégré via [#27](https://github.com/requie/AI-Red-Teaming-Guide/pull/27))
 
 ---
 
