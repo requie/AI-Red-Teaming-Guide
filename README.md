@@ -1,5 +1,7 @@
 <div align="center">
-  
+
+<img src="assets/ai-red-teaming-banner.webp" alt="AI Red Teaming: The Complete Guide" width="100%">
+
 <!-- LANGUAGE_BAR -->
 **Read this in:** **English** · [Español](README.es.md) · [中文](README.zh.md) · [Français](README.fr.md)
 

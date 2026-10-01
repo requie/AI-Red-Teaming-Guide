@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/ai-red-teaming-banner.webp" alt="AI 红队测试：完整指南" width="100%">
+
+</div>
+
 **其他语言：** [English](README.md) · [Español](README.es.md) · **中文** · [Français](README.fr.md)
 
 > 🌐 本文档译自英文版 [README.md](README.md)（权威来源），同步至 2026 年 7 月更新。如有出入，以英文版为准。

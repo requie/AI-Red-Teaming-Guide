@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/ai-red-teaming-banner.webp" alt="AI Red Teaming : le guide complet" width="100%">
+
+</div>
+
 **Lire ceci en :** [English](README.md) · [Español](README.es.md) · [中文](README.zh.md) · **Français**
 
 > 🌐 Traduction du [README.md](README.md) anglais (source de référence), synchronisée avec la mise à jour de juillet 2026. En cas de divergence, la version anglaise prévaut.
