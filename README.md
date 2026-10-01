@@ -3483,7 +3483,7 @@ used in real AI security engagements.
 
 **Ship your first assessment this week, not this quarter.**
 
-<a href="https://airedteamkit.com>
+<a href="https://airedteamkit.com">
   <img src="https://img.shields.io/badge/Get_RedTeamKit-→-1a1a1a?style=for-the-badge&labelColor=b87333" alt="Get RedTeamKit">
 </a>
 
