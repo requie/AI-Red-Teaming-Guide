@@ -46,7 +46,7 @@
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-July%202026-orange?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-October%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
 
 ---
@@ -1587,7 +1587,7 @@ Aversyn is Cogensec's commercial offensive security platform. It coordinates spe
 The newest wave targets the agent/orchestration layer specifically (tool-call hijacking, multi-agent pipelines, memory poisoning) and runs autonomous, agent-orchestrated assessments rather than static probe suites:
 
 - **Cisco AI Defense (Explorer Edition)** — brings agentic AI red teaming to builders; runtime controls + assessment. [blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
-- **Novee AI** — autonomous red-teaming platform (early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
+- **Novee AI** — autonomous red-teaming platform (launched early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
 - **General Analysis** (listed under Commercial Platforms above) and **Confident AI** publish 2026 agentic-platform comparisons worth tracking during tool selection.
 
 *(Validated 2026-06; this is a fast-moving category — confirm current capabilities directly.)*
@@ -2593,7 +2593,7 @@ Red teaming finds the holes; incident response is what you do when one is exploi
 | Single-user policy violation, narrow blast radius | Medium | Standard ticket + scheduled fix |
 
 ### Regulatory Reporting (don't skip this)
-Under the **EU AI Act**, providers of GPAI models with systemic risk must **report serious incidents to the AI Office** (effective 2 Aug 2026). Bake notification timelines into the runbook *before* an incident, and capture evidence (logs, reproductions, the [vulnerability report](#-practitioner-appendices)) in a form regulators and customers will accept. See [Regulatory Compliance](#regulatory-compliance).
+Under the **EU AI Act**, providers of GPAI models with systemic risk must **report serious incidents to the AI Office** (enforceable since 2 Aug 2026). Bake notification timelines into the runbook *before* an incident, and capture evidence (logs, reproductions, the [vulnerability report](#-practitioner-appendices)) in a form regulators and customers will accept. See [Regulatory Compliance](#regulatory-compliance).
 
 ### Post-Incident
 - Add the exploit to the [evaluation harness](#evaluation-harness-reference-implementation) as a permanent regression test.
@@ -2795,32 +2795,34 @@ Template available: `templates/model-system-security-card.md`
 
 Reference index available: `resources-validation.md`
 
-### Latest Update Watchlist (Validated: 2026-06-10)
+### Latest Update Watchlist (Validated: 2026-10-01)
 
 Use this list during quarterly maintenance to keep the guide synchronized with official sources:
 
-1. **EU AI Act enforcement begins 2 August 2026** — broad applicability plus Commission enforcement powers and **fines on GPAI providers**. Systemic-risk providers (>10²⁵ FLOPs) must document adversarial testing and report serious incidents. Track the GPAI Code of Practice.
-2. **OWASP Top 10 for Agentic Applications 2026** (peer-reviewed release) — ASI01–ASI10; now mapped throughout this guide. Watch for point updates and the AIUC-1 crosswalk.
-3. **Microsoft Taxonomy of Failure Modes in Agentic AI v2.0** (June 2026) — seven new failure categories (incl. MCP/plugin abuse, computer-use visual attacks, consent-fatigue HITL bypass). Re-check for v2.x.
-4. **NIST Cyber AI Profile (IR 8596)** — preliminary draft out; expected release **summer 2026**. Will reorganize AI cyber risk under CSF 2.0 outcomes.
-5. **NIST COSAiS — SP 800-53 control overlays for AI**, including single-agent and multi-agent overlays; draft agentic guidance expected **late summer / early fall 2026**.
-6. **NIST AI RMF Profile for Trustworthy AI in Critical Infrastructure** — concept note released **7 April 2026**.
-7. **MCP security** — 99 CVEs in 2025; monitor MCP spec/security advisories as the tool-protocol surface evolves.
-8. **NIST SSDF SP 800-218 Rev.1 (SSDF v1.2)** remained in Draft (17 December 2025); relevant for linking AI red-team controls to secure SDLC.
+1. **EU AI Act** — GPAI enforcement (incl. fines) and Art. 50 transparency **in force since 2 August 2026**. The **Digital Omnibus on AI** (in force 27 July 2026) moved stand-alone high-risk obligations to **2 Dec 2027** and product-embedded high-risk to **2 Aug 2028**. Track the GPAI Code of Practice and harmonized standards.
+2. **FTC investigation of OpenAI, Anthropic, and METR** (opened late Sept 2026) over agent incidents and safety/assurance claims — watch for findings that affect how red-team results and third-party assessments may be described.
+3. **OWASP GenAI Security Project** — 2026 **LLM Top 10** (rebuilt with real incident data), Top 10 for Agentic Applications (ASI01–ASI10, mapped throughout this guide), the new **Agent Control Standard**, and the first **AI Red Teaming Landscape** / Solutions Directory.
+4. **MITRE ATLAS v5.x** — 16 tactics / 80+ techniques, with agent-focused techniques such as *Publish Poisoned AI Agent Tool* and *Escape to Host*. Re-map attack trees when new versions ship.
+5. **Microsoft Taxonomy of Failure Modes in Agentic AI v2.0** (June 2026) — re-check for v2.x.
+6. **NIST Cyber AI Profile (IR 8596)** — **still a preliminary draft** as of Oct 2026 (the expected summer release has not landed); workshop feedback is summarized in **NIST IR 8607**. Will reorganize AI cyber risk under CSF 2.0 outcomes.
+7. **NIST COSAiS — SP 800-53 control overlays for AI** — single-agent and multi-agent overlays **still in development**; only the predictive-AI annotated outline has been published.
+8. **NIST AI RMF Profile for Trustworthy AI in Critical Infrastructure** — concept note released **7 April 2026**.
+9. **MCP & A2A security** — MCP CVEs keep landing (classic web bugs dominate) and runtime-gated poisoning is now seen in the wild (Deadbugz, Aug 2026); A2A reached v1.0 under the Linux Foundation. Monitor both specs' security advisories.
+10. **NIST SSDF SP 800-218 Rev.1 (SSDF v1.2)** — re-check draft status; relevant for linking AI red-team controls to secure SDLC.
 
 ---
 
 ## 📎 Practitioner Appendices
 
 Starter artifacts in `templates/`:
-- `threat-modeling-workshop.md`
-- `ai-security-pr-checklist.md`
-- `rules-of-engagement-template.md`
-- `vulnerability-report-template.md`
-- `test-case-library-starter.md`
-- `stakeholder-readout-outline.md`
-- `model-system-security-card.md`
-- `case-study-template.md`
+- [Threat modeling workshop](templates/threat-modeling-workshop.md)
+- [AI security PR checklist](templates/ai-security-pr-checklist.md)
+- [Rules of engagement](templates/rules-of-engagement-template.md)
+- [Vulnerability report](templates/vulnerability-report-template.md)
+- [Test case library starter](templates/test-case-library-starter.md)
+- [Stakeholder readout outline](templates/stakeholder-readout-outline.md)
+- [Model/system security card](templates/model-system-security-card.md)
+- [Case study template](templates/case-study-template.md)
 
 
 <a id="regulatory-compliance"></a>
@@ -2829,16 +2831,15 @@ Starter artifacts in `templates/`:
 
 ### United States
 
-#### Executive Order on AI (October 2023)
-Defines AI red teaming as "a structured testing effort to find flaws and vulnerabilities in an AI system, often in a controlled environment and in collaboration with developers of AI. Artificial Intelligence red-teaming is most often performed by dedicated 'red teams' that adopt adversarial methods to identify flaws and vulnerabilities, such as harmful or discriminatory outputs from an AI system, unforeseen or undesirable system behaviors, limitations, or potential risks associated with the misuse of the system."
+#### Executive Order on AI (October 2023) — *historical*
+The rescinded 2023 order is kept here for its widely-cited definition. It defined AI red teaming as "a structured testing effort to find flaws and vulnerabilities in an AI system, often in a controlled environment and in collaboration with developers of AI. Artificial Intelligence red-teaming is most often performed by dedicated 'red teams' that adopt adversarial methods to identify flaws and vulnerabilities, such as harmful or discriminatory outputs from an AI system, unforeseen or undesirable system behaviors, limitations, or potential risks associated with the misuse of the system."
 
-**Key Requirements:**
-- Mandatory red teaming for high-risk AI systems
-- Pre-deployment testing
-- Ongoing monitoring
-- Incident reporting
+**What it required (no longer in effect):** red teaming and reporting for dual-use foundation models, pre-deployment testing, ongoing monitoring, and incident reporting.
 
-> Note: federal AI policy shifted after 2023 (the original order was rescinded and replaced by later executive actions). The durable US signal is now at the **state** level plus sector regulators — track those below rather than any single executive order.
+> Federal AI policy shifted after 2023 (the original order was rescinded and replaced by later executive actions). The durable US signal is now at the **state** level, sector regulators, and **consumer-protection enforcement** — track those below rather than any single executive order.
+
+#### FTC Probe of Frontier Labs and Assessors (September 2026)
+The FTC opened a consumer-protection investigation into **OpenAI, Anthropic, and METR** over AI-agent incidents and the safety claims made about them — the first US enforcement effort built around agents acting beyond their operators' intent. Civil Investigative Demands are expected to cover incident records, executive testimony, and the role of **third-party assessors**. Implication for red teams: your findings, scope statements, and "tested/safe" claims may become evidence. Write reports that state scope, coverage, and residual risk precisely, and never overstate assurance. ([Washington Post](https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/) · [ABC News](https://abcnews.com/Politics/ftc-opens-probe-safety-ai-including-anthropic-open/story?id=136896227))
 
 #### State AI Laws (2026)
 With no comprehensive federal statute, US obligations are increasingly set by states — 45 states introduced 1,500+ AI bills in the 2025–26 sessions. The ones most relevant to security testing:
@@ -2856,13 +2857,16 @@ With no comprehensive federal statute, US obligations are increasingly set by st
 #### EU AI Act (Regulation (EU) 2024/1689)
 **Article 15** requires operators of high-risk AI systems to demonstrate accuracy, robustness, and cybersecurity.
 
-**Implementation Timeline (official phased rollout):**
+**Implementation Timeline (as amended by the Digital Omnibus on AI):**
 - **2 February 2025**: prohibited practices and AI literacy obligations entered into application
 - **2 August 2025**: governance rules and GPAI obligations became applicable
-- **2 August 2026**: ⚠️ the Act is broadly applicable, including transparency and most high-risk requirements — **and the Commission's enforcement powers (including fines on GPAI providers) enter into application**
-- **2 August 2027**: extended transition deadline for high-risk AI embedded in regulated products
+- **2 August 2026** ✅ *in force*: Article 50 transparency duties apply, and the **Commission/AI Office can now enforce GPAI obligations, including fines**
+- **2 December 2027**: stand-alone high-risk AI obligations (Annex III: biometrics, critical infrastructure, education, employment, law enforcement, border management) — *moved from 2 Aug 2026 by the Omnibus*
+- **2 August 2028**: high-risk AI embedded in regulated products (e.g. medical devices, toys) — *moved from 2 Aug 2027 by the Omnibus*
 
-##### GPAI Systemic-Risk Obligations (the part with teeth from 2 Aug 2026)
+> **Digital Omnibus on AI** (published 24 July 2026, in force 27 July 2026) deferred the high-risk timeline because harmonized standards and national authorities weren't ready — the requirements themselves are unchanged. GPAI enforcement and transparency duties were **not** delayed. Red teams supporting high-risk systems should use the extra time to build evidence, not pause testing.
+
+##### GPAI Systemic-Risk Obligations (enforceable since 2 Aug 2026)
 A general-purpose AI model is presumed to carry **systemic risk** when training compute exceeds **10²⁵ FLOPs**; providers must **notify the Commission within 2 weeks** of meeting that threshold. Systemic-risk providers must then:
 - **Conduct and document adversarial testing (red teaming)** before placing the model on the market
 - **Report serious incidents** to the AI Office (see [AI Incident Response](#ai-incident-response))
@@ -2876,15 +2880,15 @@ Map obligations to artifacts you already produce with this guide's templates:
 
 | EU AI Act obligation | Red-teaming requirement | Evidence artifact (template) |
 |----------------------|-------------------------|------------------------------|
-| Art. 15 robustness & cybersecurity | Adversarial testing across attack categories | [Vulnerability report](#-practitioner-appendices) + harness ASR trends |
-| GPAI systemic-risk adversarial testing | Documented pre-market red team with scope & results | [Rules of Engagement](#-practitioner-appendices) + final report |
+| Art. 15 robustness & cybersecurity | Adversarial testing across attack categories | [Vulnerability report](templates/vulnerability-report-template.md) + harness ASR trends |
+| GPAI systemic-risk adversarial testing | Documented pre-market red team with scope & results | [Rules of Engagement](templates/rules-of-engagement-template.md) + final report |
 | Serious-incident reporting | IR runbook + notification timeline | [AI Incident Response](#ai-incident-response) records |
-| Risk management & monitoring | Continuous regression + posture tracking | [Model/system security card](#-model--system-cards-for-security-posture) |
-| Technical documentation | Methodology, coverage, residual risk | [Stakeholder readout](#-practitioner-appendices) + changelog |
+| Risk management & monitoring | Continuous regression + posture tracking | [Model/system security card](templates/model-system-security-card.md) |
+| Technical documentation | Methodology, coverage, residual risk | [Stakeholder readout](templates/stakeholder-readout-outline.md) + changelog |
 
 **High-Risk Systems Include:** biometric identification · critical infrastructure management · educational/employment assessment · law enforcement · migration/border control · justice administration.
 
-**References:** [EU GPAI provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) · [AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+**References:** [EU GPAI provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) · [AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) · [Freshfields — the final Digital Omnibus on AI](https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/eu-ai-act-unpacked-34-the-final-digital-omnibus-on-ai-key-amendments-to-the-a-102nber) · [Jones Walker — why 2 August 2026 still matters](https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html?id=102nbon)
 
 ---
 
@@ -2992,7 +2996,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Microsoft — Updating the taxonomy of failure modes in agentic AI (June 2026)](https://www.microsoft.com/en-us/security/blog/2026/06/04/updating-taxonomy-failure-modes-agentic-ai-systems-year-red-teaming-taught-us/)
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [EU — Guidelines for providers of general-purpose AI models](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers)
-- [NIST — Cyber AI Profile (IR 8596 draft)](https://csrc.nist.gov/pubs/ir/8596/iprd) · [NIST aims for summer 2026 release (Nextgov)](https://www.nextgov.com/artificial-intelligence/2026/05/nist-aims-summer-release-ai-cyber-guidelines/413559/)
+- [NIST — Cyber AI Profile (IR 8596 preliminary draft)](https://csrc.nist.gov/pubs/ir/8596/iprd) · [NIST IR 8607 — Cyber AI Profile workshop summary](https://csrc.nist.gov/pubs/ir/8607/final)
 - [Adversa AI — Top AI Security Incidents of 2025](https://adversa.ai/blog/adversa-ai-unveils-explosive-2025-ai-security-incidents-report-revealing-how-generative-and-agentic-ai-are-already-under-attack/) · [CSO Online — Top 5 real-world AI security threats of 2025](https://www.csoonline.com/article/4111384/top-5-real-world-ai-security-threats-revealed-in-2025.html)
 - [Securiti — The Anthropic exploit: era of AI agent attacks](https://securiti.ai/blog/anthropic-exploit-era-of-ai-agent-attacks/)
 - [Agentic AI red teaming reveals zero-click HITL bypass chains](https://cybersecuritynews.com/agentic-ai-red-teaming-reveals-zero-click/)
@@ -3261,7 +3265,7 @@ Unauthorized testing of AI systems may be illegal and unethical. Always obtain e
 
 ### 🎯 Remember: Responsible red teaming makes AI safer for everyone 🎯
 
-**Last Updated**: June 2026
+**Last Updated**: October 2026
 
 **Star this repository to stay updated with the latest AI red teaming practices!**
 

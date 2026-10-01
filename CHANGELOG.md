@@ -2,6 +2,12 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [2026-09-30] - Darkmoon
+
+### Added
+
+- Added **Darkmoon** (GPL-3.0, [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon)) to Open-Source Tools: self-hosted, LLM-orchestrated multi-agent penetration testing over MCP with real-exploit validation (contributed by @MBK-fr in #23).
+
 ## [2026-09-27] - DeepKeep AI Security Platform
 
 ### Added
