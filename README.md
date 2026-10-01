@@ -81,8 +81,14 @@
 - [Voice, Audio & Multimodal Attacks](#voice-audio--multimodal-attacks)
 - [Fine-Tuning & Model Supply-Chain Security](#fine-tuning--model-supply-chain-security)
 - [AI-on-AI Red Teaming](#ai-on-ai-red-teaming)
+- [AI Coding-Agent & CI/CD Security](#ai-coding-agent--cicd-security)
+- [Agent-to-Agent (A2A) & Agent Identity](#agent-to-agent-a2a--agent-identity)
+- [Frontier Capability & AI-Accelerated Vulnerability Discovery](#frontier-capability--ai-accelerated-vulnerability-discovery)
 - [Red Teaming Tools](#red-teaming-tools)
+  - [Open-Source Tools](#open-source-tools)
+  - [Commercial Platforms](#commercial-platforms)
   - [Featured Commercial Platform: AVERSYN by Cogensec](#aversyn-cogensec)
+  - [Comparison Matrix](#comparison-matrix)
 - [Real-World Case Studies](#real-world-case-studies)
 - [Building Your Red Team](#building-your-red-team)
 - [Best Practices](#best-practices)
@@ -92,8 +98,21 @@
 - [AI Harm Severity and Triage Model](#ai-harm-severity-and-triage-model)
 - [AI Incident Response](#ai-incident-response)
 - [Secure SDLC Integration Artifacts](#secure-sdlc-integration-artifacts)
+- [Defensive Architecture Patterns](#defensive-architecture-patterns)
+- [Multilingual & Cultural Safety Playbook](#multilingual--cultural-safety-playbook)
+- [Data Governance for Red Teaming](#data-governance-for-red-teaming)
+- [Metrics That Matter (and Anti-Metrics)](#metrics-that-matter-and-anti-metrics)
+- [Purple Team Operations](#purple-team-operations)
+- [Common Implementation Pitfalls](#common-implementation-pitfalls)
+- [Case Study Quality Bar](#case-study-quality-bar)
+- [Model & System Cards for Security Posture](#model--system-cards-for-security-posture)
+- [Source Hygiene & Update Governance](#source-hygiene--update-governance)
+- [Practitioner Appendices](#practitioner-appendices)
 - [Regulatory Compliance](#regulatory-compliance)
 - [Resources and References](#resources-and-references)
+- [Contributing](#contributing)
+- [Glossary](#glossary)
+- [License](#license) · [Acknowledgments](#acknowledgments) · [Contact](#contact) · [Disclaimer](#disclaimer)
 
 ---
 
@@ -1179,6 +1198,8 @@ Sources: [The Hacker News — Mythos finds 10,000 high-severity flaws](https://t
 >
 > Autonomous adversarial validation across code, applications, APIs, and identity flows, with reproducible evidence and actionable remediation. **[Explore Aversyn and request frontier access →](https://cogensec.com/aversyn)**
 
+<a id="open-source-tools"></a>
+
 ### Open-Source Tools
 
 > **2026 shift — single-turn probing → multi-turn agentic orchestration.** The whole tool category has moved past "fire one prompt, check the answer." Promptfoo's Hydra strategy, FuzzyAI's Crescendo attacks, and PyRIT's XPIA orchestrator all reflect the same reality: real adversaries escalate across turns and pivot automatically. Favor tools that support multi-turn, adaptive, agent-orchestrated campaigns. *Versions/ownership below were validated June 2026 — re-check before relying on them.*
@@ -1591,6 +1612,8 @@ uv sync --extra dev
 **GitHub:** [asago-ai/midojo](https://github.com/asago-ai/midojo) *(validated 2026-10)* · [Red Hat Developer article](https://developers.redhat.com/articles/2026/08/10/midojo-improve-ai-agent-security-real-world-red-teaming)
 
 ---
+<a id="commercial-platforms"></a>
+
 ### Commercial Platforms
 
 <a id="aversyn-cogensec"></a>
@@ -1705,6 +1728,8 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 
 ---
 
+<a id="comparison-matrix"></a>
+
 ### Comparison Matrix
 
 | Tool | Type | Cost | Automation | Learning Curve | Best Use Case |
@@ -1712,6 +1737,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **PyRIT** | Open | Free | High | Medium | Comprehensive testing |
 | **DeepTeam** | Open | Free | High | Low | RAG/Agent systems |
 | **Garak** | Open | Free | High | Low | Quick scans |
+| **promptfoo** | Open (MIT) | Free | High | Low | CI/CD-integrated app red teaming |
 | **ART** | Open | Free | Medium | High | Classical ML attacks |
 | **Giskard** | Open | Free | High | Medium | Multi-turn attacks |
 | **Gideon** | Open | Free | High | Medium | Defensive threat intel |
@@ -1719,9 +1745,15 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **AI-Infra-Guard** | Open | Free | High | Low | Infra/agent/MCP scanning |
 | **Humanbound** | Open | Free | High | Low | Agentic system testing |
 | **Scenario** | Open | Free | High | Low | Multi-turn agent red teaming |
+| **BrokenHill** | Open | Free | High | High | Automated jailbreak (GCG-style) research |
+| **Counterfit** | Open | Free | Medium | Low | Learning / classical ML attacks |
+| **Darkmoon** | Open (GPL-3.0) | Free | Very High | Medium | Self-hosted autonomous pentesting with exploit proof |
+| **MiDojo** | Open (Apache-2.0) | Free | High | Medium | In-environment agent injection testing |
 | **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Commercial / proprietary** | Contact Cogensec | Autonomous multi-agent (vendor-described) | Not assessed | **Code, app, API, and identity validation with reproducible evidence** |
 | **Mindgard** | Commercial | $$$ | Very High | Low | Enterprise compliance |
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
+| **Splx AI** | Commercial | $$$ | High | Low | End-to-end testing + CI/CD |
+| **Adversa AI** | Commercial | $$$ | High | Low | Automated adversarial testing + regulatory alignment |
 | **General Analysis** | Commercial | $$$ | Very High | Low | Agentic + tool/MCP testing, CI gates |
 | **Haize Labs** | Commercial | $$$ | Very High | Low | Large-scale automated stress-testing |
 | **DeepKeep** | Commercial | Contact DeepKeep | High + human-steered adaptive | Low | Compliance coverage + business-impact AI red teaming |
@@ -1897,7 +1929,7 @@ One of Microsoft's red team operations discovered an outdated FFmpeg component i
 
 ---
 
-### Case Study 2: Vision Language Model Prompt Injection (2024)
+#### Case Study 2: Vision Language Model Prompt Injection (2024)
 
 **Context:** Multimodal AI processing images and text
 
@@ -1928,7 +1960,7 @@ Microsoft's red team used prompt injections to trick a vision language model by 
 
 ---
 
-### Case Study 3: GPT-4 Base64 Encryption Discovery (OpenAI, 2023)
+#### Case Study 3: GPT-4 Base64 Encryption Discovery (OpenAI, 2023)
 
 **Context:** Pre-release GPT-4 red teaming
 
@@ -1956,7 +1988,7 @@ GPT-4: [reveals original sensitive data]
 
 ---
 
-### Case Study 4: NIST ARIA Pilot Exercise (Fall 2024)
+#### Case Study 4: NIST ARIA Pilot Exercise (Fall 2024)
 
 **Context:** First large-scale public AI red teaming exercise
 
@@ -1984,7 +2016,7 @@ Participants sought to stress test model guardrails and safety mechanisms to pro
 
 ---
 
-### Case Study 5: Singapore Multilingual AI Red Teaming (Late 2024)
+#### Case Study 5: Singapore Multilingual AI Red Teaming (Late 2024)
 
 **Context:** First multilingual/multicultural AI safety exercise focused on Asia-Pacific
 
@@ -2018,7 +2050,7 @@ Reason: Less safety training data in language X
 
 ---
 
-### Case Study 6: Samsung ChatGPT Data Leak (2023)
+#### Case Study 6: Samsung ChatGPT Data Leak (2023)
 
 **Context:** Employees using ChatGPT for work tasks
 
@@ -2807,6 +2839,8 @@ To reduce "one-off" testing, integrate red-team controls into delivery workflows
 - New jailbreak family with repeat success
 - Evidence of cross-tenant leakage or autonomous unsafe tool use
 
+<a id="defensive-architecture-patterns"></a>
+
 ## 🛡️ Defensive Architecture Patterns
 
 Translate red-team findings into architecture decisions using a layered control model:
@@ -2843,6 +2877,8 @@ User Input
 
 ---
 
+<a id="multilingual--cultural-safety-playbook"></a>
+
 ## 🌍 Multilingual & Cultural Safety Playbook
 
 ### Test Set Design
@@ -2862,6 +2898,8 @@ User Input
 - Prioritize mitigation where user impact and language penetration are highest
 
 ---
+
+<a id="data-governance-for-red-teaming"></a>
 
 ## 🗂️ Data Governance for Red Teaming
 
@@ -2885,6 +2923,8 @@ User Input
 
 ---
 
+<a id="metrics-that-matter-and-anti-metrics"></a>
+
 ## 📊 Metrics That Matter (and Anti-Metrics)
 
 ### Outcome Metrics (Use)
@@ -2901,6 +2941,8 @@ User Input
 - “Pass rate” without confidence interval/sample-size disclosure
 
 ---
+
+<a id="purple-team-operations"></a>
 
 ## 🟣 Purple Team Operations
 
@@ -2926,6 +2968,8 @@ User Input
 </div>
 
 ---
+<a id="common-implementation-pitfalls"></a>
+
 ## ⚠️ Common Implementation Pitfalls
 
 | Pitfall | Why It Fails | What Good Looks Like |
@@ -2937,6 +2981,8 @@ User Input
 | No regression suite | Reintroduces old vulnerabilities | Versioned attack library in CI |
 
 ---
+
+<a id="case-study-quality-bar"></a>
 
 ## 🧾 Case Study Quality Bar
 
@@ -2953,6 +2999,8 @@ Template available: `templates/case-study-template.md`
 
 ---
 
+<a id="model--system-cards-for-security-posture"></a>
+
 ## 🪪 Model & System Cards for Security Posture
 
 Document security posture using a structured card for every production AI system:
@@ -2965,6 +3013,8 @@ Document security posture using a structured card for every production AI system
 Template available: `templates/model-system-security-card.md`
 
 ---
+
+<a id="source-hygiene--update-governance"></a>
 
 ## 🔄 Source Hygiene & Update Governance
 
@@ -2992,6 +3042,8 @@ Use this list during quarterly maintenance to keep the guide synchronized with o
 10. **NIST SSDF SP 800-218 Rev.1 (SSDF v1.2)** — re-check draft status; relevant for linking AI red-team controls to secure SDLC.
 
 ---
+
+<a id="practitioner-appendices"></a>
 
 ## 📎 Practitioner Appendices
 
@@ -3199,6 +3251,11 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) - Full-stack AI/MCP/agent security scanner (Tencent)
 - [Humanbound](https://github.com/humanbound/humanbound) - AI-agent red-team engine, SDK, and CLI
 - [Scenario](https://github.com/langwatch/scenario) - Simulation-based multi-turn agent red-teaming (LangWatch)
+- [promptfoo](https://github.com/promptfoo/promptfoo) - CI/CD-friendly LLM red teaming and evals (MIT)
+- [BrokenHill](https://github.com/BishopFox/BrokenHill) - Automated jailbreak generator (Bishop Fox)
+- [Counterfit](https://github.com/Azure/counterfit) - Microsoft's ML attack CLI
+- [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Self-hosted autonomous AI pentesting over MCP
+- [MiDojo](https://github.com/asago-ai/midojo) - Man-in-the-middle red teaming for AI agents (asago / Red Hat)
 
 **Commercial:**
 
@@ -3211,7 +3268,12 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [NeuralTrust](https://neuraltrust.ai)
 - [General Analysis](https://generalanalysis.com) - Agentic + tool/MCP red teaming, CI/CD gates
 - [Haize Labs](https://haizelabs.com) - Large-scale automated LLM stress-testing
-- [DeepKeep AI Security Platform](https://github.com/Deepkeepai/) - Automated AI red teaming for compliance coverage plus Vibe AI Red Teaming for human-steered adaptive testing
+- [Verno Labs](https://vernolabs.ai)
+- [DeepKeep AI Security Platform](https://www.deepkeep.ai/lp/vibe-ai-red-teaming) - Automated AI red teaming for compliance coverage plus Vibe AI Red Teaming for human-steered adaptive testing
+
+**Emerging (agent-native):**
+- [Cisco AI Defense — Explorer Edition](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
+- Novee AI - Autonomous red teaming for multi-agent pipelines
 
 ---
 
@@ -3267,6 +3329,8 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 
 ---
 
+<a id="contributing"></a>
+
 ## 🤝 Contributing
 
 We welcome contributions from the community to keep this guide comprehensive and up-to-date!
@@ -3298,6 +3362,8 @@ This guide is available in multiple languages: [English](README.md) · [Español
 - To update a translation, sync it to the latest English version and update its sync note.
 
 ---
+
+<a id="glossary"></a>
 
 ## 📖 Glossary
 
@@ -3359,11 +3425,15 @@ This guide is available in multiple languages: [English](README.md) · [Español
 
 ---
 
+<a id="license"></a>
+
 ## 📄 License
 
 This guide is released under the MIT License. Feel free to use, modify, and distribute with attribution.
 
 ---
+
+<a id="acknowledgments"></a>
 
 ## 🙏 Acknowledgments
 
@@ -3383,6 +3453,8 @@ This guide draws from research and best practices established by:
 - [@samugit83](https://github.com/samugit83) — Redamon, autonomous AI red-team framework
 
 ---
+
+<a id="contact"></a>
 
 ## 📞 Contact
 
@@ -3436,6 +3508,8 @@ used in real AI security engagements.
 
 ---
 ---
+
+<a id="disclaimer"></a>
 
 ## ⚠️ Disclaimer
 

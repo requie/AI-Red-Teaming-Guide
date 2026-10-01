@@ -1,34 +1,53 @@
 name: AI Red Team Regression
 
+# Example baseline scan. It needs an OPENAI_API_KEY repository secret; without
+# one (including PRs from forks, which never receive secrets) the scan is
+# skipped with a notice instead of silently "passing".
+
 on:
   pull_request:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   redteam-regression:
     runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Skip notice (no API key)
+        if: env.OPENAI_API_KEY == ''
+        run: echo "::notice::OPENAI_API_KEY secret not set; skipping the example garak scan."
+
       - name: Set up Python
+        if: env.OPENAI_API_KEY != ''
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
+        if: env.OPENAI_API_KEY != ''
         run: |
           python -m pip install --upgrade pip
           pip install garak
 
       - name: Run baseline security scan (example)
+        if: env.OPENAI_API_KEY != ''
         run: |
           mkdir -p reports
-          python -m garak --model_type openai --model_name gpt-4o-mini --report_prefix reports/garak || true
+          python -m garak --model_type openai --model_name gpt-4o-mini --report_prefix reports/garak
 
       - name: Upload reports
+        if: env.OPENAI_API_KEY != '' && always()
         uses: actions/upload-artifact@v4
         with:
           name: ai-redteam-reports
           path: reports/
+          if-no-files-found: ignore
