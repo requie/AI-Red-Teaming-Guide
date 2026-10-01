@@ -1777,6 +1777,39 @@ uv sync --extra dev
 **GitHub：** [asago-ai/midojo](https://github.com/asago-ai/midojo) *（2026-10 验证）* · [Red Hat Developer 文章](https://developers.redhat.com/articles/2026/08/10/midojo-improve-ai-agent-security-real-world-red-teaming)
 
 ---
+
+<a id="16-ziran---taoq-ai"></a>
+
+#### 16. **Ziran - TaoQ AI**
+
+面向 AI 智能体的安全测试框架：将智能体的工具、记忆和权限建模为知识图谱，并测试这些能力组合后会发生什么——例如 `read_file -> http_request`（数据外泄）或 `sql_query -> execute_code`（从 SQL 到 RCE）这类传递性工具链、即使智能体文本回复表示拒绝仍会执行的工具调用，以及由图谱决定阶段顺序的多阶段攻击活动（从侦察到外泄）。可在进程内扫描智能体（LangChain、CrewAI、Bedrock），也可通过 REST、OpenAI 兼容接口、MCP 和 A2A 协议进行远程扫描。内置 639 个攻击向量（作者自述），映射到 OWASP LLM Top 10 和 MITRE ATLAS，提供 HTML/Markdown/JSON 报告、SARIF 输出和 CI 质量门禁。
+
+```bash
+pip install ziran
+pip install ziran[langchain]     # LangChain adapter
+pip install ziran[all]           # every adapter, streaming, pentest agent, web UI
+
+ziran scan --framework langchain --agent-path my_agent.py
+ziran scan --target target.yaml --strategy llm-adaptive
+ziran multi-agent-scan --target target.yaml
+```
+
+**功能特性：**
+- 基于图谱的工具链发现，覆盖 30 多种危险组合模式
+- 执行层面的副作用检测（发现隐藏在拒绝回复背后的工具调用）
+- 8 阶段自适应攻击活动，支持固定、基于规则和 LLM 驱动的策略
+- 对监督者、路由器和点对点拓扑的多智能体扫描
+- 带 SARIF 输出的 CI/CD 质量门禁（GitHub Actions、GitLab、Jenkins、CircleCI、Azure Pipelines）
+
+**最适合：** 在部署前测试使用工具的系统和多智能体系统，以及 MCP 和 A2A 智能体
+
+**许可证：** Apache-2.0
+
+**GitHub：** [taoq-ai/ziran](https://github.com/taoq-ai/ziran) *（2026-10 验证）*
+
+*由该工具作者提交；功能为作者自述，未经独立基准测试。*
+
+---
 <a id="commercial-platforms"></a>
 
 ### 商业平台
@@ -1938,6 +1971,7 @@ Aversyn 是 Cogensec 的商业攻击性安全平台。它协调多个专业 AI �
 | **Counterfit** | 开源 | 免费 | 中 | 低 | 学习/经典机器学习攻击 |
 | **Darkmoon** | 开源（GPL-3.0） | 免费 | 非常高 | 中 | 带漏洞利用证明的自托管自主渗透测试 |
 | **MiDojo** | 开源（Apache-2.0） | 免费 | 高 | 中 | 环境内智能体注入测试 |
+| **Ziran** | 开源 | 免费 | 高 | 中 | 工具链与多智能体测试 |
 | **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **商业/专有** | 联系 Cogensec | 自主多智能体（厂商描述） | 未评估 | **代码、应用、API 和身份验证，提供可复现证据** |
 | **Mindgard** | 商业 | $$$ | 非常高 | 低 | 企业合规 |
 | **Lakera** | 商业 | $$$ | 高 | 低 | 生产环境防护 |
@@ -3657,6 +3691,7 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 - [Counterfit](https://github.com/Azure/counterfit) - Microsoft 的机器学习攻击 CLI
 - [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - 基于 MCP 的自托管自主 AI 渗透测试
 - [MiDojo](https://github.com/asago-ai/midojo) - 面向 AI 智能体的中间人式红队测试（asago / Red Hat）
+- [Ziran](https://github.com/taoq-ai/ziran) - 基于图谱的工具链与多智能体安全测试（TaoQ AI）
 
 **商业：**
 

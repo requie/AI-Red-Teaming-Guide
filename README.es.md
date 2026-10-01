@@ -1777,6 +1777,39 @@ uv sync --extra dev
 **GitHub:** [asago-ai/midojo](https://github.com/asago-ai/midojo) *(validado en 2026-10)* · [Artículo de Red Hat Developer](https://developers.redhat.com/articles/2026/08/10/midojo-improve-ai-agent-security-real-world-red-teaming)
 
 ---
+
+<a id="16-ziran---taoq-ai"></a>
+
+#### 16. **Ziran - TaoQ AI**
+
+Framework de pruebas de seguridad para agentes de IA que modela las herramientas, la memoria y los permisos del agente como un grafo de conocimiento y prueba qué ocurre cuando las capacidades se combinan: cadenas transitivas de herramientas como `read_file -> http_request` (exfiltración de datos) o `sql_query -> execute_code` (de SQL a RCE), llamadas a herramientas que se ejecutan aunque la respuesta de texto del agente se niegue, y campañas multifase (del reconocimiento a la exfiltración) cuyo orden de fases lo define el grafo. Escanea agentes dentro del proceso (LangChain, CrewAI, Bedrock) o de forma remota mediante los protocolos REST, compatible con OpenAI, MCP y A2A. Incluye 639 vectores de ataque (según su autor) asignados al OWASP LLM Top 10 y a MITRE ATLAS, informes HTML/Markdown/JSON, salida SARIF y una compuerta de calidad para CI.
+
+```bash
+pip install ziran
+pip install ziran[langchain]     # LangChain adapter
+pip install ziran[all]           # every adapter, streaming, pentest agent, web UI
+
+ziran scan --framework langchain --agent-path my_agent.py
+ziran scan --target target.yaml --strategy llm-adaptive
+ziran multi-agent-scan --target target.yaml
+```
+
+**Características:**
+- Descubrimiento de cadenas de herramientas basado en grafos, con más de 30 patrones de composición peligrosos
+- Detección de efectos secundarios a nivel de ejecución (detecta llamadas a herramientas ocultas tras una negativa)
+- Campañas adaptativas de 8 fases con estrategias fijas, basadas en reglas y guiadas por LLM
+- Escaneos multiagente de topologías supervisor, enrutador y entre pares
+- Compuerta de calidad CI/CD con salida SARIF (GitHub Actions, GitLab, Jenkins, CircleCI, Azure Pipelines)
+
+**Ideal para:** pruebas previas al despliegue de sistemas con herramientas y multiagente, y de agentes MCP y A2A
+
+**Licencia:** Apache-2.0
+
+**GitHub:** [taoq-ai/ziran](https://github.com/taoq-ai/ziran) *(validado en 2026-10)*
+
+*Aportado por el autor de la herramienta; las capacidades las describe su autor y no se han evaluado de forma independiente.*
+
+---
 <a id="commercial-platforms"></a>
 
 ### Plataformas comerciales
@@ -1938,6 +1971,7 @@ La ola más reciente se dirige específicamente a la capa de agentes/orquestaci�
 | **Counterfit** | Abierta | Gratis | Media | Baja | Aprendizaje / ataques de ML clásico |
 | **Darkmoon** | Abierta (GPL-3.0) | Gratis | Muy alta | Media | Pentesting autónomo autoalojado con prueba de explotación |
 | **MiDojo** | Abierta (Apache-2.0) | Gratis | Alta | Media | Pruebas de inyección a agentes en su propio entorno |
+| **Ziran** | Abierta | Gratis | Alta | Media | Pruebas de cadenas de herramientas y multiagente |
 | **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Comercial / propietaria** | Contactar a Cogensec | Multiagente autónoma (según el proveedor) | No evaluada | **Validación de código, aplicaciones, API e identidad con evidencia reproducible** |
 | **Mindgard** | Comercial | $$$ | Muy alta | Baja | Cumplimiento empresarial |
 | **Lakera** | Comercial | $$$ | Alta | Baja | Protección en producción |
@@ -3663,6 +3697,7 @@ Estas fuentes respaldan los incidentes, las estadísticas y las actualizaciones 
 - [Counterfit](https://github.com/Azure/counterfit) - CLI de ataques de ML de Microsoft
 - [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Pentesting autónomo con IA y autoalojado sobre MCP
 - [MiDojo](https://github.com/asago-ai/midojo) - Red teaming man-in-the-middle para agentes de IA (asago / Red Hat)
+- [Ziran](https://github.com/taoq-ai/ziran) - Pruebas de seguridad de cadenas de herramientas y multiagente basadas en grafos (TaoQ AI)
 
 **Comerciales:**
 

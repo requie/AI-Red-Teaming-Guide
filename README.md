@@ -1615,7 +1615,7 @@ uv sync --extra dev
 
 #### 16. **Ziran - TaoQ AI**
 
-Security testing framework for AI agents that models the agent's tools, memory, and permissions as a knowledge graph and tests what happens when capabilities combine: transitive tool chains such as `read_file -> http_request` (data exfiltration) or `sql_query -> execute_code` (SQL to RCE), tool calls that execute even when the agent's text reply refuses, and multi-phase campaigns (reconnaissance through exfiltration) whose phase order is driven by the graph. Scans agents in-process (LangChain, CrewAI, Bedrock) or remotely over REST, OpenAI-compatible, MCP, and A2A protocols. Ships 639 attack vectors mapped to OWASP LLM Top 10 and MITRE ATLAS, HTML/Markdown/JSON reports, SARIF output, and a CI quality gate.
+Security testing framework for AI agents that models the agent's tools, memory, and permissions as a knowledge graph and tests what happens when capabilities combine: transitive tool chains such as `read_file -> http_request` (data exfiltration) or `sql_query -> execute_code` (SQL to RCE), tool calls that execute even when the agent's text reply refuses, and multi-phase campaigns (reconnaissance through exfiltration) whose phase order is driven by the graph. Scans agents in-process (LangChain, CrewAI, Bedrock) or remotely over REST, OpenAI-compatible, MCP, and A2A protocols. Ships 639 attack vectors (author-described) mapped to OWASP LLM Top 10 and MITRE ATLAS, HTML/Markdown/JSON reports, SARIF output, and a CI quality gate.
 
 ```bash
 pip install ziran
@@ -1638,7 +1638,9 @@ ziran multi-agent-scan --target target.yaml
 
 **License:** Apache-2.0
 
-**GitHub:** [taoq-ai/ziran](https://github.com/taoq-ai/ziran) *(validated 2026-09)*
+**GitHub:** [taoq-ai/ziran](https://github.com/taoq-ai/ziran) *(validated 2026-10)*
+
+*Contributed by the tool's author; capabilities are author-described and not independently benchmarked.*
 
 ---
 <a id="commercial-platforms"></a>
@@ -3286,6 +3288,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Counterfit](https://github.com/Azure/counterfit) - Microsoft's ML attack CLI
 - [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Self-hosted autonomous AI pentesting over MCP
 - [MiDojo](https://github.com/asago-ai/midojo) - Man-in-the-middle red teaming for AI agents (asago / Red Hat)
+- [Ziran](https://github.com/taoq-ai/ziran) - Graph-based tool-chain and multi-agent security testing (TaoQ AI)
 
 **Commercial:**
 
