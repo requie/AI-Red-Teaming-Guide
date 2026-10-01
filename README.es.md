@@ -10,6 +10,8 @@
 
 <div align="center">
 
+<a id="-ai-red-teaming-the-complete-guide"></a>
+
 # 🎯 AI Red Teaming: la guía completa
 
 **Una guía integral sobre pruebas adversariales y evaluación de seguridad de sistemas de IA, que ayuda a las organizaciones a identificar vulnerabilidades antes de que los atacantes las exploten.**
@@ -125,6 +127,8 @@
 
 <a id="overview"></a>
 
+<a id="-overview"></a>
+
 ## 🎯 Panorama general
 
 A medida que los sistemas de inteligencia artificial se integran cada vez más en operaciones empresariales críticas, servicios de salud, finanzas y procesos de toma de decisiones, garantizar su seguridad y confiabilidad nunca había sido tan importante. El AI red teaming se ha consolidado como una práctica de seguridad fundamental que ayuda a las organizaciones a identificar vulnerabilidades antes de que puedan explotarse en escenarios reales.
@@ -151,6 +155,8 @@ Esta guía integral está dirigida a:
 ---
 
 <a id="what-is-ai-red-teaming"></a>
+
+<a id="-what-is-ai-red-teaming"></a>
 
 ## 🤖 ¿Qué es el AI Red Teaming?
 
@@ -186,6 +192,8 @@ El AI red teaming adapta los conceptos de red team militares y de ciberseguridad
 ---
 
 <a id="why-ai-red-teaming-matters"></a>
+
+<a id="-why-ai-red-teaming-matters"></a>
 
 ## 🚨 Por qué importa el AI Red Teaming
 
@@ -233,6 +241,8 @@ El artículo 15 de la Ley de IA de la Unión Europea (EU AI Act) obliga a los op
 ---
 
 <a id="key-frameworks-and-standards"></a>
+
+<a id="-key-frameworks-and-standards"></a>
 
 ## 📚 Marcos y estándares clave
 
@@ -431,6 +441,8 @@ Cuando Microsoft publicó por primera vez su *Taxonomy of Failure Modes in Agent
 ---
 
 <a id="ai-red-teaming-methodology"></a>
+
+<a id="-ai-red-teaming-methodology"></a>
 
 ## 🔬 Metodología de AI Red Teaming
 
@@ -677,6 +689,8 @@ For each vulnerability:
 
 <a id="threat-landscape"></a>
 
+<a id="-threat-landscape"></a>
+
 ## 🎯 Panorama de amenazas
 
 <a id="adversary-types"></a>
@@ -736,6 +750,8 @@ For each vulnerability:
 ---
 
 <a id="attack-vectors-and-techniques"></a>
+
+<a id="-attack-vectors-and-techniques"></a>
 
 ## ⚔️ Vectores y técnicas de ataque
 
@@ -1058,6 +1074,8 @@ Test: Can a single injected artifact cause downstream agents to reproduce and
 
 <a id="mcp--tool-protocol-security"></a>
 
+<a id="-mcp--tool-protocol-security"></a>
+
 ## 🔌 Seguridad de MCP y protocolos de herramientas
 
 El **Model Context Protocol (MCP)** se convirtió en 2025 en el estándar de facto para conectar modelos con herramientas externas y, con él, apareció una superficie de ataque completamente nueva. **En 2025 se publicaron 99 CVE para software relacionado con MCP**, y el envenenamiento de herramientas pasó de ser un riesgo teórico a un ataque real y explotado. Si tu sistema le da herramientas a un modelo, esta sección es el lugar de mayor impacto para probar. (Se corresponde con OWASP **ASI02** Tool Misuse y **ASI04** Agentic Supply Chain Compromise).
@@ -1111,6 +1129,8 @@ En configuraciones multiagente/multiherramienta, dos herramientas que reclaman e
 
 <a id="computer-use--browser-agent-attacks"></a>
 
+<a id="-computer-use--browser-agent-attacks"></a>
+
 ## 🖥️ Ataques a agentes de uso de computadora y de navegador
 
 Los agentes que **ven pantallas y hacen clic** (modelos de uso de computadora, navegadores con IA) heredan todos los ataques web/de UI *además* de una nueva clase de inyección visual/perceptual. La taxonomía v2.0 de Microsoft añadió los "ataques visuales a agentes de uso de computadora" precisamente porque pasaron de la investigación a la realidad en 2025–2026 (demostrados contra Comet de Perplexity y Gemini para Chrome).
@@ -1126,6 +1146,8 @@ Los agentes que **ven pantallas y hacen clic** (modelos de uso de computadora, n
 ---
 
 <a id="rag-attack-taxonomy"></a>
+
+<a id="-rag-attack-taxonomy"></a>
 
 ## 📚 Taxonomía de ataques a RAG
 
@@ -1146,6 +1168,8 @@ La generación aumentada por recuperación (Retrieval-Augmented Generation, RAG)
 
 <a id="voice-audio--multimodal-attacks"></a>
 
+<a id="-voice-audio--multimodal-attacks"></a>
+
 ## 🎙️ Ataques de voz, audio y multimodales
 
 A medida que los agentes de voz y los modelos multimodales llegan a producción (centros de llamadas, asistentes de voz, flujos de trabajo autenticados por voz), la superficie de ataque se extiende al audio. Esto complementa el [Manual de seguridad multilingüe y cultural](#-multilingual--cultural-safety-playbook).
@@ -1162,6 +1186,8 @@ A medida que los agentes de voz y los modelos multimodales llegan a producción 
 
 <a id="fine-tuning--model-supply-chain-security"></a>
 
+<a id="-fine-tuning--model-supply-chain-security"></a>
+
 ## 🧬 Seguridad del fine-tuning y de la cadena de suministro de modelos
 
 Personalizar modelos introduce riesgos *antes* de que se envíe un solo prompt. Esta sección profundiza los [Ataques a la cadena de suministro](#7-supply-chain-attacks) en la capa de los pesos del modelo.
@@ -1177,6 +1203,8 @@ Personalizar modelos introduce riesgos *antes* de que se envíe un solo prompt. 
 ---
 
 <a id="ai-on-ai-red-teaming"></a>
+
+<a id="-ai-on-ai-red-teaming"></a>
 
 ## 🤖 Red teaming de IA contra IA
 
@@ -1212,6 +1240,8 @@ Objective (natural language)
 
 <a id="ai-coding-agent--cicd-security"></a>
 
+<a id="-ai-coding-agent--cicd-security"></a>
+
 ## 💻 Seguridad de agentes de programación con IA y CI/CD
 
 Los agentes de programación (Claude Code, el agente de programación de GitHub Copilot, Gemini CLI, Cursor, Codex y otros) ahora se ejecutan dentro de los IDE **y** dentro de pipelines de CI con acceso de escritura a repositorios y a secretos del pipeline. Esa combinación —texto no confiable que entra, acciones privilegiadas que salen— los convierte en uno de los objetivos de mayor valor en 2026. (Se corresponde con ASI01 Goal Hijack, ASI02 Tool Misuse y ASI05 Unexpected Code Execution).
@@ -1244,6 +1274,8 @@ Los agentes de programación (Claude Code, el agente de programación de GitHub 
 
 <a id="agent-to-agent-a2a--agent-identity"></a>
 
+<a id="-agent-to-agent-a2a--agent-identity"></a>
+
 ## 🤝 Agente a agente (A2A) e identidad de agentes
 
 Los sistemas multiagente se comunican cada vez más mediante protocolos estándar. **A2A** (originalmente de Google) alcanzó la **v1.0 en 2026 bajo la Linux Foundation**: los agentes publican una **Agent Card** (metadatos que describen habilidades y endpoints), se descubren entre sí, delegan tareas e intercambian mensajes. MCP conecta un agente con herramientas; A2A conecta agentes con agentes, y hereda el mismo problema de que "el texto son instrucciones", además de un problema de identidad. (Se corresponde con ASI03 Identity & Privilege Abuse y ASI07 Insecure Inter-Agent Communication).
@@ -1258,7 +1290,7 @@ Los sistemas multiagente se comunican cada vez más mediante protocolos estánda
 - **Escalamiento por delegación:** un agente con pocos privilegios le pide a uno con muchos privilegios que actúe por él (el patrón de inyección de segundo orden del [Caso de estudio C](#case-study-c-github-copilot-rce--second-order-prompt-injection-2025)).
 - **Filtración entre protocolos:** datos obtenidos mediante MCP se pasan textualmente a otro agente mediante A2A y salen de su límite previsto.
 
-<a id="controls"></a>
+<a id="controls-1"></a>
 
 ### Controles
 - **Agent Cards firmadas** (JWS) y una lista de permitidos de firmantes confiables; rechaza tarjetas sin firmar o desconocidas.
@@ -1270,6 +1302,8 @@ Los sistemas multiagente se comunican cada vez más mediante protocolos estánda
 ---
 
 <a id="frontier-capability--ai-accelerated-vulnerability-discovery"></a>
+
+<a id="-frontier-capability--ai-accelerated-vulnerability-discovery"></a>
 
 ## 🔭 Capacidades de frontera y descubrimiento de vulnerabilidades acelerado por IA
 
@@ -1290,6 +1324,8 @@ Fuentes: [The Hacker News — Mythos encuentra 10,000 fallas de alta severidad](
 ---
 
 <a id="red-teaming-tools"></a>
+
+<a id="-red-teaming-tools"></a>
 
 ## 🛠️ Herramientas de red teaming
 
@@ -1747,6 +1783,8 @@ uv sync --extra dev
 
 <a id="aversyn-cogensec"></a>
 
+<a id="-featured-aversyn-by-cogensec"></a>
+
 #### ⭐ Destacada: **[AVERSYN de Cogensec](https://cogensec.com/aversyn)**
 
 **Validación adversarial autónoma. Evidencia reproducible. Correcciones accionables.**
@@ -1915,6 +1953,8 @@ La ola más reciente se dirige específicamente a la capa de agentes/orquestaci�
 ---
 
 <a id="real-world-case-studies"></a>
+
+<a id="-real-world-case-studies"></a>
 
 ## 📊 Casos de estudio reales
 
@@ -2252,6 +2292,8 @@ Empleados de Samsung filtraron accidentalmente datos confidenciales de la empres
 
 <a id="building-your-red-team"></a>
 
+<a id="-building-your-red-team"></a>
+
 ## 👥 Cómo construir tu red team
 
 <a id="team-composition"></a>
@@ -2462,6 +2504,8 @@ Empleados de Samsung filtraron accidentalmente datos confidenciales de la empres
 ---
 
 <a id="best-practices"></a>
+
+<a id="-best-practices"></a>
 
 ## ✅ Buenas prácticas
 
@@ -2736,6 +2780,8 @@ Los integrantes del red team deben sentirse cómodos para:
 
 <a id="implementation-quickstart-306090"></a>
 
+<a id="-implementation-quickstart-306090"></a>
+
 ## 🚀 Guía rápida de implementación (30/60/90)
 
 Usa este plan por fases para convertir la orientación en un programa operativo.
@@ -2770,6 +2816,8 @@ Usa este plan por fases para convertir la orientación en un programa operativo.
 ---
 
 <a id="evaluation-harness-reference-implementation"></a>
+
+<a id="-evaluation-harness-reference-implementation"></a>
 
 ## 🧪 Arnés de evaluación (implementación de referencia)
 
@@ -2917,6 +2965,8 @@ Antes de crear los tuyos, ancla tu programa en los benchmarks de la comunidad: o
 
 <a id="agentic-ai-attack-trees--controls-mapping"></a>
 
+<a id="-agentic-ai-attack-trees--controls-mapping"></a>
+
 ## 🕸️ Árboles de ataque a IA agéntica + mapeo de controles
 
 Usa árboles de ataque para conectar las rutas de pruebas ofensivas con los controles defensivos. Cada árbol está etiquetado con los ID del [OWASP Agentic Top 10](#owasp-top-10-for-agentic-applications-2026) que ejercita.
@@ -3005,6 +3055,8 @@ Usa árboles de ataque para conectar las rutas de pruebas ofensivas con los cont
 
 <a id="ai-harm-severity-and-triage-model"></a>
 
+<a id="-ai-harm-severity-and-triage-model"></a>
+
 ## 📈 Modelo de severidad y triaje de daños de IA
 
 Usa CVSS como base y luego añade modificadores específicos de la IA:
@@ -3029,6 +3081,8 @@ Usa CVSS como base y luego añade modificadores específicos de la IA:
 
 <a id="ai-incident-response"></a>
 
+<a id="-ai-incident-response"></a>
+
 ## 🚒 Respuesta a incidentes de IA
 
 El red teaming encuentra los huecos; la respuesta a incidentes es lo que haces cuando uno de ellos se explota en producción. Los sistemas agénticos necesitan patrones de IR que los runbooks tradicionales no cubren, porque un agente comprometido puede *actuar*, no solo emitir texto.
@@ -3042,7 +3096,7 @@ El red teaming encuentra los huecos; la respuesta a incidentes es lo que haces c
 - **Desactivación de herramientas/MCP**: desactiva la herramienta o el servidor MCP específico que está en la ruta de impacto mientras el resto del sistema sigue funcionando.
 - **Aislamiento de sesiones**: termina las sesiones afectadas e impide la filtración entre sesiones/contextos.
 
-<a id="escalation-logic-tied-to-the-harm-severity--triage-modelai-harm-severity-and-triage-model"></a>
+<a id="escalation-logic-tied-to-the-harm-severity--triage-model"></a>
 
 ### Lógica de escalamiento (vinculada al [Modelo de severidad y triaje de daños](#ai-harm-severity-and-triage-model))
 | Disparador | Severidad | Respuesta |
@@ -3067,6 +3121,8 @@ Según la **EU AI Act**, los proveedores de modelos GPAI con riesgo sistémico d
 ---
 
 <a id="secure-sdlc-integration-artifacts"></a>
+
+<a id="-secure-sdlc-integration-artifacts"></a>
 
 ## 🧩 Artefactos de integración en el SDLC seguro
 
@@ -3097,6 +3153,8 @@ Para reducir las pruebas "puntuales", integra los controles del red team en los 
 - Evidencia de filtración entre inquilinos o de uso inseguro y autónomo de herramientas
 
 <a id="defensive-architecture-patterns"></a>
+
+<a id="-defensive-architecture-patterns"></a>
 
 ## 🛡️ Patrones de arquitectura defensiva
 
@@ -3169,6 +3227,8 @@ User Input
 ---
 
 <a id="data-governance-for-red-teaming"></a>
+
+<a id="-data-governance-for-red-teaming"></a>
 
 ## 🗂️ Gobernanza de datos para red teaming
 
@@ -3257,6 +3317,8 @@ User Input
 ---
 <a id="common-implementation-pitfalls"></a>
 
+<a id="-common-implementation-pitfalls"></a>
+
 ## ⚠️ Errores comunes de implementación
 
 | Error | Por qué falla | Cómo se ve una buena práctica |
@@ -3307,6 +3369,8 @@ Plantilla disponible: `templates/model-system-security-card.md`
 
 <a id="source-hygiene--update-governance"></a>
 
+<a id="-source-hygiene--update-governance"></a>
+
 ## 🔄 Higiene de fuentes y gobernanza de actualizaciones
 
 <a id="governance-practices"></a>
@@ -3356,6 +3420,8 @@ Artefactos iniciales en `templates/`:
 
 
 <a id="regulatory-compliance"></a>
+
+<a id="-regulatory-compliance"></a>
 
 ## 📋 Cumplimiento regulatorio
 
@@ -3408,6 +3474,8 @@ El **artículo 15** exige a los operadores de sistemas de IA de alto riesgo demo
 
 > El **Digital Omnibus on AI** (publicado el 24 de julio de 2026, en vigor desde el 27 de julio de 2026) aplazó el calendario de alto riesgo porque las normas armonizadas y las autoridades nacionales no estaban listas; los requisitos en sí no cambiaron. La aplicación de las obligaciones de GPAI y de transparencia **no** se retrasó. Los red teams que respaldan sistemas de alto riesgo deberían aprovechar el tiempo adicional para generar evidencia, no para pausar las pruebas.
 
+<a id="gpai-systemic-risk-obligations-enforceable-since-2-aug-2026"></a>
+
 ##### Obligaciones de GPAI con riesgo sistémico (exigibles desde el 2 de agosto de 2026)
 Se presume que un modelo de IA de propósito general conlleva **riesgo sistémico** cuando el cómputo de entrenamiento supera los **10²⁵ FLOP**; los proveedores deben **notificar a la Comisión en un plazo de 2 semanas** desde que alcanzan ese umbral. A partir de ahí, los proveedores con riesgo sistémico deben:
 - **Realizar y documentar pruebas adversariales (red teaming)** antes de comercializar el modelo
@@ -3416,6 +3484,8 @@ Se presume que un modelo de IA de propósito general conlleva **riesgo sistémic
 - Realizar y documentar **evaluaciones del modelo**
 
 El **Código de Buenas Prácticas de GPAI** (GPAI Code of Practice) es la vía principal para demostrar el cumplimiento antes de que existan normas armonizadas.
+
+<a id="article--red-teaming-requirement--evidence-artifact"></a>
 
 ##### Artículo → requisito de red teaming → artefacto de evidencia
 Mapea las obligaciones a los artefactos que ya produces con las plantillas de esta guía:
@@ -3492,6 +3562,8 @@ Recomienda pruebas adversariales antes del despliegue y monitoreo continuo en pr
 ---
 
 <a id="resources-and-references"></a>
+
+<a id="-resources-and-references"></a>
 
 ## 📚 Recursos y referencias
 
@@ -3672,6 +3744,8 @@ Estas fuentes respaldan los incidentes, las estadísticas y las actualizaciones 
 
 <a id="contributing"></a>
 
+<a id="-contributing"></a>
+
 ## 🤝 Cómo contribuir
 
 ¡Damos la bienvenida a las contribuciones de la comunidad para mantener esta guía completa y actualizada!
@@ -3711,6 +3785,8 @@ Esta guía está disponible en varios idiomas: [English](README.md) · [Español
 ---
 
 <a id="glossary"></a>
+
+<a id="-glossary"></a>
 
 ## 📖 Glosario
 
@@ -3774,6 +3850,8 @@ Esta guía está disponible en varios idiomas: [English](README.md) · [Español
 
 <a id="license"></a>
 
+<a id="-license"></a>
+
 ## 📄 Licencia
 
 Esta guía se publica bajo la licencia MIT. Puedes usarla, modificarla y distribuirla libremente con la debida atribución.
@@ -3781,6 +3859,8 @@ Esta guía se publica bajo la licencia MIT. Puedes usarla, modificarla y distrib
 ---
 
 <a id="acknowledgments"></a>
+
+<a id="-acknowledgments"></a>
 
 ## 🙏 Agradecimientos
 
@@ -3804,6 +3884,8 @@ Esta guía se basa en investigaciones y buenas prácticas establecidas por:
 ---
 
 <a id="contact"></a>
+
+<a id="-contact"></a>
 
 ## 📞 Contacto
 
@@ -3861,6 +3943,8 @@ utilizados en ejercicios reales de seguridad de IA.
 ---
 
 <a id="disclaimer"></a>
+
+<a id="-disclaimer"></a>
 
 ## ⚠️ Aviso legal
 

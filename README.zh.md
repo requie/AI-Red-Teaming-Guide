@@ -10,6 +10,8 @@
 
 <div align="center">
 
+<a id="-ai-red-teaming-the-complete-guide"></a>
+
 # 🎯 AI 红队测试：完整指南
 
 **一份关于 AI 系统对抗性测试与安全评估的综合指南，帮助组织在攻击者利用漏洞之前发现它们。**
@@ -125,6 +127,8 @@
 
 <a id="overview"></a>
 
+<a id="-overview"></a>
+
 ## 🎯 概述
 
 随着人工智能系统日益深入地融入关键业务运营、医疗、金融和决策流程，确保其安全性与可靠性从未像今天这样重要。AI 红队测试已成为一项基础性安全实践，帮助组织在漏洞被真实场景利用之前发现它们。
@@ -151,6 +155,8 @@
 ---
 
 <a id="what-is-ai-red-teaming"></a>
+
+<a id="-what-is-ai-red-teaming"></a>
 
 ## 🤖 什么是 AI 红队测试？
 
@@ -186,6 +192,8 @@ AI 红队测试将军事和网络安全领域的红队概念，适配到 AI 系�
 ---
 
 <a id="why-ai-red-teaming-matters"></a>
+
+<a id="-why-ai-red-teaming-matters"></a>
 
 ## 🚨 为什么 AI 红队测试至关重要
 
@@ -233,6 +241,8 @@ AI 红队测试将军事和网络安全领域的红队概念，适配到 AI 系�
 ---
 
 <a id="key-frameworks-and-standards"></a>
+
+<a id="-key-frameworks-and-standards"></a>
 
 ## 📚 关键框架与标准
 
@@ -431,6 +441,8 @@ Microsoft 首次发布其《智能体 AI 系统失效模式分类法》（*Taxon
 ---
 
 <a id="ai-red-teaming-methodology"></a>
+
+<a id="-ai-red-teaming-methodology"></a>
 
 ## 🔬 AI 红队测试方法论
 
@@ -677,6 +689,8 @@ For each vulnerability:
 
 <a id="threat-landscape"></a>
 
+<a id="-threat-landscape"></a>
+
 ## 🎯 威胁态势
 
 <a id="adversary-types"></a>
@@ -736,6 +750,8 @@ For each vulnerability:
 ---
 
 <a id="attack-vectors-and-techniques"></a>
+
+<a id="-attack-vectors-and-techniques"></a>
 
 ## ⚔️ 攻击向量与技术
 
@@ -1058,6 +1074,8 @@ Test: Can a single injected artifact cause downstream agents to reproduce and
 
 <a id="mcp--tool-protocol-security"></a>
 
+<a id="-mcp--tool-protocol-security"></a>
+
 ## 🔌 MCP 与工具协议安全
 
 **模型上下文协议（Model Context Protocol，MCP）** 在 2025 年成为连接模型与外部工具的事实标准——随之而来的是一个全新的攻击面。**2025 年共发布了 99 个与 MCP 相关软件的 CVE**，工具投毒也从理论风险变成了真实的、已被利用的攻击。如果你的系统为模型提供了工具，本节就是最具杠杆效应的测试重点。（对应 OWASP **ASI02** 工具滥用和 **ASI04** 智能体供应链攻陷。）
@@ -1111,6 +1129,8 @@ MCP 服务器配置通常保存着 API 密钥和令牌。暴露的实例会泄�
 
 <a id="computer-use--browser-agent-attacks"></a>
 
+<a id="-computer-use--browser-agent-attacks"></a>
+
 ## 🖥️ 计算机使用与浏览器智能体攻击
 
 能够**看屏幕并点击**的智能体（计算机使用模型、AI 浏览器）继承了所有 Web/UI 攻击，*外加*一类新的视觉/感知注入。Microsoft 分类法 v2.0 之所以新增"计算机使用智能体视觉攻击"，正是因为这类攻击在 2025–2026 年已从研究走向现实（已针对 Perplexity 的 Comet 和 Gemini for Chrome 进行了演示）。
@@ -1126,6 +1146,8 @@ MCP 服务器配置通常保存着 API 密钥和令牌。暴露的实例会泄�
 ---
 
 <a id="rag-attack-taxonomy"></a>
+
+<a id="-rag-attack-taxonomy"></a>
 
 ## 📚 RAG 攻击分类
 
@@ -1146,6 +1168,8 @@ MCP 服务器配置通常保存着 API 密钥和令牌。暴露的实例会泄�
 
 <a id="voice-audio--multimodal-attacks"></a>
 
+<a id="-voice-audio--multimodal-attacks"></a>
+
 ## 🎙️ 语音、音频与多模态攻击
 
 随着语音智能体和多模态模型进入生产环境（呼叫中心、语音助手、语音认证工作流），攻击面扩展到了音频领域。本节是对[多语言与文化安全手册](#-multilingual--cultural-safety-playbook)的补充。
@@ -1162,6 +1186,8 @@ MCP 服务器配置通常保存着 API 密钥和令牌。暴露的实例会泄�
 
 <a id="fine-tuning--model-supply-chain-security"></a>
 
+<a id="-fine-tuning--model-supply-chain-security"></a>
+
 ## 🧬 微调与模型供应链安全
 
 定制模型会在发送任何一个提示词*之前*就引入风险。本节针对模型权重层深化了[供应链攻击](#7-supply-chain-attacks)的内容。
@@ -1177,6 +1203,8 @@ MCP 服务器配置通常保存着 API 密钥和令牌。暴露的实例会泄�
 ---
 
 <a id="ai-on-ai-red-teaming"></a>
+
+<a id="-ai-on-ai-red-teaming"></a>
 
 ## 🤖 以 AI 对抗 AI 的红队测试
 
@@ -1212,6 +1240,8 @@ Objective (natural language)
 
 <a id="ai-coding-agent--cicd-security"></a>
 
+<a id="-ai-coding-agent--cicd-security"></a>
+
 ## 💻 AI 编码智能体与 CI/CD 安全
 
 编码智能体（Claude Code、GitHub Copilot coding agent、Gemini CLI、Cursor、Codex 等）如今既运行在 IDE 中，**也**运行在 CI 流水线中，并拥有对代码仓库和流水线密钥的写权限。这种组合——不可信文本输入、特权操作输出——使它们成为 2026 年最具价值的攻击目标之一。（对应 ASI01 目标劫持、ASI02 工具滥用、ASI05 意外代码执行。）
@@ -1244,6 +1274,8 @@ Objective (natural language)
 
 <a id="agent-to-agent-a2a--agent-identity"></a>
 
+<a id="-agent-to-agent-a2a--agent-identity"></a>
+
 ## 🤝 智能体间通信（A2A）与智能体身份
 
 多智能体系统越来越多地通过标准协议进行通信。**A2A**（最初来自 Google）于 **2026 年在 Linux 基金会治理下发布 v1.0**：智能体发布 **Agent Card**（描述技能和端点的元数据）、相互发现、委派任务并交换消息。MCP 将智能体连接到工具；A2A 将智能体连接到智能体——并继承了同样的"文本即指令"问题，外加一个身份问题。（对应 ASI03 身份与权限滥用、ASI07 不安全的智能体间通信。）
@@ -1258,7 +1290,7 @@ Objective (natural language)
 - **委派提权：** 低权限智能体请求高权限智能体代其行事（即[案例研究 C](#case-study-c-github-copilot-rce--second-order-prompt-injection-2025) 中的二阶注入模式）。
 - **跨协议泄露：** 通过 MCP 获取的数据被原样经由 A2A 传给另一个智能体，从而越出其预期边界。
 
-<a id="controls"></a>
+<a id="controls-1"></a>
 
 ### 控制措施
 - **签名的 Agent Card**（JWS）以及可信签名者允许列表；拒绝未签名或未知的卡片。
@@ -1270,6 +1302,8 @@ Objective (natural language)
 ---
 
 <a id="frontier-capability--ai-accelerated-vulnerability-discovery"></a>
+
+<a id="-frontier-capability--ai-accelerated-vulnerability-discovery"></a>
 
 ## 🔭 前沿能力与 AI 加速的漏洞发现
 
@@ -1290,6 +1324,8 @@ Objective (natural language)
 ---
 
 <a id="red-teaming-tools"></a>
+
+<a id="-red-teaming-tools"></a>
 
 ## 🛠️ 红队测试工具
 
@@ -1747,6 +1783,8 @@ uv sync --extra dev
 
 <a id="aversyn-cogensec"></a>
 
+<a id="-featured-aversyn-by-cogensec"></a>
+
 #### ⭐ 推荐：**[Cogensec 的 AVERSYN](https://cogensec.com/aversyn)**
 
 **自主对抗性验证。可复现的证据。可操作的修复。**
@@ -1915,6 +1953,8 @@ Aversyn 是 Cogensec 的商业攻击性安全平台。它协调多个专业 AI �
 ---
 
 <a id="real-world-case-studies"></a>
+
+<a id="-real-world-case-studies"></a>
 
 ## 📊 真实案例研究
 
@@ -2252,6 +2292,8 @@ Reason: Less safety training data in language X
 
 <a id="building-your-red-team"></a>
 
+<a id="-building-your-red-team"></a>
+
 ## 👥 组建你的红队
 
 <a id="team-composition"></a>
@@ -2462,6 +2504,8 @@ Reason: Less safety training data in language X
 ---
 
 <a id="best-practices"></a>
+
+<a id="-best-practices"></a>
 
 ## ✅ 最佳实践
 
@@ -2736,6 +2780,8 @@ Lower Priority:
 
 <a id="implementation-quickstart-306090"></a>
 
+<a id="-implementation-quickstart-306090"></a>
+
 ## 🚀 实施快速入门（30/60/90 天）
 
 使用这一分阶段计划，将指南转化为可运行的计划。
@@ -2770,6 +2816,8 @@ Lower Priority:
 ---
 
 <a id="evaluation-harness-reference-implementation"></a>
+
+<a id="-evaluation-harness-reference-implementation"></a>
 
 ## 🧪 评估框架（参考实现）
 
@@ -2917,6 +2965,8 @@ if __name__ == "__main__":
 
 <a id="agentic-ai-attack-trees--controls-mapping"></a>
 
+<a id="-agentic-ai-attack-trees--controls-mapping"></a>
+
 ## 🕸️ 智能体 AI 攻击树 + 控制措施映射
 
 使用攻击树将攻击性测试路径与防御性控制措施联系起来。每棵树都标注了其涉及的 [OWASP Agentic Top 10](#owasp-top-10-for-agentic-applications-2026) ID。
@@ -3005,6 +3055,8 @@ if __name__ == "__main__":
 
 <a id="ai-harm-severity-and-triage-model"></a>
 
+<a id="-ai-harm-severity-and-triage-model"></a>
+
 ## 📈 AI 危害严重性与分诊模型
 
 以 CVSS 为基础，再加上 AI 特有的修正因子：
@@ -3029,6 +3081,8 @@ if __name__ == "__main__":
 
 <a id="ai-incident-response"></a>
 
+<a id="-ai-incident-response"></a>
+
 ## 🚒 AI 事件响应
 
 红队测试负责发现漏洞；事件响应则是当漏洞在生产环境中被利用时你要做的事。智能体系统需要传统运行手册未涵盖的事件响应模式——因为被攻陷的智能体能够*行动*，而不仅仅是输出文本。
@@ -3042,7 +3096,7 @@ if __name__ == "__main__":
 - **禁用工具/MCP**——禁用爆炸路径上的特定工具或 MCP 服务器，同时保持系统其余部分运行。
 - **会话隔离**——终止受影响的会话，防止跨会话/上下文渗漏。
 
-<a id="escalation-logic-tied-to-the-harm-severity--triage-modelai-harm-severity-and-triage-model"></a>
+<a id="escalation-logic-tied-to-the-harm-severity--triage-model"></a>
 
 ### 升级逻辑（与[危害严重性与分诊模型](#ai-harm-severity-and-triage-model)挂钩）
 | 触发条件 | 严重性 | 响应 |
@@ -3067,6 +3121,8 @@ if __name__ == "__main__":
 ---
 
 <a id="secure-sdlc-integration-artifacts"></a>
+
+<a id="-secure-sdlc-integration-artifacts"></a>
 
 ## 🧩 安全 SDLC 集成工件
 
@@ -3097,6 +3153,8 @@ if __name__ == "__main__":
 - 存在跨租户泄露或自主不安全工具使用的证据
 
 <a id="defensive-architecture-patterns"></a>
+
+<a id="-defensive-architecture-patterns"></a>
 
 ## 🛡️ 防御性架构模式
 
@@ -3168,6 +3226,8 @@ User Input
 ---
 
 <a id="data-governance-for-red-teaming"></a>
+
+<a id="-data-governance-for-red-teaming"></a>
 
 ## 🗂️ 红队测试的数据治理
 
@@ -3254,6 +3314,8 @@ User Input
 ---
 <a id="common-implementation-pitfalls"></a>
 
+<a id="-common-implementation-pitfalls"></a>
+
 ## ⚠️ 常见实施陷阱
 
 | 陷阱 | 为何失败 | 良好实践是什么样的 |
@@ -3301,6 +3363,8 @@ User Input
 ---
 
 <a id="source-hygiene--update-governance"></a>
+
+<a id="-source-hygiene--update-governance"></a>
 
 ## 🔄 来源规范与更新治理
 
@@ -3350,6 +3414,8 @@ User Input
 
 
 <a id="regulatory-compliance"></a>
+
+<a id="-regulatory-compliance"></a>
 
 ## 📋 法规合规
 
@@ -3402,6 +3468,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 
 > **《人工智能数字综合法案》（Digital Omnibus on AI）**（2026 年 7 月 24 日公布，2026 年 7 月 27 日生效）因协调标准和国家主管机构尚未就绪而推迟了高风险时间表——要求本身并未改变。GPAI 执法和透明度义务**并未**推迟。为高风险系统提供支持的红队应利用这段额外时间积累证据，而不是暂停测试。
 
+<a id="gpai-systemic-risk-obligations-enforceable-since-2-aug-2026"></a>
+
 ##### GPAI 系统性风险义务（自 2026 年 8 月 2 日起可强制执行）
 当训练算力超过 **10²⁵ FLOPs** 时，通用人工智能模型即被推定具有**系统性风险**；提供者必须在达到该阈值后 **2 周内通知欧盟委员会**。具有系统性风险的提供者随后必须：
 - 在将模型投放市场之前**开展并记录对抗性测试（红队测试）**
@@ -3410,6 +3478,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 - 开展并记录**模型评估**
 
 在协调标准出台之前，**GPAI 行为准则（GPAI Code of Practice）** 是证明合规的主要途径。
+
+<a id="article--red-teaming-requirement--evidence-artifact"></a>
 
 ##### 条款 → 红队测试要求 → 证据工件
 将合规义务映射到你已使用本指南模板产出的工件：
@@ -3486,6 +3556,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 ---
 
 <a id="resources-and-references"></a>
+
+<a id="-resources-and-references"></a>
 
 ## 📚 资源与参考文献
 
@@ -3666,6 +3738,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 
 <a id="contributing"></a>
 
+<a id="-contributing"></a>
+
 ## 🤝 贡献指南
 
 我们欢迎社区贡献，让本指南保持全面和最新！
@@ -3705,6 +3779,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 ---
 
 <a id="glossary"></a>
+
+<a id="-glossary"></a>
 
 ## 📖 术语表
 
@@ -3768,6 +3844,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 
 <a id="license"></a>
 
+<a id="-license"></a>
+
 ## 📄 许可证
 
 本指南以 MIT 许可证发布。欢迎在注明出处的前提下自由使用、修改和分发。
@@ -3775,6 +3853,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 ---
 
 <a id="acknowledgments"></a>
+
+<a id="-acknowledgments"></a>
 
 ## 🙏 致谢
 
@@ -3798,6 +3878,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 ---
 
 <a id="contact"></a>
+
+<a id="-contact"></a>
 
 ## 📞 联系方式
 
@@ -3855,6 +3937,8 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 ---
 
 <a id="disclaimer"></a>
+
+<a id="-disclaimer"></a>
 
 ## ⚠️ 免责声明
 
