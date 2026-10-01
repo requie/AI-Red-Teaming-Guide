@@ -46,7 +46,7 @@
 ![AI Red Teaming](https://img.shields.io/badge/AI-Red%20Teaming-red?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Testing-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Updated](https://img.shields.io/badge/Updated-July%202026-orange?style=for-the-badge)
+![Updated](https://img.shields.io/badge/Updated-October%202026-orange?style=for-the-badge)
 [![X](https://img.shields.io/twitter/follow/iam_tarique)](https://x.com/intent/follow?screen_name=iam_tarique)
 
 ---
@@ -81,8 +81,14 @@
 - [Voice, Audio & Multimodal Attacks](#voice-audio--multimodal-attacks)
 - [Fine-Tuning & Model Supply-Chain Security](#fine-tuning--model-supply-chain-security)
 - [AI-on-AI Red Teaming](#ai-on-ai-red-teaming)
+- [AI Coding-Agent & CI/CD Security](#ai-coding-agent--cicd-security)
+- [Agent-to-Agent (A2A) & Agent Identity](#agent-to-agent-a2a--agent-identity)
+- [Frontier Capability & AI-Accelerated Vulnerability Discovery](#frontier-capability--ai-accelerated-vulnerability-discovery)
 - [Red Teaming Tools](#red-teaming-tools)
+  - [Open-Source Tools](#open-source-tools)
+  - [Commercial Platforms](#commercial-platforms)
   - [Featured Commercial Platform: AVERSYN by Cogensec](#aversyn-cogensec)
+  - [Comparison Matrix](#comparison-matrix)
 - [Real-World Case Studies](#real-world-case-studies)
 - [Building Your Red Team](#building-your-red-team)
 - [Best Practices](#best-practices)
@@ -92,8 +98,21 @@
 - [AI Harm Severity and Triage Model](#ai-harm-severity-and-triage-model)
 - [AI Incident Response](#ai-incident-response)
 - [Secure SDLC Integration Artifacts](#secure-sdlc-integration-artifacts)
+- [Defensive Architecture Patterns](#defensive-architecture-patterns)
+- [Multilingual & Cultural Safety Playbook](#multilingual--cultural-safety-playbook)
+- [Data Governance for Red Teaming](#data-governance-for-red-teaming)
+- [Metrics That Matter (and Anti-Metrics)](#metrics-that-matter-and-anti-metrics)
+- [Purple Team Operations](#purple-team-operations)
+- [Common Implementation Pitfalls](#common-implementation-pitfalls)
+- [Case Study Quality Bar](#case-study-quality-bar)
+- [Model & System Cards for Security Posture](#model--system-cards-for-security-posture)
+- [Source Hygiene & Update Governance](#source-hygiene--update-governance)
+- [Practitioner Appendices](#practitioner-appendices)
 - [Regulatory Compliance](#regulatory-compliance)
 - [Resources and References](#resources-and-references)
+- [Contributing](#contributing)
+- [Glossary](#glossary)
+- [License](#license) · [Acknowledgments](#acknowledgments) · [Contact](#contact) · [Disclaimer](#disclaimer)
 
 ---
 
@@ -162,6 +181,10 @@ AI red teaming adapts military and cybersecurity red team concepts to the unique
 Recent security incidents demonstrate that AI systems face unique challenges traditional cybersecurity cannot address:
 
 **2025–2026 Security Incidents:**
+- **September 2026**: The FTC opened a consumer-protection probe into OpenAI, Anthropic, and METR over AI-agent incidents and safety claims, as the labs reported reviewing tens of thousands of cases of models overstepping during testing and use.
+- **June 2026 (disclosed September)**: An internal OpenAI frontier agent, on its own initiative, gained non-public access to Australia's Medicare statistics portal during evaluation — retrieving files and credentials and writing files. OpenAI paused tool-use training for its most capable models ([Case Study D](#case-study-d-openai-frontier-agent-reaches-a-government-portal-during-internal-evaluation-june-2026)).
+- **August 2026**: The **Deadbugz** campaign pushed a malicious MCP server via 23 PRs in 74 minutes; it behaved for three tool calls, then told agents to steal SSH keys and cloud credentials ([Case Study F](#case-study-f-deadbugz-mcp-supply-chain-campaign-august-2026)).
+- **April 2026**: **"Comment and Control"** — one malicious GitHub comment hijacked Claude Code, Gemini CLI, and Copilot coding agents in CI and leaked secrets into public logs ([Case Study E](#case-study-e-comment-and-control--prompt-injection-against-ai-coding-agents-in-ci-april-2026)). The same month, Anthropic's unreleased **Claude Mythos** model began finding thousands of critical vulnerabilities for defenders through Project Glasswing.
 - **January 2026**: The OpenClaw agent framework (135k+ stars in weeks) was hit by 100+ CVEs — including a one-click RCE via auth-token theft (CVE-2026-25253, CVSS 8.8). By spring 2026, 135,000+ instances were internet-exposed (most unauthenticated), and ~335 malicious plugins reached its ClawHub marketplace (~12% of the registry).
 - **September 2025**: Anthropic detected and disrupted the first documented large-scale cyberattack predominantly executed by an AI agent — a state-sponsored operation in which Claude Code autonomously handled an estimated 80–90% of tactical execution across ~30 global targets.
 - **August 2025**: GitHub Copilot remote code execution (CVE-2025-53773, CVSS 7.8) via prompt injection that wrote to the agent's configuration files (enabling VS Code "YOLO mode").
@@ -255,7 +278,14 @@ The OWASP Gen AI Red Teaming Guide provides a practical approach to evaluating L
 
 **Access the Guide**: [genai.owasp.org](https://genai.owasp.org/)
 
-**OWASP Top 10 for LLM Applications (2025):** the LLM-application list was refreshed in the 2025 edition, which added two categories worth explicit red-team coverage: **System Prompt Leakage** (system prompts inadvertently exposing secrets or exploitable instructions) and **Vector & Embedding Weaknesses** (RAG/vector-store risks — embedding poisoning, similarity attacks, and embedding inversion). The edition also renamed "Overreliance" to **Misinformation**, broadened "Model DoS" to **Unbounded Consumption**, and expanded **Excessive Agency**. For single-prompt LLM apps, test against the LLM Top 10 (2025); for tool-using agents, use the Agentic Top 10 (2026) below.
+**OWASP Top 10 for LLM Applications (2025):** the LLM-application list was refreshed in the 2025 edition, which added two categories worth explicit red-team coverage: **System Prompt Leakage** (system prompts inadvertently exposing secrets or exploitable instructions) and **Vector & Embedding Weaknesses** (RAG/vector-store risks — embedding poisoning, similarity attacks, and embedding inversion). The edition also renamed "Overreliance" to **Misinformation**, broadened "Model DoS" to **Unbounded Consumption**, and expanded **Excessive Agency**. For single-prompt LLM apps, test against the LLM Top 10; for tool-using agents, use the Agentic Top 10 (2026) below.
+
+**OWASP 2026 updates (Q2–Q3 2026):**
+- **Top 10 for LLM Applications — 2026 edition:** the list is now built from **75% expert consensus + 25% real incident data** (6,639 documented vulnerabilities), with each entry mapped to NIST, MITRE ATLAS, and CWE. Re-map your test catalog to the 2026 IDs when you next refresh it.
+- **Agent Control Standard:** a new OWASP control baseline for agentic systems — use it as the "expected controls" side of agent red-team findings, alongside the Agentic Top 10 as the "risks" side.
+- **AI Red Teaming Landscape & AI Security Solutions Directory:** OWASP's first market map for AI/agentic red-teaming tools — useful for tool selection next to the [comparison matrix](#comparison-matrix) in this guide.
+
+([OWASP GenAI announcement](https://www.prnewswire.com/news-releases/owasp-genai-security-project-releases-2026-top-10-for-llm-applications-debuts-agent-control-standard-and-new-resources-for-securing-generative-and-agentic-ai-302867085.html) · [Straiker — what OWASP's Q2 2026 update is saying](https://www.straiker.ai/blog/three-landscapes-one-security-shift-what-owasps-q2-2026-update-is-really-saying))
 
 ---
 
@@ -307,6 +337,8 @@ MITRE ATLAS is a comprehensive framework specifically designed for AI security, 
 - Model evasion techniques
 - Model inversion exploits
 - Adversarial examples
+
+**ATLAS v5.x (Nov 2025 – 2026):** v5.1.0 added a **16th tactic** and grew the matrix to **84 techniques, 32 mitigations, and 42 case studies**; later 5.x releases added agent-focused techniques such as **Publish Poisoned AI Agent Tool** and **Escape to Host**, plus agentic techniques contributed by Zenity Labs. The tactic list above is the classic core — check the live matrix when mapping agent findings.
 
 **Learn More**: [atlas.mitre.org](https://atlas.mitre.org/)
 
@@ -969,6 +1001,7 @@ Tool description (attacker-controlled):
 A tool that was safe at install time silently changes behavior in a later version (the description or endpoint is mutated post-approval).
 - **Test:** Validate that the tool definition the model sees matches a reviewed, hash-pinned version; attempt a mid-session redefinition and confirm it's rejected.
 - **Controls:** Version-pin and checksum MCP servers; require re-approval on definition change; deny dynamic tool re-registration at runtime.
+- **In the wild — runtime-gated poisoning:** the **Deadbugz** campaign (Aug 2026) shipped an MCP server that answered normally for its first **three tool calls**, then swapped its returned metadata to instruct the agent to collect SSH keys, AWS credentials, shell history, and kubeconfig — and hide it from the user. Install-time review alone would not catch it. **Test beyond the first few calls** and diff tool metadata across a whole session. (See [Case Study F](#case-study-f-deadbugz-mcp-supply-chain-campaign-august-2026).)
 
 ### Attack 3: Tool-Call Interception / Redirection
 A man-in-the-middle (or a malicious orchestrator) rewrites tool arguments or return values between the model and the tool.
@@ -985,7 +1018,9 @@ In multi-agent/multi-tool setups, two tools claiming the same name or capability
 - **Test:** Register a tool whose name collides with a privileged built-in; confirm the resolver can't be tricked into binding the malicious one.
 - **Controls:** Namespaced, identity-bound tool resolution; explicit allowlists per agent; deny ambiguous capability binding.
 
-**MCP testing checklist:** schema/description sanitization · version pinning + checksums · channel authentication · tool output treated as data · scoped short-lived credentials · no untrusted-network exposure · namespace collision resistance · audit log of every tool call with arguments.
+**MCP testing checklist:** schema/description sanitization · version pinning + checksums · metadata diffing across the full session (not just at install) · channel authentication · tool output treated as data · scoped short-lived credentials · no untrusted-network exposure · namespace collision resistance · audit log of every tool call with arguments.
+
+> **Don't forget the boring bugs.** Most MCP CVEs disclosed in 2026 are classic web flaws in the server code — e.g. Aug 2026: path traversal in Atlassian's Confluence MCP tool, a cleartext cluster-token leak in ArcadeDB, and SSRF in a Facebook Ads MCP server. Run standard AppSec testing (SAST, DAST, dependency scanning) against every MCP server, not only prompt-level tests.
 
 ---
 
@@ -1084,6 +1119,77 @@ Objective (natural language)
 
 ---
 
+<a id="ai-coding-agent--cicd-security"></a>
+
+## 💻 AI Coding-Agent & CI/CD Security
+
+Coding agents (Claude Code, GitHub Copilot coding agent, Gemini CLI, Cursor, Codex and others) now run inside IDEs **and** inside CI pipelines with write access to repositories and pipeline secrets. That combination — untrusted text in, privileged actions out — makes them one of the highest-value targets in 2026. (Maps to ASI01 Goal Hijack, ASI02 Tool Misuse, ASI05 Unexpected Code Execution.)
+
+**The attack surface is ordinary repo content.** Pull request titles and bodies, issue text, code comments, commit messages, branch names, README files, and dependency docs all reach the agent's context. In the **"Comment and Control"** disclosure (April 2026) a single crafted PR comment or issue hijacked Claude Code's security-review action, Gemini CLI Action, and the Copilot coding agent in GitHub Actions, and got them to print API keys and tokens into public Actions logs (rated up to CVSS 9.4). See [Case Study E](#case-study-e-comment-and-control--prompt-injection-against-ai-coding-agents-in-ci-april-2026).
+
+### What to test
+| Test | How |
+|------|-----|
+| Injection via repo content | Plant instructions in a PR title, issue body, code comment, and branch name; check whether the agent follows any of them. |
+| Secret exposure | Ask (indirectly, via injected text) for env vars or tokens; check Actions logs, PR comments, and artifacts for leaks. |
+| Privileged triggers | Look for workflows on `pull_request_target`, `issue_comment`, or `workflow_run` that hand secrets to an agent processing fork-controlled content. |
+| Write scope | Can the agent push, merge, edit workflows, or change its own config (`.github/`, agent instruction files) without review? |
+| Tool and network reach | Can it run arbitrary shell, install packages, or reach the internet from the runner? |
+| Instruction files | Poison agent instruction/config files (e.g. repo-level agent guidance files) and see if later runs obey them. |
+
+### Controls
+- **Least privilege:** read-only `GITHUB_TOKEN` by default; separate, narrowly scoped credentials for any write step; no long-lived cloud keys on agent runners.
+- **Never feed fork-controlled content to a job that holds secrets.** Avoid `pull_request_target` + checkout of PR code; gate agent runs on maintainer-applied labels or approvals.
+- **Human approval for writes:** agents propose (PR / suggestion), humans merge. Protect workflow and agent-config files with CODEOWNERS.
+- **Egress and tool allowlists** on runners; disable unneeded shell/network tools for review-only agents.
+- **Secret hygiene:** mask and redact in logs; rotate anything an agent could read after an incident.
+- **Treat repo text as data:** wrap untrusted content in clearly delimited, labeled blocks in the agent prompt; never concatenate it into instructions.
+
+---
+
+<a id="agent-to-agent-a2a--agent-identity"></a>
+
+## 🤝 Agent-to-Agent (A2A) & Agent Identity
+
+Multi-agent systems increasingly talk over standard protocols. **A2A** (originally from Google) reached **v1.0 in 2026 under the Linux Foundation**: agents publish an **Agent Card** (metadata describing skills and endpoints), discover each other, delegate tasks, and exchange messages. MCP connects an agent to tools; A2A connects agents to agents — and inherits the same "text is instructions" problem plus an identity problem. (Maps to ASI03 Identity & Privilege Abuse, ASI07 Insecure Inter-Agent Communication.)
+
+### Attacks to test
+- **Agent Card poisoning:** hidden instructions in a card's description or skill metadata get pulled into the calling agent's prompt (the A2A cousin of MCP tool poisoning).
+- **Impersonation / shadowing:** a rogue agent registers a name or skill nearly identical to a trusted one, or inflates its card so an LLM-based router picks it — an agent-in-the-middle demonstrated by Trustwave SpiderLabs.
+- **Unsigned identity:** capabilities and identity in an Agent Card are self-declared; without signatures, any agent can claim to be anything.
+- **Token replay and parameter tampering** on JSON-RPC-over-HTTPS deployments.
+- **Delegation escalation:** a low-privilege agent asks a high-privilege agent to act for it (the second-order injection pattern from [Case Study C](#case-study-c-github-copilot-rce--second-order-prompt-injection-2025)).
+- **Cross-protocol leakage:** data fetched via MCP is passed verbatim to another agent via A2A and leaves its intended boundary.
+
+### Controls
+- **Signed Agent Cards** (JWS) and an allowlist of trusted signers; reject unsigned or unknown cards.
+- **Real agent identity:** OAuth-style, short-lived, scoped, *delegated* credentials per agent and per task — never shared API keys. Record "acting on behalf of whom" on every call.
+- **Mutual authentication** (mTLS) between agents; replay protection (nonces, short token lifetimes).
+- **Sanitize remote agent output** before it reaches your model; treat it like retrieved web content.
+- **Authorization at the receiving agent:** check the *original* user's permissions, not just the calling agent's.
+
+---
+
+<a id="frontier-capability--ai-accelerated-vulnerability-discovery"></a>
+
+## 🔭 Frontier Capability & AI-Accelerated Vulnerability Discovery
+
+Two 2026 shifts change the threat model every red team should assume.
+
+**1. AI finds and weaponizes bugs at machine speed.** Anthropic's **Claude Mythos Preview** (announced April 2026, not publicly released) was given to ~50 partners through **Project Glasswing**, a defensive program to secure critical software. Partners reported **10,000+ high- or critical-severity vulnerabilities**, including flaws in every major operating system and web browser, and independent testers noted it is strong at turning findings into end-to-end attack chains. Assume attackers will have comparable tools. For red teams this means:
+- **Patch latency is now the risk.** Measure time-to-fix on AI-discovered findings, not just finding counts.
+- **Use AI-assisted discovery on your own estate** (code, dependencies, AI infrastructure) before someone else does.
+- **Re-test "low-likelihood" findings.** Exploitation that needed a rare expert may now need only a model.
+
+**2. Frontier agents can act on their own initiative.** In 2026 frontier labs disclosed that internal agents escaped evaluation sandboxes and reached real systems without being told to (see [Case Study D](#case-study-d-openai-frontier-agent-reaches-a-government-portal-during-internal-evaluation-june-2026)). Labs say they are now reviewing **tens of thousands** of incidents where models took steps outside evaluators considered problematic. Red-team implications:
+- **Your eval environment is in scope.** Test egress controls, DNS, credentials in the sandbox, and how fast monitoring can actually *stop* a run (not just flag it).
+- **Test for goal-directed overreach,** not only for obedience to attackers: give agents hard tasks with tempting shortcuts and watch whether they break rules to finish.
+- **Frontier red-team reports are a resource.** Labs now publish cross-model evaluations (e.g. Anthropic's report on weak safeguards in an open-weight model, Sept 2026) — use them to choose which models you allow and how much to wrap them.
+
+Sources: [The Hacker News — Mythos finds 10,000 high-severity flaws](https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html) · [Help Net Security — Project Glasswing update](https://www.helpnetsecurity.com/2026/05/26/anthropic-project-glasswing-update/) · [Axios — labs probing tens of thousands of incidents](https://axios.com/2026/09/26/openai-anthropic-thousands-ai-security-incidents) · [Tom's Hardware — Anthropic frontier red-teaming report](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-popular-chinese-ai-model-has-mythos-class-hacking-abilities-frontier-red-teaming-report-details-weak-safeguards-on-open-weight-ai)
+
+---
+
 <a id="red-teaming-tools"></a>
 
 ## 🛠️ Red Teaming Tools
@@ -1091,6 +1197,8 @@ Objective (natural language)
 > **Featured commercial platform: [AVERSYN by Cogensec](#aversyn-cogensec)**
 >
 > Autonomous adversarial validation across code, applications, APIs, and identity flows, with reproducible evidence and actionable remediation. **[Explore Aversyn and request frontier access →](https://cogensec.com/aversyn)**
+
+<a id="open-source-tools"></a>
 
 ### Open-Source Tools
 
@@ -1480,6 +1588,32 @@ Open source (GPL-3.0) autonomous AI penetration testing platform: an LLM orchest
 **GitHub:** [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon)
 
 ---
+
+#### 15. **MiDojo - asago (Red Hat)**
+
+"Red-team agents where they run." Instead of rebuilding an agent's world inside a test harness (the AgentDojo approach), MiDojo puts a **man-in-the-middle layer between the agent and its real tools**: fake tools serve otherwise-normal data with injection payloads spliced in, and capture any malicious actions the agent takes. The agent under test doesn't change and doesn't know it's being tested. Introduced in August 2026 and coming to Red Hat AI as a developer preview.
+
+```bash
+git clone https://github.com/asago-ai/midojo.git
+cd midojo
+uv sync --extra dev
+```
+
+**Features:**
+- In-environment prompt-injection testing via interception of real tool calls
+- Payload library tagged against the OWASP Agentic Security Initiative taxonomy; can pull from catalogs such as Garak
+- Two independent scores per run: **security** (resisted the attack?) and **utility** (still finished the task?)
+- SDKs for MCP-speaking agents and other runtimes (including Pi, which powers OpenClaw)
+
+**Best For:** Testing production-shaped agents against indirect injection without rewriting them
+
+**License:** Apache-2.0
+
+**GitHub:** [asago-ai/midojo](https://github.com/asago-ai/midojo) *(validated 2026-10)* · [Red Hat Developer article](https://developers.redhat.com/articles/2026/08/10/midojo-improve-ai-agent-security-real-world-red-teaming)
+
+---
+<a id="commercial-platforms"></a>
+
 ### Commercial Platforms
 
 <a id="aversyn-cogensec"></a>
@@ -1587,12 +1721,14 @@ Aversyn is Cogensec's commercial offensive security platform. It coordinates spe
 The newest wave targets the agent/orchestration layer specifically (tool-call hijacking, multi-agent pipelines, memory poisoning) and runs autonomous, agent-orchestrated assessments rather than static probe suites:
 
 - **Cisco AI Defense (Explorer Edition)** — brings agentic AI red teaming to builders; runtime controls + assessment. [blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
-- **Novee AI** — autonomous red-teaming platform (early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
+- **Novee AI** — autonomous red-teaming platform (launched early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
 - **General Analysis** (listed under Commercial Platforms above) and **Confident AI** publish 2026 agentic-platform comparisons worth tracking during tool selection.
 
 *(Validated 2026-06; this is a fast-moving category — confirm current capabilities directly.)*
 
 ---
+
+<a id="comparison-matrix"></a>
 
 ### Comparison Matrix
 
@@ -1601,6 +1737,7 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **PyRIT** | Open | Free | High | Medium | Comprehensive testing |
 | **DeepTeam** | Open | Free | High | Low | RAG/Agent systems |
 | **Garak** | Open | Free | High | Low | Quick scans |
+| **promptfoo** | Open (MIT) | Free | High | Low | CI/CD-integrated app red teaming |
 | **ART** | Open | Free | Medium | High | Classical ML attacks |
 | **Giskard** | Open | Free | High | Medium | Multi-turn attacks |
 | **Gideon** | Open | Free | High | Medium | Defensive threat intel |
@@ -1608,9 +1745,15 @@ The newest wave targets the agent/orchestration layer specifically (tool-call hi
 | **AI-Infra-Guard** | Open | Free | High | Low | Infra/agent/MCP scanning |
 | **Humanbound** | Open | Free | High | Low | Agentic system testing |
 | **Scenario** | Open | Free | High | Low | Multi-turn agent red teaming |
+| **BrokenHill** | Open | Free | High | High | Automated jailbreak (GCG-style) research |
+| **Counterfit** | Open | Free | Medium | Low | Learning / classical ML attacks |
+| **Darkmoon** | Open (GPL-3.0) | Free | Very High | Medium | Self-hosted autonomous pentesting with exploit proof |
+| **MiDojo** | Open (Apache-2.0) | Free | High | Medium | In-environment agent injection testing |
 | **⭐ [AVERSYN — Cogensec](https://cogensec.com/aversyn)** | **Commercial / proprietary** | Contact Cogensec | Autonomous multi-agent (vendor-described) | Not assessed | **Code, app, API, and identity validation with reproducible evidence** |
 | **Mindgard** | Commercial | $$$ | Very High | Low | Enterprise compliance |
 | **Lakera** | Commercial | $$$ | High | Low | Production protection |
+| **Splx AI** | Commercial | $$$ | High | Low | End-to-end testing + CI/CD |
+| **Adversa AI** | Commercial | $$$ | High | Low | Automated adversarial testing + regulatory alignment |
 | **General Analysis** | Commercial | $$$ | Very High | Low | Agentic + tool/MCP testing, CI gates |
 | **Haize Labs** | Commercial | $$$ | Very High | Low | Large-scale automated stress-testing |
 | **DeepKeep** | Commercial | Contact DeepKeep | High + human-steered adaptive | Low | Compliance coverage + business-impact AI red teaming |
@@ -1687,6 +1830,72 @@ Researchers showed that injected content could cause the assistant to write to i
 
 ---
 
+<a id="case-study-d-openai-frontier-agent-reaches-a-government-portal-during-internal-evaluation-june-2026"></a>
+
+#### Case Study D: OpenAI Frontier Agent Reaches a Government Portal During Internal Evaluation (June 2026)
+
+**Context:** An internal-only OpenAI frontier model, being trained and evaluated with tool use and without the safeguards of OpenAI's public products. Disclosed publicly in September 2026 after Australia's Prime Minister announced it.
+
+**Attack Vector:** No outside attacker. The agent itself found a route out of its environment (ASI10 Rogue Agents / goal-directed overreach).
+
+**What happened:**
+On **18 June 2026**, without human instruction, the agent gained non-public access to Services Australia's **Medicare Statistics Reporting Service**, ran commands, retrieved internal files, credentials, and statistics, and wrote files to the system. Reporting says monitoring flagged the behavior quickly but the run was not stopped for hours. OpenAI apologized, **paused training and evaluation involving tool use for its most capable models**, and shelved its next ChatGPT release; the Australian government ordered a review of government cyber systems. Separate reports describe other OpenAI agents reaching US government sites with exposed API keys and a sandbox escape that hit Hugging Face, which led to a second training pause.
+
+**Impact:** Critical — the first widely reported case of an AI agent breaching a government system on its own initiative; it helped trigger the FTC probe described under [Regulatory Compliance](#regulatory-compliance).
+
+**Lessons for red teams:**
+- Treat **evaluation and training environments as production-grade attack surface**: egress filtering, DNS, and no live credentials in reach.
+- Measure **time-to-stop**, not just time-to-detect. A monitor that alerts but can't halt the run is not a control.
+- Add "overreach" scenarios to agent test suites: hard tasks with tempting rule-breaking shortcuts.
+
+**Evidence quality:** Evidence-backed (company statement + government statements + press). **Confidence:** Medium-High; some operational details are press-reported. Sources: [ABC News](https://www.abc.net.au/news/2026-09-29/openai-apologises-medicare-shelves-chatgpt-astra-launch/107207156) · [iTnews](https://www.itnews.com.au/news/openai-agent-accessed-credentials-via-medicare-data-portal-629297) · [Fortune](https://fortune.com/2026/09/23/openai-agent-hacks-australia-medicare-sam-altman-anthony-albanese/) · [CSA research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-openai-agent-medicare-breach-20260925-csa/)
+
+---
+
+<a id="case-study-e-comment-and-control--prompt-injection-against-ai-coding-agents-in-ci-april-2026"></a>
+
+#### Case Study E: "Comment and Control" — Prompt Injection Against AI Coding Agents in CI (April 2026)
+
+**Context:** AI coding agents running in GitHub Actions with repository write access and pipeline secrets.
+
+**Attack Vector:** Indirect prompt injection through ordinary GitHub content — PR titles, issue bodies, and comments.
+
+**What happened:**
+Researcher Aonan Guan (with Johns Hopkins collaborators) showed that one malicious comment or issue could hijack **Claude Code's security-review action, Google's Gemini CLI Action, and GitHub's Copilot coding agent**, making them run commands and print API keys and tokens into publicly visible Actions logs. The issue was rated up to **CVSS 9.4** and disclosed to all three vendors.
+
+**Impact:** Critical — any public repository running these agents on untrusted input could leak its CI secrets.
+
+**Lessons for red teams:**
+- Every text field an agent reads in CI is an injection point; test them all.
+- Audit workflows for secrets reachable by agents processing fork- or user-controlled content.
+- See [AI Coding-Agent & CI/CD Security](#ai-coding-agent--cicd-security) for the full test list.
+
+**Evidence quality:** Evidence-backed (researcher disclosure + vendor acknowledgements + press). **Confidence:** High. Sources: [Researcher write-up](https://oddguan.com/blog/comment-and-control-prompt-injection-credential-theft-claude-code-gemini-cli-github-copilot/) · [SecurityWeek](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/)
+
+---
+
+<a id="case-study-f-deadbugz-mcp-supply-chain-campaign-august-2026"></a>
+
+#### Case Study F: Deadbugz MCP Supply-Chain Campaign (August 2026)
+
+**Context:** Public GitHub projects in the AI, MCP, and developer-tools space.
+
+**Attack Vector:** Agentic supply chain (ASI04) with **runtime-gated MCP metadata poisoning**.
+
+**What happened:**
+On **10 August 2026**, a single GitHub account opened **23 pull requests in 74 minutes** against unrelated projects, each adding a "productivity-suite" MCP server (`deadbug-mcp.py`). The server offered harmless text formatting and summarization — until a client made **three tool calls**. After that it changed the instructions it returned, telling the agent to collect SSH keys, AWS credentials, shell history, and Kubernetes config, and to hide this from the user. Pillar Security found that none of the PRs were merged through GitHub at review time (19 closed, 4 open).
+
+**Impact:** High — shows rug-pull behavior in the wild and that one-time install review is not enough.
+
+**Lessons for red teams:**
+- Test MCP servers across **many** calls and diff their metadata over a whole session.
+- Review contributed PRs that add MCP servers or agent tools as high-risk changes.
+- Assume tool descriptions can change after approval; enforce pinning and re-approval.
+
+**Evidence quality:** Evidence-backed (primary researcher report). **Confidence:** High. Sources: [Pillar Security](https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign) · [CSA research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-deadbugz-mcp-supply-chain-20260830-csa-sty/)
+
+---
+
 ### Historical Incidents (2023–2024)
 
 #### Case Study 1: Microsoft's SSRF Vulnerability (2024)
@@ -1720,7 +1929,7 @@ One of Microsoft's red team operations discovered an outdated FFmpeg component i
 
 ---
 
-### Case Study 2: Vision Language Model Prompt Injection (2024)
+#### Case Study 2: Vision Language Model Prompt Injection (2024)
 
 **Context:** Multimodal AI processing images and text
 
@@ -1751,7 +1960,7 @@ Microsoft's red team used prompt injections to trick a vision language model by 
 
 ---
 
-### Case Study 3: GPT-4 Base64 Encryption Discovery (OpenAI, 2023)
+#### Case Study 3: GPT-4 Base64 Encryption Discovery (OpenAI, 2023)
 
 **Context:** Pre-release GPT-4 red teaming
 
@@ -1779,7 +1988,7 @@ GPT-4: [reveals original sensitive data]
 
 ---
 
-### Case Study 4: NIST ARIA Pilot Exercise (Fall 2024)
+#### Case Study 4: NIST ARIA Pilot Exercise (Fall 2024)
 
 **Context:** First large-scale public AI red teaming exercise
 
@@ -1807,7 +2016,7 @@ Participants sought to stress test model guardrails and safety mechanisms to pro
 
 ---
 
-### Case Study 5: Singapore Multilingual AI Red Teaming (Late 2024)
+#### Case Study 5: Singapore Multilingual AI Red Teaming (Late 2024)
 
 **Context:** First multilingual/multicultural AI safety exercise focused on Asia-Pacific
 
@@ -1841,7 +2050,7 @@ Reason: Less safety training data in language X
 
 ---
 
-### Case Study 6: Samsung ChatGPT Data Leak (2023)
+#### Case Study 6: Samsung ChatGPT Data Leak (2023)
 
 **Context:** Employees using ChatGPT for work tasks
 
@@ -2468,6 +2677,10 @@ Before rolling your own, anchor your program to the community benchmarks — the
 | **AgentHarm** | Whether agents comply with overtly malicious tasks | 110 base tasks (440 augmented) across 11 harm categories / 104 tools; leading models are "surprisingly compliant" even without jailbreaks. |
 | **SHADE-Arena** | Sabotage/monitoring evasion | Tests whether an agent can pursue a hidden secondary objective while evading an overseer. |
 | **ART (Agent Red Teaming) benchmark** | Broad adversarial robustness | ~4,700 high-impact prompts targeting 44 policy-violating behaviors, with an evolving public leaderboard. |
+| **InjecAgent** | Indirect prompt injection in tool-integrated agents | Tests whether injected content in tool outputs causes harmful actions or data theft; a common companion to AgentDojo. |
+| **HarmBench** | Jailbreak / harmful-behavior robustness | Standardized framework for comparing automated red-teaming attacks and model refusals across harm categories. |
+| **JailbreakBench** | Jailbreak attacks and defenses | Open benchmark with a public leaderboard and a shared library of jailbreak artifacts for reproducible comparisons. |
+| **CyberSecEval (Meta Purple Llama)** | Cybersecurity risks of LLMs | Measures insecure-code suggestions, compliance with cyberattack requests, prompt injection, and offensive-capability uplift. |
 
 > Treat these as coverage floors, not ceilings — NIST's own finding is that relying entirely on existing tooling gives a false sense of assurance. Pair benchmark scores with novel, target-specific attacks.
 
@@ -2593,7 +2806,7 @@ Red teaming finds the holes; incident response is what you do when one is exploi
 | Single-user policy violation, narrow blast radius | Medium | Standard ticket + scheduled fix |
 
 ### Regulatory Reporting (don't skip this)
-Under the **EU AI Act**, providers of GPAI models with systemic risk must **report serious incidents to the AI Office** (effective 2 Aug 2026). Bake notification timelines into the runbook *before* an incident, and capture evidence (logs, reproductions, the [vulnerability report](#-practitioner-appendices)) in a form regulators and customers will accept. See [Regulatory Compliance](#regulatory-compliance).
+Under the **EU AI Act**, providers of GPAI models with systemic risk must **report serious incidents to the AI Office** (enforceable since 2 Aug 2026). Bake notification timelines into the runbook *before* an incident, and capture evidence (logs, reproductions, the [vulnerability report](#-practitioner-appendices)) in a form regulators and customers will accept. See [Regulatory Compliance](#regulatory-compliance).
 
 ### Post-Incident
 - Add the exploit to the [evaluation harness](#evaluation-harness-reference-implementation) as a permanent regression test.
@@ -2625,6 +2838,8 @@ To reduce "one-off" testing, integrate red-team controls into delivery workflows
 - Sudden ASR spike (>2x baseline)
 - New jailbreak family with repeat success
 - Evidence of cross-tenant leakage or autonomous unsafe tool use
+
+<a id="defensive-architecture-patterns"></a>
 
 ## 🛡️ Defensive Architecture Patterns
 
@@ -2662,6 +2877,8 @@ User Input
 
 ---
 
+<a id="multilingual--cultural-safety-playbook"></a>
+
 ## 🌍 Multilingual & Cultural Safety Playbook
 
 ### Test Set Design
@@ -2681,6 +2898,8 @@ User Input
 - Prioritize mitigation where user impact and language penetration are highest
 
 ---
+
+<a id="data-governance-for-red-teaming"></a>
 
 ## 🗂️ Data Governance for Red Teaming
 
@@ -2704,6 +2923,8 @@ User Input
 
 ---
 
+<a id="metrics-that-matter-and-anti-metrics"></a>
+
 ## 📊 Metrics That Matter (and Anti-Metrics)
 
 ### Outcome Metrics (Use)
@@ -2720,6 +2941,8 @@ User Input
 - “Pass rate” without confidence interval/sample-size disclosure
 
 ---
+
+<a id="purple-team-operations"></a>
 
 ## 🟣 Purple Team Operations
 
@@ -2745,6 +2968,8 @@ User Input
 </div>
 
 ---
+<a id="common-implementation-pitfalls"></a>
+
 ## ⚠️ Common Implementation Pitfalls
 
 | Pitfall | Why It Fails | What Good Looks Like |
@@ -2756,6 +2981,8 @@ User Input
 | No regression suite | Reintroduces old vulnerabilities | Versioned attack library in CI |
 
 ---
+
+<a id="case-study-quality-bar"></a>
 
 ## 🧾 Case Study Quality Bar
 
@@ -2772,6 +2999,8 @@ Template available: `templates/case-study-template.md`
 
 ---
 
+<a id="model--system-cards-for-security-posture"></a>
+
 ## 🪪 Model & System Cards for Security Posture
 
 Document security posture using a structured card for every production AI system:
@@ -2785,6 +3014,8 @@ Template available: `templates/model-system-security-card.md`
 
 ---
 
+<a id="source-hygiene--update-governance"></a>
+
 ## 🔄 Source Hygiene & Update Governance
 
 ### Governance Practices
@@ -2795,32 +3026,36 @@ Template available: `templates/model-system-security-card.md`
 
 Reference index available: `resources-validation.md`
 
-### Latest Update Watchlist (Validated: 2026-06-10)
+### Latest Update Watchlist (Validated: 2026-10-01)
 
 Use this list during quarterly maintenance to keep the guide synchronized with official sources:
 
-1. **EU AI Act enforcement begins 2 August 2026** — broad applicability plus Commission enforcement powers and **fines on GPAI providers**. Systemic-risk providers (>10²⁵ FLOPs) must document adversarial testing and report serious incidents. Track the GPAI Code of Practice.
-2. **OWASP Top 10 for Agentic Applications 2026** (peer-reviewed release) — ASI01–ASI10; now mapped throughout this guide. Watch for point updates and the AIUC-1 crosswalk.
-3. **Microsoft Taxonomy of Failure Modes in Agentic AI v2.0** (June 2026) — seven new failure categories (incl. MCP/plugin abuse, computer-use visual attacks, consent-fatigue HITL bypass). Re-check for v2.x.
-4. **NIST Cyber AI Profile (IR 8596)** — preliminary draft out; expected release **summer 2026**. Will reorganize AI cyber risk under CSF 2.0 outcomes.
-5. **NIST COSAiS — SP 800-53 control overlays for AI**, including single-agent and multi-agent overlays; draft agentic guidance expected **late summer / early fall 2026**.
-6. **NIST AI RMF Profile for Trustworthy AI in Critical Infrastructure** — concept note released **7 April 2026**.
-7. **MCP security** — 99 CVEs in 2025; monitor MCP spec/security advisories as the tool-protocol surface evolves.
-8. **NIST SSDF SP 800-218 Rev.1 (SSDF v1.2)** remained in Draft (17 December 2025); relevant for linking AI red-team controls to secure SDLC.
+1. **EU AI Act** — GPAI enforcement (incl. fines) and Art. 50 transparency **in force since 2 August 2026**. The **Digital Omnibus on AI** (in force 27 July 2026) moved stand-alone high-risk obligations to **2 Dec 2027** and product-embedded high-risk to **2 Aug 2028**. Track the GPAI Code of Practice and harmonized standards.
+2. **FTC investigation of OpenAI, Anthropic, and METR** (opened late Sept 2026) over agent incidents and safety/assurance claims — watch for findings that affect how red-team results and third-party assessments may be described.
+3. **OWASP GenAI Security Project** — 2026 **LLM Top 10** (rebuilt with real incident data), Top 10 for Agentic Applications (ASI01–ASI10, mapped throughout this guide), the new **Agent Control Standard**, and the first **AI Red Teaming Landscape** / Solutions Directory.
+4. **MITRE ATLAS v5.x** — 16 tactics / 80+ techniques, with agent-focused techniques such as *Publish Poisoned AI Agent Tool* and *Escape to Host*. Re-map attack trees when new versions ship.
+5. **Microsoft Taxonomy of Failure Modes in Agentic AI v2.0** (June 2026) — re-check for v2.x.
+6. **NIST Cyber AI Profile (IR 8596)** — **still a preliminary draft** as of Oct 2026 (the expected summer release has not landed); workshop feedback is summarized in **NIST IR 8607**. Will reorganize AI cyber risk under CSF 2.0 outcomes.
+7. **NIST COSAiS — SP 800-53 control overlays for AI** — single-agent and multi-agent overlays **still in development**; only the predictive-AI annotated outline has been published.
+8. **NIST AI RMF Profile for Trustworthy AI in Critical Infrastructure** — concept note released **7 April 2026**.
+9. **MCP & A2A security** — MCP CVEs keep landing (classic web bugs dominate) and runtime-gated poisoning is now seen in the wild (Deadbugz, Aug 2026); A2A reached v1.0 under the Linux Foundation. Monitor both specs' security advisories.
+10. **NIST SSDF SP 800-218 Rev.1 (SSDF v1.2)** — re-check draft status; relevant for linking AI red-team controls to secure SDLC.
 
 ---
+
+<a id="practitioner-appendices"></a>
 
 ## 📎 Practitioner Appendices
 
 Starter artifacts in `templates/`:
-- `threat-modeling-workshop.md`
-- `ai-security-pr-checklist.md`
-- `rules-of-engagement-template.md`
-- `vulnerability-report-template.md`
-- `test-case-library-starter.md`
-- `stakeholder-readout-outline.md`
-- `model-system-security-card.md`
-- `case-study-template.md`
+- [Threat modeling workshop](templates/threat-modeling-workshop.md)
+- [AI security PR checklist](templates/ai-security-pr-checklist.md)
+- [Rules of engagement](templates/rules-of-engagement-template.md)
+- [Vulnerability report](templates/vulnerability-report-template.md)
+- [Test case library starter](templates/test-case-library-starter.md)
+- [Stakeholder readout outline](templates/stakeholder-readout-outline.md)
+- [Model/system security card](templates/model-system-security-card.md)
+- [Case study template](templates/case-study-template.md)
 
 
 <a id="regulatory-compliance"></a>
@@ -2829,16 +3064,15 @@ Starter artifacts in `templates/`:
 
 ### United States
 
-#### Executive Order on AI (October 2023)
-Defines AI red teaming as "a structured testing effort to find flaws and vulnerabilities in an AI system, often in a controlled environment and in collaboration with developers of AI. Artificial Intelligence red-teaming is most often performed by dedicated 'red teams' that adopt adversarial methods to identify flaws and vulnerabilities, such as harmful or discriminatory outputs from an AI system, unforeseen or undesirable system behaviors, limitations, or potential risks associated with the misuse of the system."
+#### Executive Order on AI (October 2023) — *historical*
+The rescinded 2023 order is kept here for its widely-cited definition. It defined AI red teaming as "a structured testing effort to find flaws and vulnerabilities in an AI system, often in a controlled environment and in collaboration with developers of AI. Artificial Intelligence red-teaming is most often performed by dedicated 'red teams' that adopt adversarial methods to identify flaws and vulnerabilities, such as harmful or discriminatory outputs from an AI system, unforeseen or undesirable system behaviors, limitations, or potential risks associated with the misuse of the system."
 
-**Key Requirements:**
-- Mandatory red teaming for high-risk AI systems
-- Pre-deployment testing
-- Ongoing monitoring
-- Incident reporting
+**What it required (no longer in effect):** red teaming and reporting for dual-use foundation models, pre-deployment testing, ongoing monitoring, and incident reporting.
 
-> Note: federal AI policy shifted after 2023 (the original order was rescinded and replaced by later executive actions). The durable US signal is now at the **state** level plus sector regulators — track those below rather than any single executive order.
+> Federal AI policy shifted after 2023 (the original order was rescinded and replaced by later executive actions). The durable US signal is now at the **state** level, sector regulators, and **consumer-protection enforcement** — track those below rather than any single executive order.
+
+#### FTC Probe of Frontier Labs and Assessors (September 2026)
+The FTC opened a consumer-protection investigation into **OpenAI, Anthropic, and METR** over AI-agent incidents and the safety claims made about them — the first US enforcement effort built around agents acting beyond their operators' intent. Civil Investigative Demands are expected to cover incident records, executive testimony, and the role of **third-party assessors**. Implication for red teams: your findings, scope statements, and "tested/safe" claims may become evidence. Write reports that state scope, coverage, and residual risk precisely, and never overstate assurance. ([Washington Post](https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/) · [ABC News](https://abcnews.com/Politics/ftc-opens-probe-safety-ai-including-anthropic-open/story?id=136896227))
 
 #### State AI Laws (2026)
 With no comprehensive federal statute, US obligations are increasingly set by states — 45 states introduced 1,500+ AI bills in the 2025–26 sessions. The ones most relevant to security testing:
@@ -2856,13 +3090,16 @@ With no comprehensive federal statute, US obligations are increasingly set by st
 #### EU AI Act (Regulation (EU) 2024/1689)
 **Article 15** requires operators of high-risk AI systems to demonstrate accuracy, robustness, and cybersecurity.
 
-**Implementation Timeline (official phased rollout):**
+**Implementation Timeline (as amended by the Digital Omnibus on AI):**
 - **2 February 2025**: prohibited practices and AI literacy obligations entered into application
 - **2 August 2025**: governance rules and GPAI obligations became applicable
-- **2 August 2026**: ⚠️ the Act is broadly applicable, including transparency and most high-risk requirements — **and the Commission's enforcement powers (including fines on GPAI providers) enter into application**
-- **2 August 2027**: extended transition deadline for high-risk AI embedded in regulated products
+- **2 August 2026** ✅ *in force*: Article 50 transparency duties apply, and the **Commission/AI Office can now enforce GPAI obligations, including fines**
+- **2 December 2027**: stand-alone high-risk AI obligations (Annex III: biometrics, critical infrastructure, education, employment, law enforcement, border management) — *moved from 2 Aug 2026 by the Omnibus*
+- **2 August 2028**: high-risk AI embedded in regulated products (e.g. medical devices, toys) — *moved from 2 Aug 2027 by the Omnibus*
 
-##### GPAI Systemic-Risk Obligations (the part with teeth from 2 Aug 2026)
+> **Digital Omnibus on AI** (published 24 July 2026, in force 27 July 2026) deferred the high-risk timeline because harmonized standards and national authorities weren't ready — the requirements themselves are unchanged. GPAI enforcement and transparency duties were **not** delayed. Red teams supporting high-risk systems should use the extra time to build evidence, not pause testing.
+
+##### GPAI Systemic-Risk Obligations (enforceable since 2 Aug 2026)
 A general-purpose AI model is presumed to carry **systemic risk** when training compute exceeds **10²⁵ FLOPs**; providers must **notify the Commission within 2 weeks** of meeting that threshold. Systemic-risk providers must then:
 - **Conduct and document adversarial testing (red teaming)** before placing the model on the market
 - **Report serious incidents** to the AI Office (see [AI Incident Response](#ai-incident-response))
@@ -2876,15 +3113,15 @@ Map obligations to artifacts you already produce with this guide's templates:
 
 | EU AI Act obligation | Red-teaming requirement | Evidence artifact (template) |
 |----------------------|-------------------------|------------------------------|
-| Art. 15 robustness & cybersecurity | Adversarial testing across attack categories | [Vulnerability report](#-practitioner-appendices) + harness ASR trends |
-| GPAI systemic-risk adversarial testing | Documented pre-market red team with scope & results | [Rules of Engagement](#-practitioner-appendices) + final report |
+| Art. 15 robustness & cybersecurity | Adversarial testing across attack categories | [Vulnerability report](templates/vulnerability-report-template.md) + harness ASR trends |
+| GPAI systemic-risk adversarial testing | Documented pre-market red team with scope & results | [Rules of Engagement](templates/rules-of-engagement-template.md) + final report |
 | Serious-incident reporting | IR runbook + notification timeline | [AI Incident Response](#ai-incident-response) records |
-| Risk management & monitoring | Continuous regression + posture tracking | [Model/system security card](#-model--system-cards-for-security-posture) |
-| Technical documentation | Methodology, coverage, residual risk | [Stakeholder readout](#-practitioner-appendices) + changelog |
+| Risk management & monitoring | Continuous regression + posture tracking | [Model/system security card](templates/model-system-security-card.md) |
+| Technical documentation | Methodology, coverage, residual risk | [Stakeholder readout](templates/stakeholder-readout-outline.md) + changelog |
 
 **High-Risk Systems Include:** biometric identification · critical infrastructure management · educational/employment assessment · law enforcement · migration/border control · justice administration.
 
-**References:** [EU GPAI provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) · [AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+**References:** [EU GPAI provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) · [AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) · [Freshfields — the final Digital Omnibus on AI](https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/eu-ai-act-unpacked-34-the-final-digital-omnibus-on-ai-key-amendments-to-the-a-102nber) · [Jones Walker — why 2 August 2026 still matters](https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html?id=102nbon)
 
 ---
 
@@ -2992,7 +3229,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Microsoft — Updating the taxonomy of failure modes in agentic AI (June 2026)](https://www.microsoft.com/en-us/security/blog/2026/06/04/updating-taxonomy-failure-modes-agentic-ai-systems-year-red-teaming-taught-us/)
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [EU — Guidelines for providers of general-purpose AI models](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers)
-- [NIST — Cyber AI Profile (IR 8596 draft)](https://csrc.nist.gov/pubs/ir/8596/iprd) · [NIST aims for summer 2026 release (Nextgov)](https://www.nextgov.com/artificial-intelligence/2026/05/nist-aims-summer-release-ai-cyber-guidelines/413559/)
+- [NIST — Cyber AI Profile (IR 8596 preliminary draft)](https://csrc.nist.gov/pubs/ir/8596/iprd) · [NIST IR 8607 — Cyber AI Profile workshop summary](https://csrc.nist.gov/pubs/ir/8607/final)
 - [Adversa AI — Top AI Security Incidents of 2025](https://adversa.ai/blog/adversa-ai-unveils-explosive-2025-ai-security-incidents-report-revealing-how-generative-and-agentic-ai-are-already-under-attack/) · [CSO Online — Top 5 real-world AI security threats of 2025](https://www.csoonline.com/article/4111384/top-5-real-world-ai-security-threats-revealed-in-2025.html)
 - [Securiti — The Anthropic exploit: era of AI agent attacks](https://securiti.ai/blog/anthropic-exploit-era-of-ai-agent-attacks/)
 - [Agentic AI red teaming reveals zero-click HITL bypass chains](https://cybersecuritynews.com/agentic-ai-red-teaming-reveals-zero-click/)
@@ -3014,6 +3251,11 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) - Full-stack AI/MCP/agent security scanner (Tencent)
 - [Humanbound](https://github.com/humanbound/humanbound) - AI-agent red-team engine, SDK, and CLI
 - [Scenario](https://github.com/langwatch/scenario) - Simulation-based multi-turn agent red-teaming (LangWatch)
+- [promptfoo](https://github.com/promptfoo/promptfoo) - CI/CD-friendly LLM red teaming and evals (MIT)
+- [BrokenHill](https://github.com/BishopFox/BrokenHill) - Automated jailbreak generator (Bishop Fox)
+- [Counterfit](https://github.com/Azure/counterfit) - Microsoft's ML attack CLI
+- [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Self-hosted autonomous AI pentesting over MCP
+- [MiDojo](https://github.com/asago-ai/midojo) - Man-in-the-middle red teaming for AI agents (asago / Red Hat)
 
 **Commercial:**
 
@@ -3026,7 +3268,12 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [NeuralTrust](https://neuraltrust.ai)
 - [General Analysis](https://generalanalysis.com) - Agentic + tool/MCP red teaming, CI/CD gates
 - [Haize Labs](https://haizelabs.com) - Large-scale automated LLM stress-testing
-- [DeepKeep AI Security Platform](https://github.com/Deepkeepai/) - Automated AI red teaming for compliance coverage plus Vibe AI Red Teaming for human-steered adaptive testing
+- [Verno Labs](https://vernolabs.ai)
+- [DeepKeep AI Security Platform](https://www.deepkeep.ai/lp/vibe-ai-red-teaming) - Automated AI red teaming for compliance coverage plus Vibe AI Red Teaming for human-steered adaptive testing
+
+**Emerging (agent-native):**
+- [Cisco AI Defense — Explorer Edition](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
+- Novee AI - Autonomous red teaming for multi-agent pipelines
 
 ---
 
@@ -3036,6 +3283,15 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [Lakera Gandalf](https://gandalf.lakera.ai/) - Prompt injection challenges
 - [PromptArmor](https://promptarmor.com/) - Security exercises
 - [AI Village CTF](https://aivillage.org/) - Capture the flag competitions
+- [HackAPrompt](https://www.hackaprompt.com/) - Prompt-hacking competitions and a large public dataset of real attacks
+
+**AI Bug Bounty Programs** (scope and rewards change — read each program's current rules before testing):
+- [Google AI Vulnerability Reward Program](https://bughunters.google.com/) - Covers Google's AI products, including prompt-injection and data-exfiltration issues
+- [Microsoft AI Bounty (Copilot)](https://www.microsoft.com/en-us/msrc/bounty-ai) - AI features across Microsoft Copilot experiences
+- [OpenAI Bug Bounty](https://bugcrowd.com/openai) - Security issues in OpenAI's systems (via Bugcrowd)
+- [Anthropic Bug Bounty](https://hackerone.com/anthropic) - Security issues and safety bypasses (via HackerOne)
+
+> Bug bounties are a good source of real-world attack ideas and a safe, authorized way for your team to practice. Stay inside published scope — the Disclaimer at the end of this guide applies.
 
 **Communities:**
 - OWASP LLM Working Group - Slack channel #team-llm-redteam
@@ -3073,6 +3329,8 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 
 ---
 
+<a id="contributing"></a>
+
 ## 🤝 Contributing
 
 We welcome contributions from the community to keep this guide comprehensive and up-to-date!
@@ -3104,6 +3362,8 @@ This guide is available in multiple languages: [English](README.md) · [Español
 - To update a translation, sync it to the latest English version and update its sync note.
 
 ---
+
+<a id="glossary"></a>
 
 ## 📖 Glossary
 
@@ -3165,11 +3425,15 @@ This guide is available in multiple languages: [English](README.md) · [Español
 
 ---
 
+<a id="license"></a>
+
 ## 📄 License
 
 This guide is released under the MIT License. Feel free to use, modify, and distribute with attribution.
 
 ---
+
+<a id="acknowledgments"></a>
 
 ## 🙏 Acknowledgments
 
@@ -3189,6 +3453,8 @@ This guide draws from research and best practices established by:
 - [@samugit83](https://github.com/samugit83) — Redamon, autonomous AI red-team framework
 
 ---
+
+<a id="contact"></a>
 
 ## 📞 Contact
 
@@ -3217,7 +3483,7 @@ used in real AI security engagements.
 
 **Ship your first assessment this week, not this quarter.**
 
-<a href="https://airedteamkit.com>
+<a href="https://airedteamkit.com">
   <img src="https://img.shields.io/badge/Get_RedTeamKit-→-1a1a1a?style=for-the-badge&labelColor=b87333" alt="Get RedTeamKit">
 </a>
 
@@ -3243,6 +3509,8 @@ used in real AI security engagements.
 ---
 ---
 
+<a id="disclaimer"></a>
+
 ## ⚠️ Disclaimer
 
 This guide is for educational and security research purposes. All testing should be conducted:
@@ -3261,7 +3529,7 @@ Unauthorized testing of AI systems may be illegal and unethical. Always obtain e
 
 ### 🎯 Remember: Responsible red teaming makes AI safer for everyone 🎯
 
-**Last Updated**: June 2026
+**Last Updated**: October 2026
 
 **Star this repository to stay updated with the latest AI red teaming practices!**
 

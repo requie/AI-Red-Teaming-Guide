@@ -2,6 +2,28 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [v1.2.0] - 2026-10 — Q4 refresh: agent incidents, coding agents, A2A, frontier capability
+
+### Added
+- **New sections:** AI Coding-Agent & CI/CD Security; Agent-to-Agent (A2A) & Agent Identity; Frontier Capability & AI-Accelerated Vulnerability Discovery (Claude Mythos / Project Glasswing, rogue-agent incidents).
+- **New case studies:** D — OpenAI frontier agent reached Australia's Medicare statistics portal during internal evaluation (Jun 2026, disclosed Sep); E — "Comment and Control" prompt injection against Claude Code, Gemini CLI, and Copilot coding agents in CI (Apr 2026); F — Deadbugz runtime-gated MCP supply-chain campaign (Aug 2026).
+- **Regulatory:** EU **Digital Omnibus on AI** (high-risk obligations moved to 2 Dec 2027 / 2 Aug 2028); FTC probe of OpenAI, Anthropic, and METR (Sep 2026).
+- **Frameworks:** OWASP 2026 LLM Top 10, Agent Control Standard, AI Red Teaming Landscape; MITRE ATLAS v5.x.
+- **Tools:** MiDojo (asago / Red Hat). **Benchmarks:** InjecAgent, HarmBench, JailbreakBench, CyberSecEval. **Learning:** HackAPrompt and vendor AI bug bounty programs.
+- Filled-in, agent-aware versions of the rules-of-engagement, stakeholder-readout, case-study, and model/system security-card templates.
+
+### Changed
+- EU AI Act and NIST items rewritten for October 2026 status (GPAI enforcement in force; Cyber AI Profile still a draft; COSAiS agent overlays in development); 2023 US EO marked historical.
+- Update Watchlist re-validated 2026-10-01; badge and footer dates updated.
+- Table of contents now covers every section; comparison matrix and Resources include every listed tool; case-study headings normalized.
+- `ai-redteam-regression.yml` skips cleanly without an API key instead of masking failures.
+
+## [2026-09-30] - Darkmoon
+
+### Added
+
+- Added **Darkmoon** (GPL-3.0, [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon)) to Open-Source Tools: self-hosted, LLM-orchestrated multi-agent penetration testing over MCP with real-exploit validation (contributed by @MBK-fr in #23).
+
 ## [2026-09-27] - DeepKeep AI Security Platform
 
 ### Added
