@@ -2,6 +2,13 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [2026-10-01] - Ziran
+
+### Added
+
+- Added **Ziran** (Apache-2.0, [taoq-ai/ziran](https://github.com/taoq-ai/ziran)) as open-source tool #16: graph-based testing of dangerous tool-chain combinations, tool calls hidden behind refusals, and multi-agent topologies, with MCP and A2A adapters. Contributed by its author, @leoneperdigao (#22); scale claims marked author-described.
+- Added Ziran to the comparison matrix and open-source resources in English, Spanish, French, and Simplified Chinese, and recorded the source review in `resources-validation.md`.
+
 ## [v1.2.0] - 2026-10 — Q4 refresh: agent incidents, coding agents, A2A, frontier capability
 
 ### Added

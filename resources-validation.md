@@ -18,6 +18,7 @@ Track major external references to keep this guide current.
 | [OpenAI agent / Medicare portal coverage (ABC News)](https://www.abc.net.au/news/2026-09-29/openai-apologises-medicare-shelves-chatgpt-astra-launch/107207156) | Incident reporting | 2026-10-01 | Evidence-backed (press + company statement) | Source for Case Study D; some operational details press-reported. |
 | [Comment and Control write-up](https://oddguan.com/blog/comment-and-control-prompt-injection-credential-theft-claude-code-gemini-cli-github-copilot/) | Incident research | 2026-10-01 | Evidence-backed | Primary source for Case Study E. |
 | [MiDojo (asago-ai/midojo)](https://github.com/asago-ai/midojo) | Open-source tool | 2026-10-01 | Evidence-backed | Apache-2.0; Red Hat developer preview (Aug 2026). |
+| [Ziran (taoq-ai/ziran)](https://github.com/taoq-ai/ziran) | Open-source tool | 2026-10-01 | Author-described | Apache-2.0; MCP and A2A adapters confirmed in README. Attack-vector counts are the author's; contributed by the author (#22). |
 
 ## Update Process
 1. Validate links and publication status quarterly.
