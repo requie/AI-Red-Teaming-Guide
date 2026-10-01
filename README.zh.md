@@ -3908,7 +3908,13 @@ FTC 就 AI 智能体事件以及相关安全声明，对 **OpenAI、Anthropic �
 
 ### 贡献者
 
+- [@mldangelo](https://github.com/mldangelo) —— promptfoo，LLM 红队测试与评估 ([#1](https://github.com/requie/AI-Red-Teaming-Guide/pull/1))
+- [@alespignaNT](https://github.com/alespignaNT) —— NeuralTrust，AI 红队测试服务与生成式应用防火墙 ([#2](https://github.com/requie/AI-Red-Teaming-Guide/pull/2), [#3](https://github.com/requie/AI-Red-Teaming-Guide/pull/3))
+- [@pm3310](https://github.com/pm3310) —— Pallma AI（后更名为 Verno Labs） ([#7](https://github.com/requie/AI-Red-Teaming-Guide/pull/7), [#14](https://github.com/requie/AI-Red-Teaming-Guide/pull/14))
 - [@samugit83](https://github.com/samugit83) —— Redamon，自主 AI 红队框架
+- [@gilarel](https://github.com/gilarel) —— DeepKeep AI Security Platform ([#21](https://github.com/requie/AI-Red-Teaming-Guide/pull/21))
+- [@MBK-fr](https://github.com/MBK-fr) —— Darkmoon，可自托管的自主 AI 渗透测试 ([#23](https://github.com/requie/AI-Red-Teaming-Guide/pull/23))
+- [@leoneperdigao](https://github.com/leoneperdigao) —— Ziran，基于图谱的工具链与多智能体安全测试 ([#22](https://github.com/requie/AI-Red-Teaming-Guide/pull/22), 经由 [#27](https://github.com/requie/AI-Red-Teaming-Guide/pull/27))
 
 ---
 
