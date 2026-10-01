@@ -17,7 +17,6 @@ All notable changes to this guide should be documented in this file.
 - Update Watchlist re-validated 2026-10-01; badge and footer dates updated.
 - Table of contents now covers every section; comparison matrix and Resources include every listed tool; case-study headings normalized.
 - `ai-redteam-regression.yml` skips cleanly without an API key instead of masking failures.
-- Spanish, Chinese, and French translations re-synced with the English edition (incl. DeepKeep and Darkmoon).
 
 ## [2026-09-30] - Darkmoon
 
