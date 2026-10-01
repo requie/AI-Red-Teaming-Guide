@@ -1145,6 +1145,8 @@ Coding agents (Claude Code, GitHub Copilot coding agent, Gemini CLI, Cursor, Cod
 - **Secret hygiene:** mask and redact in logs; rotate anything an agent could read after an incident.
 - **Treat repo text as data:** wrap untrusted content in clearly delimited, labeled blocks in the agent prompt; never concatenate it into instructions.
 
+**Further reading — vendor benchmark:** [AI Coding Agent Runtime Security Benchmark (HOL)](https://hol.org/guard/research/ai-coding-agent-runtime-security-benchmark) compares built-in safety controls in Codex CLI, Claude Code, Cursor, Gemini CLI, and OpenCode across 11 risky scenarios (220 deterministic fixture results, JSON/CSV published). *Vendor-published: it compares those controls against the publisher's own product (HOL Guard), tests documented control behavior with fixtures rather than live attacks, and does not measure exploit resistance, latency, or false positives.*
+
 ---
 
 <a id="agent-to-agent-a2a--agent-identity"></a>

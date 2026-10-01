@@ -1270,6 +1270,8 @@ Objective (natural language)
 - **密钥卫生：** 在日志中屏蔽和脱敏；事件发生后轮换智能体可能读取到的任何密钥。
 - **将仓库文本视为数据：** 在智能体提示词中用清晰分隔、带标签的块包裹不可信内容；绝不将其拼接进指令。
 
+**延伸阅读——厂商基准测试：** [AI Coding Agent Runtime Security Benchmark（HOL）](https://hol.org/guard/research/ai-coding-agent-runtime-security-benchmark) 比较了 Codex CLI、Claude Code、Cursor、Gemini CLI 和 OpenCode 在 11 个高风险场景中的内置安全控制（220 条确定性 fixture 结果，以 JSON/CSV 发布）。*由厂商发布：它将这些控制与发布方自家的产品（HOL Guard）进行比较，使用 fixture 测试文档所述的控制行为而非真实攻击，且不衡量漏洞利用抵御能力、延迟或误报率。*
+
 ---
 
 <a id="agent-to-agent-a2a--agent-identity"></a>

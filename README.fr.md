@@ -1271,6 +1271,8 @@ Les agents de codage (Claude Code, l'agent de codage GitHub Copilot, Gemini CLI,
 - **Hygiène des secrets :** masquer et caviarder dans les logs ; après un incident, renouveler tout ce qu'un agent aurait pu lire.
 - **Traiter le texte du dépôt comme des données :** encapsuler le contenu non fiable dans des blocs clairement délimités et étiquetés dans le prompt de l'agent ; ne jamais le concaténer dans les instructions.
 
+**Pour aller plus loin — benchmark d'un fournisseur :** [AI Coding Agent Runtime Security Benchmark (HOL)](https://hol.org/guard/research/ai-coding-agent-runtime-security-benchmark) compare les contrôles de sécurité intégrés de Codex CLI, Claude Code, Cursor, Gemini CLI et OpenCode sur 11 scénarios à risque (220 résultats déterministes sur fixtures, publiés en JSON/CSV). *Publié par un fournisseur : il compare ces contrôles au produit de l'éditeur lui-même (HOL Guard), teste le comportement documenté des contrôles avec des fixtures plutôt qu'avec de vraies attaques, et ne mesure ni la résistance aux exploits, ni la latence, ni les faux positifs.*
+
 ---
 
 <a id="agent-to-agent-a2a--agent-identity"></a>
