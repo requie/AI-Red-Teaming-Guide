@@ -1270,6 +1270,8 @@ Los agentes de programación (Claude Code, el agente de programación de GitHub 
 - **Higiene de secretos:** enmascara y redacta en los registros; rota todo lo que un agente pudiera leer después de un incidente.
 - **Trata el texto del repositorio como datos:** envuelve el contenido no confiable en bloques claramente delimitados y etiquetados dentro del prompt del agente; nunca lo concatenes con las instrucciones.
 
+**Lectura adicional — benchmark de un proveedor:** [AI Coding Agent Runtime Security Benchmark (HOL)](https://hol.org/guard/research/ai-coding-agent-runtime-security-benchmark) compara los controles de seguridad integrados de Codex CLI, Claude Code, Cursor, Gemini CLI y OpenCode en 11 escenarios de riesgo (220 resultados deterministas con fixtures, publicados en JSON/CSV). *Publicado por un proveedor: compara esos controles con el producto del propio editor (HOL Guard), prueba el comportamiento documentado de los controles con fixtures en lugar de ataques reales y no mide la resistencia a exploits, la latencia ni los falsos positivos.*
+
 ---
 
 <a id="agent-to-agent-a2a--agent-identity"></a>
