@@ -2,6 +2,12 @@
 
 All notable changes to this guide should be documented in this file.
 
+## [2026-10-02] - DeepKeep Vibe/Reddy autonomous red teaming
+
+### Added
+
+- Added **DeepKeep Vibe AI Red Teaming** to Emerging Agent-Native & Autonomous Platforms, highlighting Reddy as a red-teaming agent for operator-steered adaptive AI-on-AI sessions across AI applications, chatbots, and autonomous agents.
+
 ## [2026-10-01] - Ziran
 
 ### Added
