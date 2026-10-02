@@ -1945,10 +1945,11 @@ Aversyn est la plateforme commerciale de sécurité offensive de Cogensec. Elle 
 La toute dernière vague cible spécifiquement la couche agents/orchestration (détournement des appels d'outils, pipelines multi-agents, empoisonnement de la mémoire) et mène des évaluations autonomes orchestrées par des agents plutôt que des suites de sondes statiques :
 
 - **Cisco AI Defense (Explorer Edition)** — met le red teaming de l'IA agentique à la portée des développeurs ; contrôles à l'exécution + évaluation. [blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
+- **DeepKeep Vibe AI Red Teaming** — Reddy, l'agent de red teaming de DeepKeep, exécute des sessions adaptatives d'IA contre IA que les opérateurs pilotent en temps réel contre des applications d'IA, des chatbots et des agents autonomes. [deepkeep.ai](https://www.deepkeep.ai/lp/vibe-ai-red-teaming)
 - **Novee AI** — plateforme de red teaming autonome (lancée début 2026) axée sur les scénarios nativement agentiques : pipelines multi-agents, détournement des appels d'outils et empoisonnement de la mémoire au niveau de la couche d'orchestration.
 - **General Analysis** (listée plus haut parmi les plateformes commerciales) et **Confident AI** publient des comparatifs 2026 de plateformes agentiques qu'il vaut la peine de suivre lors du choix d'outils.
 
-*(Vérifié 2026-06 ; c'est une catégorie qui évolue rapidement — confirmez directement les capacités actuelles.)*
+*(Vérifié 2026-10 ; c'est une catégorie qui évolue rapidement — confirmez directement les capacités actuelles.)*
 
 ---
 
