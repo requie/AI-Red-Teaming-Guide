@@ -1945,10 +1945,11 @@ Aversyn 是 Cogensec 的商业攻击性安全平台。它协调多个专业 AI �
 最新一波工具专门针对智能体/编排层（工具调用劫持、多智能体流水线、记忆投毒），并运行自主的、由智能体编排的评估，而非静态的探针套件：
 
 - **Cisco AI Defense（Explorer Edition）**——为构建者带来智能体 AI 红队测试；运行时控制 + 评估。[blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
+- **DeepKeep Vibe AI Red Teaming**——Reddy 是 DeepKeep 的红队测试智能体，可运行自适应的 AI 对 AI 会话，并由操作员实时引导，用于测试 AI 应用、聊天机器人和自主智能体。[deepkeep.ai](https://www.deepkeep.ai/lp/vibe-ai-red-teaming)
 - **Novee AI**——自主红队测试平台（2026 年初推出），聚焦智能体原生场景：多智能体流水线、工具调用劫持以及编排层的记忆投毒。
 - **General Analysis**（已列于上文商业平台中）和 **Confident AI** 发布了 2026 年智能体平台对比，在工具选型时值得关注。
 
-*（2026-06 验证；这是一个快速变化的类别——请直接确认当前能力。）*
+*（2026-10 验证；这是一个快速变化的类别——请直接确认当前能力。）*
 
 ---
 

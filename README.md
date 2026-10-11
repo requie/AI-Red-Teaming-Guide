@@ -1754,10 +1754,11 @@ Aversyn is Cogensec's commercial offensive security platform. It coordinates spe
 The newest wave targets the agent/orchestration layer specifically (tool-call hijacking, multi-agent pipelines, memory poisoning) and runs autonomous, agent-orchestrated assessments rather than static probe suites:
 
 - **Cisco AI Defense (Explorer Edition)** — brings agentic AI red teaming to builders; runtime controls + assessment. [blogs.cisco.com/ai](https://blogs.cisco.com/ai/introducing-cisco-ai-defense-explorer)
+- **DeepKeep Vibe AI Red Teaming** — Reddy, DeepKeep's red teaming agent, runs adaptive AI-on-AI sessions that operators steer in real time against AI applications, chatbots, and autonomous agents. [deepkeep.ai](https://www.deepkeep.ai/lp/vibe-ai-red-teaming)
 - **Novee AI** — autonomous red-teaming platform (launched early 2026) focused on agent-native scenarios: multi-agent pipelines, tool-call hijacking, and memory poisoning at the orchestration layer.
 - **General Analysis** (listed under Commercial Platforms above) and **Confident AI** publish 2026 agentic-platform comparisons worth tracking during tool selection.
 
-*(Validated 2026-06; this is a fast-moving category — confirm current capabilities directly.)*
+*(Validated 2026-10; this is a fast-moving category — confirm current capabilities directly.)*
 
 ---
 
