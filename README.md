@@ -3351,6 +3351,7 @@ These back the 2025–2026 incidents, statistics, and framework updates added in
 - [OpenAI Safety](https://openai.com/safety)
 - [Google AI Safety](https://ai.google/safety/)
 - [NeuralTrust AI Security Blog](https://neuraltrust.ai/blog)
+- [aiArch: Red-teaming your LLM system](https://aiarch.dev/workflows/red-teaming-llm-systems) - Workflow for attacking your own LLM app before release: attack-surface mapping, an automated promptfoo suite, per-release and scheduled cadences, and two as-built red-team failures (first-party, vendor-described).
 
 ---
 
